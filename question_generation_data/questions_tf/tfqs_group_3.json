@@ -1,0 +1,67 @@
+[
+    {
+        "question": "In a scenario where adversaries bypass a mandatory access control mechanism like AppArmor, they exploit a vulnerability in the vehicle's operating system to disable access control.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "It is true that adversaries may exploit vulnerabilities in the operating system to disable mandatory access control mechanisms such as AppArmor.",
+            "F": "It is incorrect to say that adversaries can bypass mandatory access control without exploiting an operating system vulnerability, as these mechanisms are reliant on the integrity of the OS."
+        },
+        "source_procedures": ["ATM-P0114"]
+    },
+    {
+        "question": "When exploiting a browser for initial access, adversaries typically gain access by exploiting services designed to accept remote connections like SSH and VNC.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This statement is incorrect because exploiting a browser typically involves targeting the browser itself, not services like SSH and VNC.",
+            "F": "It is correct that browser exploitation generally targets browser vulnerabilities, not remote connection services."
+        },
+        "source_procedures": ["ATM-P0052"]
+    },
+    {
+        "question": "Adversaries may exploit a radio interface vulnerability to execute code on a vehicle, such as through a Wi-Fi stack attack.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "True, adversaries can exploit vulnerabilities in a vehicle's radio interfaces, including Wi-Fi, to execute code.",
+            "F": "False, because radio interface exploits, such as those targeting the Wi-Fi stack, are legitimate points of entry for adversaries to execute code."
+        },
+        "source_procedures": ["ATM-P0070"]
+    },
+    {
+        "question": "An attacker can achieve persistence on a vehicle ECU by exploiting short range wireless communication protocols like Bluetooth and Wi-Fi.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "False, persistence on a vehicle ECU typically involves modifying firmware or system components, not exploiting short range wireless communication.",
+            "F": "Correct, because persistence usually requires more than simply exploiting communication protocols; it involves deeper system modifications."
+        },
+        "source_procedures": ["ATM-P0117"]
+    },
+    {
+        "question": "To gain initial access to an automotive system, adversaries might exploit unsecured credentials stored in plaintext files on the vehicle’s system.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Correct, adversaries can search for and exploit unsecured credentials in plaintext files as a means to gain initial access.",
+            "F": "Incorrect, as exploiting unsecured credentials in plaintext files is indeed a method used by adversaries for initial access."
+        },
+        "source_procedures": ["ATM-P0018"]
+    }
+]

@@ -1,0 +1,338 @@
+[
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "A rogue cellular base station can be used to create the necessary conditions to attempt initial access",
+        "mitreId": "P0006",
+        "technique": [
+            {
+                "title": "Rogue Cellular Base Station",
+                "type": "technique",
+                "description": "<p>An adversary could set up a rogue cellular base station and then use it to eavesdrop on or manipulate the vehicle cellular interface's communication. A compromised cellular femtocell could be used to carry out this technique<a href=\"http://www.computerworld.com/article/2484538/cybercrime-hacking/researchers-exploit-cellular-tech-flaws-to-intercept-phone-calls.html\">[1]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1467/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.164Z",
+                "mitreId": "T0008",
+                "updatedAt": "2024-08-30T19:08:09.120Z",
+                "id": "ATM-T0008",
+                "lastModifiedAt": "2024-08-30T19:08:09.120Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.787Z",
+        "id": "ATM-P0006"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "Vulnerabilities in the NBT were used to exploit bugs in the in-vehicle browser (the \u201cDevCtrlBrowser_Bon\u201c) for the purpose of achieving browser privileges.",
+        "mitreId": "P0007",
+        "technique": [
+            {
+                "title": "Exploit Co-Located Computing Device for Privilege Escalation",
+                "type": "technique",
+                "description": "<p>Adversaries may be able to leverage their access on one of an ECU's computing devices to gain control of another computing device on the same ECU. For example, it may be possible for a compromised USB controller or Wi-Fi/Bluetooth chip to gain control of the operating system running on a separate chip but still part of the same ECU.</p>",
+                "createdAt": "2023-08-09T09:51:19.129Z",
+                "mitreId": "T0025",
+                "updatedAt": "2024-08-30T19:12:28.036Z",
+                "id": "ATM-T0025",
+                "lastModifiedAt": "2024-08-30T19:12:28.035Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.792Z",
+        "id": "ATM-P0007"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "BMW ConnectedDrive Service traffic was captured using the rogue cellular base station and vulnerabilities in the NBT. This was used to find bugs in the \u201cDevCtrlBrowser_Bon\u201c and exploit them.",
+        "mitreId": "P0008",
+        "technique": [],
+        "updatedAt": "2025-01-30T17:36:02.798Z",
+        "id": "ATM-P0008"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "The researchers were able to discover that USB-to-Ethernet had some security issues, \u201cwhich makes it possible to obtain access to the internal network of the head unit, and then detect many exposed internal services through port scanning.\u201c",
+        "mitreId": "P0009",
+        "technique": [
+            {
+                "title": "Network Service Scanning",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to get a listing of services running on a vehicle's ECUs, including those that may be vulnerable to remote software exploitation. Methods to acquire this information include port scans and vulnerability scans using tools that are brought onto a system.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1046/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.142Z",
+                "mitreId": "T0044",
+                "updatedAt": "2024-08-30T19:15:30.829Z",
+                "id": "ATM-T0044",
+                "lastModifiedAt": "2024-08-30T19:15:30.828Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.803Z",
+        "id": "ATM-P0009"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "The researchers can laterally move amongst the different CAN buses of the vehicle freely once root privileges have been acquired.",
+        "mitreId": "P0010",
+        "technique": [
+            {
+                "title": "Bridge Vehicle Networks",
+                "type": "technique",
+                "description": "<p>The adversary may seek to bridge vehicle vehicle networks to obtain their objectives.</p><p>Some ECUs may possess multiple interfaces to the vehicle network, including interfaces that use different networking technologies, and an adversary could modify these ECUs to bridge networks that would otherwise be separated.</p><p>For example, an adversary that has gained initial access on an ECU with a connection to a vehicle's Ethernet network may attempt to modify an ECU that is connected to the vehicle's Ethernet and CAN networks so that they can extend their reach to ECU on the vehicle's CAN network.</p>",
+                "createdAt": "2023-08-09T09:51:19.132Z",
+                "mitreId": "T0051",
+                "updatedAt": "2024-08-30T19:16:42.863Z",
+                "id": "ATM-T0051",
+                "lastModifiedAt": "2024-08-30T19:16:42.863Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.808Z",
+        "id": "ATM-P0010"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "The Bluetooth functionality can be forced to reboot as a result of an internal mechanism activated by a memory corruption vulnerability.",
+        "mitreId": "P0011",
+        "technique": [],
+        "updatedAt": "2025-01-30T17:36:02.813Z",
+        "id": "ATM-P0011"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "As a result of unintended CAN messages, control of ECUs can be manipulated and functionality can be interrupted in many areas of the vehicle.",
+        "mitreId": "P0012",
+        "technique": [],
+        "updatedAt": "2025-01-30T17:36:02.818Z",
+        "id": "ATM-P0012"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "Root-privileged shells are used for running commands via Local and Remote Code Execution.",
+        "mitreId": "P0046",
+        "technique": [
+            {
+                "title": "Command and Scripting Interpreter",
+                "type": "technique",
+                "description": "<p>From <a href=\"https://attack.mitre.org/techniques/T1059/\">MITRE ATT&amp;CK</a>:</p><p>Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and scripting capabilities.</p><p>There are also cross-platform interpreters such as&nbsp;Python, as well as those commonly associated with client applications such as&nbsp;JavaScript&nbsp;and&nbsp;Visual Basic.</p><p>Adversaries may abuse these technologies in various ways as a means of executing arbitrary commands. Commands and scripts can be embedded in&nbsp;Initial Access&nbsp;payloads delivered to victims as lure documents or as secondary payloads downloaded from an existing C2. Adversaries may also execute commands through interactive terminals/shells.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0018",
+                "updatedAt": "2024-08-30T19:09:44.747Z",
+                "id": "ATM-T0018",
+                "lastModifiedAt": "2024-08-30T19:09:44.734Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.991Z",
+        "id": "ATM-P0046"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "As long as the rogue base station is still in range, remote access can be maintained for a command and control purpose using the vulnerabilities in the cellular/telecommunications modules.",
+        "mitreId": "P0047",
+        "technique": [
+            {
+                "title": "Cellular Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's cellular communication system (e.g., SMS) in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0062",
+                "updatedAt": "2024-08-30T19:18:07.880Z",
+                "id": "ATM-T0062",
+                "lastModifiedAt": "2024-08-30T19:18:07.880Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.996Z",
+        "id": "ATM-P0047"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "Physical access to USB/OBD ports can be used to \u201cinstall the backdoor in the NBT, and then manipulate the vehicle functions through Central Gateway Module.\u201c (CVE-2018-9314)",
+        "mitreId": "P0108",
+        "technique": [
+            {
+                "title": "Physical Modification",
+                "type": "technique",
+                "description": "<p>The adversary can make physical modifications to the vehicle's ECUs, wiring harnesses, and can replace ECUs.</p><p>Some ECUs possess physical debug interfaces that are not exposed outside their enclosures. With sufficient time, an adversary can partially disassemble the vehicle to obtain physical access to these ECUs, remove their enclosures, and connect or solder cables to access these debug interfaces.</p><p>Direct physical access can also be used by an adversary to attempt different types of glitching attacks, side channel attacks, memory removal, reprogramming, and replacement, as well as others.</p><p>To gain access to a vehicle an adversary could replace an ECU with one they have modified ahead of time (e.g., a modified service or junkyard part).</p>",
+                "createdAt": "2023-08-09T09:51:19.165Z",
+                "mitreId": "T0016",
+                "updatedAt": "2024-08-30T19:09:25.323Z",
+                "id": "ATM-T0016",
+                "lastModifiedAt": "2024-08-30T19:09:25.323Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.341Z",
+        "id": "ATM-P0108"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "The NBT (Infotainment Head Unit) can be modified to contain a backdoor for persistent attacker entry.",
+        "mitreId": "P0109",
+        "technique": [],
+        "updatedAt": "2025-01-30T17:36:03.345Z",
+        "id": "ATM-P0109"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "The researchers were able to access and identify many of the internal compute systems of the vehicle, including Infotainment and Telematics modules, while also identifying the software and some services included on those systems.",
+        "mitreId": "P0110",
+        "technique": [
+            {
+                "title": "System Information Discovery",
+                "type": "technique",
+                "description": "<p>An adversary may attempt to get detailed information about the ECU's operating system and hardware, including version, patches, hotfixes, service packs, and architecture. Adversaries may use the information from&nbsp;this technique&nbsp;during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1082/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.161Z",
+                "mitreId": "T0047",
+                "updatedAt": "2024-08-30T19:15:48.360Z",
+                "id": "ATM-T0047",
+                "lastModifiedAt": "2024-08-30T19:15:48.360Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.351Z",
+        "id": "ATM-P0110"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "UDS messages can be sent across CAN buses to control ECUs.\n\n\u201c\u2026it's easy for us to make the Central Gateway Module transfer controlled diagnostic messages to manipulate ECUs on CAN Buses (e.g. PT-CAN, KCAN, etc..) at most of the time.\u201c",
+        "mitreId": "P0111",
+        "technique": [
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.356Z",
+        "id": "ATM-P0111"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "The researchers have \u201cbeen able to gain control of the CAN buses with the execution of arbitrary, unauthorized diagnostic requests of BMW in-car systems remotely.\u201c",
+        "mitreId": "P0112",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.360Z",
+        "id": "ATM-P0112"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "Code signing was bypassed by the researchers via discovered vulnerabilities:\n\n\u201cAfter reverse-engineering the diagnose protocol between Central Gateway and NBT, we found the vulnerability that can be utilized to bypass the code sign mechanism\u2026\u201c\n\n\u201c\u2026we also found a memory corruption vulnerability that allows us to bypass the signature protection and achieve remote code execution in the firmware.\u201c",
+        "mitreId": "P0115",
+        "technique": [
+            {
+                "title": "Bypass Code Integrity Protections",
+                "type": "technique",
+                "description": "<p>Adversaries may seek to circumvent various code integrity protections to install unauthorized firmware or software on the device.</p>",
+                "createdAt": "2023-08-09T09:51:19.120Z",
+                "mitreId": "T0031",
+                "updatedAt": "2024-08-30T19:13:30.269Z",
+                "id": "ATM-T0031",
+                "lastModifiedAt": "2024-08-30T19:13:30.269Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.374Z",
+        "id": "ATM-P0115"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "A USB dongle can be used to exploit vulnerabilities in USB-to-Ethernet and firmware update features, allowing for initial access.\n\n(CVE-2018-9312, CVE-2018-9320, CVE-2018-9322)",
+        "mitreId": "P0150",
+        "technique": [
+            {
+                "title": "Exploit via Removable Media",
+                "type": "technique",
+                "description": "<p>Adversaries may gain initial access to an automotive environment by copying malware to removable media and taking advantage of Autorun features or automatic parsing of file (e.g., MP3s) when the device is inserted into a system and executes. This may occur through manual manipulation of the media, modification of systems used to initially format the media, or modification to the media's firmware itself.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1091/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.146Z",
+                "mitreId": "T0013",
+                "updatedAt": "2024-08-30T19:09:09.313Z",
+                "id": "ATM-T0013",
+                "lastModifiedAt": "2024-08-30T19:09:09.312Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.568Z",
+        "id": "ATM-P0150"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "By using a rogue cellular base station, or Bluetooth, vulnerabilities in the Telematics Control Unit can be exploited via the use of GSM for initial access.\n\n(CVE-2018-9311, CVE-2018-9313, CVE-2018-9318)",
+        "mitreId": "P0151",
+        "technique": [
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.573Z",
+        "id": "ATM-P0151"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "Vehicle update services will monitor the contents of a connected USB dongle. If the dongle contains certain content, the vehicle will believe an update is occurring, allowing the exploitation of some vulnerabilities:\n\n\u201cSome content is signed by BMW private keys, while some are not, which gives us a chance to prepare our malformed content in the USB stick and leverage some vulnerabilities existed in the update service to gain control of hu-intel system with root privilege.\u201c",
+        "mitreId": "P0152",
+        "technique": [
+            {
+                "title": "Exploit OS Vulnerability",
+                "type": "technique",
+                "description": "<p>A malicious app can exploit unpatched vulnerabilities in the operating system to obtain escalated privileges.</p><p>Adapted from <a href=\"https://attack.mitre.org/techniques/T1404/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.138Z",
+                "mitreId": "T0026",
+                "updatedAt": "2024-08-30T19:12:35.503Z",
+                "id": "ATM-T0026",
+                "lastModifiedAt": "2024-08-30T19:12:35.502Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.582Z",
+        "id": "ATM-P0152"
+    },
+    {
+        "title": "Experimental Security Assessment of BMW Cars: A Summary Report",
+        "type": "procedure",
+        "description": "The researchers were able to discover information about the system from its files/directories. Notably, they discovered the USB configuration file, some supported adapters were discovered, which led to future exploits using USB. Other examples of reverse engineering and discovery used this technique, as well.",
+        "mitreId": "P0153",
+        "technique": [
+            {
+                "title": "File and Directory Discovery",
+                "type": "technique",
+                "description": "<p>Adversaries may enumerate files and directories or may search in specific locations of an ECU for certain information within a file system. Adversaries may use the information from&nbsp;this technique&nbsp;during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.</p><p>Many command shell utilities can be used to obtain this information. Examples include&nbsp;<code>dir</code>,&nbsp;<code>tree</code>,&nbsp;<code>ls</code>,&nbsp;<code>find</code>, and&nbsp;<code>locate</code>.&nbsp;<a href=\"http://blog.jpcert.or.jp/2016/01/windows-commands-abused-by-attackers.html\">[1]</a>&nbsp;Custom tools may also be used to gather file and directory information and interact with the&nbsp;Native API.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1083/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.124Z",
+                "mitreId": "T0042",
+                "updatedAt": "2024-08-30T19:15:16.271Z",
+                "id": "ATM-T0042",
+                "lastModifiedAt": "2024-08-30T19:15:16.271Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.587Z",
+        "id": "ATM-P0153"
+    }
+]

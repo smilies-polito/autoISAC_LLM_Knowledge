@@ -1,0 +1,277 @@
+[
+    {
+        "title": "Security and Privacy Vulnerabilities of In-Car Wireless Networks: A Tire Pressure Monitoring System Case Study",
+        "type": "procedure",
+        "description": "Researchers were able affect the tire pressure values displayed in the dashboard by spoofing TPMS messages using a custom packet generator and a custom Universal Software Radio Peripheral.",
+        "mitreId": "P0023",
+        "technique": [
+            {
+                "title": "Manipulate Communications",
+                "type": "technique",
+                "description": "<p>If network traffic between the vehicle and a remote server or mobile device is not securely protected, then an attacker positioned on the network may be able to manipulate network communication without being detected. For example, FireEye researchers found in 2014 that 68% of the top 1,000 free applications in the Google Play Store had at least one Transport Layer Security (TLS) implementation vulnerability potentially opening the applications' network traffic to man-in-the-middle attacks&nbsp;<a href=\"https://www.fireeye.com/blog/threat-research/2014/08/ssl-vulnerabilities-who-listens-when-android-applications-talk.html\">[1]</a>.</p><p>V2X spoofing, GPS spoofing, etc., can also be considered as another form of manipulate communication.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1463/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.153Z",
+                "mitreId": "T0003",
+                "updatedAt": "2024-08-30T19:07:53.948Z",
+                "id": "ATM-T0003",
+                "lastModifiedAt": "2024-08-30T19:07:53.948Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.873Z",
+        "id": "ATM-P0023"
+    },
+    {
+        "type": "procedure",
+        "title": "Drive it like you hacked it",
+        "description": "Researcher was able to remote control various vehicle's door locks, start its engine, and track its location by accessing RemoteLink, a mobile app for users to perform actions to a vehicle, with intercepted login credentials.",
+        "technique": [
+            {
+                "title": "Rogue Wi-Fi Access Point",
+                "type": "technique",
+                "description": "<p>From <a href=\"https://attack.mitre.org/techniques/T1465/\">MITRE ATT&amp;CK for Mobile</a>:</p><p>An adversary could set up unauthorized Wi-Fi access points or compromise existing access points and, if the device connects to them, carry out network-based attacks such as eavesdropping on or modifying network communication</p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0009",
+                "updatedAt": "2024-08-30T19:08:17.374Z",
+                "id": "ATM-T0009",
+                "lastModifiedAt": "2024-08-30T19:08:17.374Z"
+            },
+            {
+                "title": "Internet Communication",
+                "type": "technique",
+                "description": "<p>The adversary can use a compromised ECU's internet connection (if available) for command and control and to exfiltrate data.</p>",
+                "createdAt": "2023-08-09T09:51:19.144Z",
+                "mitreId": "T0063",
+                "updatedAt": "2024-08-30T19:18:15.781Z",
+                "id": "ATM-T0063",
+                "lastModifiedAt": "2024-08-30T19:18:15.781Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:31:48.810Z",
+        "updatedAt": "2025-01-30T17:36:02.950Z",
+        "id": "ATM-P0038",
+        "mitreId": "P0038"
+    },
+    {
+        "type": "procedure",
+        "title": "Drive it like you hacked it",
+        "description": "Researcher intercepted login requests from RemoteLink, a mobile app for users to perform actions to a vehicle and retrieved credentials by using a custom-made device to set up a fake access point and performing an SSL MITM attack.",
+        "technique": [
+            {
+                "title": "Rogue Wi-Fi Access Point",
+                "type": "technique",
+                "description": "<p>From <a href=\"https://attack.mitre.org/techniques/T1465/\">MITRE ATT&amp;CK for Mobile</a>:</p><p>An adversary could set up unauthorized Wi-Fi access points or compromise existing access points and, if the device connects to them, carry out network-based attacks such as eavesdropping on or modifying network communication</p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0009",
+                "updatedAt": "2024-08-30T19:08:17.374Z",
+                "id": "ATM-T0009",
+                "lastModifiedAt": "2024-08-30T19:08:17.374Z"
+            },
+            {
+                "title": "Manipulate Communications",
+                "type": "technique",
+                "description": "<p>If network traffic between the vehicle and a remote server or mobile device is not securely protected, then an attacker positioned on the network may be able to manipulate network communication without being detected. For example, FireEye researchers found in 2014 that 68% of the top 1,000 free applications in the Google Play Store had at least one Transport Layer Security (TLS) implementation vulnerability potentially opening the applications' network traffic to man-in-the-middle attacks&nbsp;<a href=\"https://www.fireeye.com/blog/threat-research/2014/08/ssl-vulnerabilities-who-listens-when-android-applications-talk.html\">[1]</a>.</p><p>V2X spoofing, GPS spoofing, etc., can also be considered as another form of manipulate communication.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1463/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.153Z",
+                "mitreId": "T0003",
+                "updatedAt": "2024-08-30T19:07:53.948Z",
+                "id": "ATM-T0003",
+                "lastModifiedAt": "2024-08-30T19:07:53.948Z"
+            },
+            {
+                "title": "Network Sniffing",
+                "type": "technique",
+                "description": "<p>Adversaries may sniff vehicle network traffic to capture information about an environment, including authentication material passed over the vehicle network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless vehicle network connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.</p><p>Data captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.</p><p>Network sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.</p><p>Adversaries may also try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1040/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.155Z",
+                "mitreId": "T0038",
+                "updatedAt": "2024-08-30T19:14:51.336Z",
+                "id": "ATM-T0038",
+                "lastModifiedAt": "2024-08-30T19:14:51.335Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:26:38.171Z",
+        "updatedAt": "2025-01-30T17:36:03.108Z",
+        "id": "ATM-P0069",
+        "mitreId": "P0069"
+    },
+    {
+        "title": "Security and Privacy Vulnerabilities of In-Car Wireless Networks: A Tire Pressure Monitoring System Case Study",
+        "type": "procedure",
+        "description": "Researchers were able to crash and disable the TPMS ECU after repeatedly triggering the TPMS warning on and off over 2 days of experiments.",
+        "mitreId": "P0125",
+        "technique": [
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            },
+            {
+                "title": "Denial of Service on Vehicle Function",
+                "type": "technique",
+                "description": "<p><span style=\"color:black;\">Adversaries may perform Denial of Service (DoS) attacks to disrupt expected vehicle functionality. Examples of DoS attacks include overwhelming an ECU with a high volume of requests in a short time period and sending an ECU a request it does not know how to handle. Vulnerabilities that cause processes to crash can result in a denial of service.</span></p><p><span style=\"color:black;\">&nbsp;In some cases, disrupting the availability of some vehicle functions may cause the vehicle to try to default to a known 'safe state' that could result in reduced or blocked vehicle propulsion, further impacting the road user.</span></p><p>This technique was adopted from <a href=\"https://attack.mitre.org/techniques/T0814/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.152Z",
+                "mitreId": "T0072",
+                "updatedAt": "2024-08-30T19:20:50.381Z",
+                "id": "ATM-T0072",
+                "lastModifiedAt": "2024-08-30T19:20:50.380Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.428Z",
+        "id": "ATM-P0125"
+    },
+    {
+        "type": "procedure",
+        "title": "Drive it like you hacked it",
+        "description": "Researcher was able to unlock vehicles by using a custom-made device to jam radio signals to prevent the vehicle from receiving signals and copying the original signal to later unlock and steal the car.",
+        "technique": [
+            {
+                "title": "Manipulate Communications",
+                "type": "technique",
+                "description": "<p>If network traffic between the vehicle and a remote server or mobile device is not securely protected, then an attacker positioned on the network may be able to manipulate network communication without being detected. For example, FireEye researchers found in 2014 that 68% of the top 1,000 free applications in the Google Play Store had at least one Transport Layer Security (TLS) implementation vulnerability potentially opening the applications' network traffic to man-in-the-middle attacks&nbsp;<a href=\"https://www.fireeye.com/blog/threat-research/2014/08/ssl-vulnerabilities-who-listens-when-android-applications-talk.html\">[1]</a>.</p><p>V2X spoofing, GPS spoofing, etc., can also be considered as another form of manipulate communication.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1463/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.153Z",
+                "mitreId": "T0003",
+                "updatedAt": "2024-08-30T19:07:53.948Z",
+                "id": "ATM-T0003",
+                "lastModifiedAt": "2024-08-30T19:07:53.948Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:34:08.188Z",
+        "updatedAt": "2025-01-30T17:36:03.506Z",
+        "id": "ATM-P0139",
+        "mitreId": "P0139"
+    },
+    {
+        "title": "Security and Privacy Vulnerabilities of In-Car Wireless Networks: A Tire Pressure Monitoring System Case Study",
+        "type": "procedure",
+        "description": "Researchers extracted Tire Pressure Monitoring System (TPMS) timing information between activation signals and sensor responses by using various TPM sensors and radio data capturing equipment.\n\nResearchers were able to monitor the TPMS channel by using a custom eavesdropper to record radio waves and custom Matlab decoders to extract the pressure, temperature, and sensor ID of high energy packets.",
+        "mitreId": "P0163",
+        "technique": [
+            {
+                "title": "Short Range Wireless Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's short range wireless communication capabilities, including Bluetooth and Wi-Fi, in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.157Z",
+                "mitreId": "T0065",
+                "updatedAt": "2024-08-30T19:19:12.540Z",
+                "id": "ATM-T0065",
+                "lastModifiedAt": "2024-08-30T19:19:12.539Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.642Z",
+        "id": "ATM-P0163"
+    },
+    {
+        "title": "Security and Privacy Vulnerabilities of In-Car Wireless Networks: A Tire Pressure Monitoring System Case Study",
+        "type": "procedure",
+        "description": "Researchers were able to trigger the tire low-pressure warning light in a moving vehicle by spoofing TPMS messages using a custom packet generator and a custom Universal Software Radio Peripheral.",
+        "mitreId": "P0164",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            },
+            {
+                "title": "Manipulate Communications",
+                "type": "technique",
+                "description": "<p>If network traffic between the vehicle and a remote server or mobile device is not securely protected, then an attacker positioned on the network may be able to manipulate network communication without being detected. For example, FireEye researchers found in 2014 that 68% of the top 1,000 free applications in the Google Play Store had at least one Transport Layer Security (TLS) implementation vulnerability potentially opening the applications' network traffic to man-in-the-middle attacks&nbsp;<a href=\"https://www.fireeye.com/blog/threat-research/2014/08/ssl-vulnerabilities-who-listens-when-android-applications-talk.html\">[1]</a>.</p><p>V2X spoofing, GPS spoofing, etc., can also be considered as another form of manipulate communication.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1463/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.153Z",
+                "mitreId": "T0003",
+                "updatedAt": "2024-08-30T19:07:53.948Z",
+                "id": "ATM-T0003",
+                "lastModifiedAt": "2024-08-30T19:07:53.948Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.646Z",
+        "id": "ATM-P0164"
+    },
+    {
+        "type": "procedure",
+        "title": "Driving Down the Rabbit Hole",
+        "description": "<p><span style=\"color:rgb(19, 19, 19);\">We'll take you with us on a journey from zero car security validation experience through the discovery and disclosure of multiple remotely-exploitable automotive vulnerabilities. Along the way, we'll visit a wrecking yard, reassemble (most) of a 2015 Nissan Leaf in our lab, discuss how we picked our battles, fought them, and won. During our talk, we'll examine the details of three different classes of vulnerabilities we found in this vehicle, how they can be exploited, and the potential ramifications to the owner of their real-world exploitation. We'll also discuss the broader scope of the vulnerabilities discovered, how they extend beyond just this specific vehicle, and what the industry can do better to prevent these types of problems in the future.</span></p>",
+        "technique": [
+            {
+                "title": "Data from Local System",
+                "type": "technique",
+                "description": "<p>Adversaries may search local system sources, such as file systems, local databases, logs, or volatile storage via data dumps to find files of interest and sensitive data prior to exfiltration.</p><p>Adversaries may do this using a&nbsp;command and scripting interpreter, such as&nbsp;cmd, which has functionality to interact with the file system to gather information.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1005/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.162Z",
+                "mitreId": "T0059",
+                "updatedAt": "2024-08-30T19:17:36.249Z",
+                "id": "ATM-T0059",
+                "lastModifiedAt": "2024-08-30T19:17:36.248Z"
+            },
+            {
+                "title": "Removable Media",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to exfiltrate data via a physical medium, such as a removable drive. Such media could be an external hard drive, USB drive, cellular phone, MP3 player, or other removable storage and processing device.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1052/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.152Z",
+                "mitreId": "T0006",
+                "updatedAt": "2024-08-30T19:19:36.451Z",
+                "id": "ATM-T0006",
+                "lastModifiedAt": "2024-08-30T19:19:36.451Z"
+            },
+            {
+                "title": "Network Sniffing",
+                "type": "technique",
+                "description": "<p>Adversaries may sniff vehicle network traffic to capture information about an environment, including authentication material passed over the vehicle network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless vehicle network connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.</p><p>Data captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.</p><p>Network sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.</p><p>Adversaries may also try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1040/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.155Z",
+                "mitreId": "T0038",
+                "updatedAt": "2024-08-30T19:14:51.336Z",
+                "id": "ATM-T0038",
+                "lastModifiedAt": "2024-08-30T19:14:51.335Z"
+            },
+            {
+                "title": "Location Tracking",
+                "type": "technique",
+                "description": "<p>An adversary could use a malicious or exploited application to surreptitiously track the vehicle's physical location through use of standard operating system APIs.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1430/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.131Z",
+                "mitreId": "T0043",
+                "updatedAt": "2024-08-30T19:15:24.474Z",
+                "id": "ATM-T0043",
+                "lastModifiedAt": "2024-08-30T19:15:24.474Z"
+            },
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:37:07.912Z",
+        "updatedAt": "2025-02-06T21:07:07.701Z",
+        "id": "ATM-P0175",
+        "mitreId": "P0175"
+    },
+    {
+        "type": "procedure",
+        "title": "Security and Privacy Vulnerabilities of In-Car Wireless Networks: A Tire Pressure Monitoring System Case Study",
+        "description": "Researchers extracted Tire Pressure Monitoring System (TPMS) timing information between activation signals and sensor responses by using various TPM sensors and radio data capturing equipment. Researchers were able to monitor the TPMS channel by using a custom eavesdropper to record radio waves and custom Matlab decoders to extract the pressure, temperature, and sensor ID of high energy packets.",
+        "technique": [
+            {
+                "title": "Short Range Wireless Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's short range wireless communication capabilities, including Bluetooth and Wi-Fi, in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.157Z",
+                "mitreId": "T0065",
+                "updatedAt": "2024-08-30T19:19:12.540Z",
+                "id": "ATM-T0065",
+                "lastModifiedAt": "2024-08-30T19:19:12.539Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:20:21.275Z",
+        "updatedAt": "2025-01-30T17:36:03.765Z",
+        "id": "ATM-P0189",
+        "mitreId": "P0189"
+    }
+]

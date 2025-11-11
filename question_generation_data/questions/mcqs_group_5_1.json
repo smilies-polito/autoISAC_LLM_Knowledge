@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the procedure where researchers forced the telematics unit to download and execute arbitrary payloads, what vulnerabilities were exploited?",
+        "options": {
+            "A": "Command injection and data tampering vulnerabilities",
+            "B": "Call authentication and buffer overflow vulnerabilities",
+            "C": "Wireless protocol and firmware vulnerabilities",
+            "D": "None of the above"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. The procedure does not mention command injection and data tampering vulnerabilities.",
+            "B": "Correct. Researchers exploited the call authentication and buffer overflow vulnerabilities.",
+            "C": "Incorrect. The procedure does not mention wireless protocol and firmware vulnerabilities.",
+            "D": "Incorrect. Option B is the correct answer."
+        },
+        "source_procedures": ["ATM-P0100"]
+    },
+    {
+        "question": "What technique involves sending unintended messages on the in-vehicle network, often following a privilege escalation technique?",
+        "options": {
+            "A": "Exploit via Radio Interface",
+            "B": "Network Sniffing",
+            "C": "Unintended Vehicle Network Message",
+            "D": "Malicious SMS Message"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Incorrect. Exploit via Radio Interface involves targeting a vehicle through radio interfaces, not sending unintended messages.",
+            "B": "Incorrect. Network Sniffing involves capturing network traffic.",
+            "C": "Correct. Unintended Vehicle Network Message involves sending messages that are not supposed to be sent, or at an incorrect time, rate, or sequence.",
+            "D": "Incorrect. Malicious SMS Message involves exploiting vulnerabilities via SMS."
+        },
+        "source_procedures": ["ATM-P0101", "ATM-P0190"]
+    },
+    {
+        "question": "When researchers injected arbitrary CAN packets, what exploit did they use to achieve this?",
+        "options": {
+            "A": "By exploiting the vehicle’s ECU update mechanism",
+            "B": "By using wireless communication vulnerabilities",
+            "C": "By exploiting the media player’s CD data reflashing logic",
+            "D": "All of the above"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Incorrect. This option describes a different type of exploitation.",
+            "B": "Incorrect. Wireless communication is not mentioned in this context.",
+            "C": "Correct. Researchers exploited the media player's CD data reflashing logic to inject CAN packets.",
+            "D": "Incorrect. Only option C is correct."
+        },
+        "source_procedures": ["ATM-P0190"]
+    },
+    {
+        "question": "In the context of exploiting the media player's read functions, how did researchers overwrite the function pointers?",
+        "options": {
+            "A": "Through a paired Bluetooth device",
+            "B": "Using an in-system debugger via an unused serial port",
+            "C": "By remotely sending malicious code",
+            "D": "None of the above"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. Bluetooth pairing is not relevant to this context.",
+            "B": "Correct. Researchers used an in-system debugger via an unused serial port to overwrite function pointers.",
+            "C": "Incorrect. The procedure does not mention remote code sending.",
+            "D": "Incorrect. Option B is the correct choice."
+        },
+        "source_procedures": ["ATM-P0183"]
+    },
+    {
+        "question": "Which of the following techniques can be used to capture vehicle telemetry data, including propulsion system status and locked/unlocked state?",
+        "options": {
+            "A": "Short Range Wireless Communication",
+            "B": "Modify OS Kernel, Boot Partition, or System Partition",
+            "C": "Network Sniffing",
+            "D": "Reprogram ECU for Lateral Movement"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Incorrect. Short Range Wireless Communication is used for command and control purposes.",
+            "B": "Incorrect. Modifying the OS Kernel or System Partition involves code modification, not capturing telemetry data.",
+            "C": "Correct. Network Sniffing involves capturing vehicle network traffic, which can include telemetry data.",
+            "D": "Incorrect. Reprogramming ECU for lateral movement involves network infiltration, not data capture."
+        },
+        "source_procedures": ["ATM-P0185"]
+    }
+]

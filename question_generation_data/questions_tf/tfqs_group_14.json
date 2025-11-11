@@ -1,0 +1,67 @@
+[
+    {
+        "question": "In the scenario 'Extracting SecOC secrets from an Electronic Control Unit (ECU)', the researcher used RAM-based code to dump credentials, which can later be utilized for lateral movement.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This statement is true as the procedure describes the use of RAM-based code to read SecOC keys and credentials, which aligns with the technique of ECU Credential Dumping used for lateral movement.",
+            "F": "This statement is not false because RAM-based code was indeed used to dump credentials, facilitating lateral movement."
+        },
+        "source_procedures": ["ATM-P0196"]
+    },
+    {
+        "question": "The researchers extracted SecOC secrets from an ECU by targeting user-assigned passwords stored within the system's non-volatile memory.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This statement is false because the procedure involved RAM-based code to read out SecOC keys, not targeting user-assigned passwords in non-volatile memory.",
+            "F": "The procedure did not involve non-volatile memory but rather reading secrets using RAM-based code, which includes keys and passwords that are not personal user information."
+        },
+        "source_procedures": ["ATM-P0196"]
+    },
+    {
+        "question": "According to the procedure 'Extracting SecOC secrets from an ECU', the extracted credentials can be later used to access restricted information by adversaries.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This statement is true as the technique ECU Credential Dumping suggests that extracted credentials could be used for accessing restricted information.",
+            "F": "This statement is not false because obtaining credentials through dumping can indeed facilitate access to restricted information."
+        },
+        "source_procedures": ["ATM-P0196"]
+    },
+    {
+        "question": "The ECU Credential Dumping technique involves manipulating personal user information to obtain SecOC secrets.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This statement is false because the focus of the procedure was on security-related secrets, not personal user information.",
+            "F": "The procedure involves reading security-related secrets, such as keys and passwords, not personal user information."
+        },
+        "source_procedures": ["ATM-P0196"]
+    },
+    {
+        "question": "The extraction of SecOC keys from an ECU by a researcher involves techniques that are described within the MITRE ATT&CK framework.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This statement is true as the ECU Credential Dumping technique is aligned with MITRE ATT&CK techniques, specifically referenced in the description.",
+            "F": "This statement is not false because the procedure and technique described are indeed part of the MITRE ATT&CK framework, as indicated by the provided MITRE ID."
+        },
+        "source_procedures": ["ATM-P0196"]
+    }
+]

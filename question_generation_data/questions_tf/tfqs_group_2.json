@@ -1,0 +1,67 @@
+[
+    {
+        "question": "In a scenario where researchers utilized a token for lateral movement from the 'IC' device to the 'CID', it is likely that remote service protocols such as Telnet or SSH were involved.",
+        "options": {
+            "T": "True: Remote service protocols like SSH are typically used for lateral movement.",
+            "F": "False: The token used in the scenario suggests a different mechanism not involving remote service protocols."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The use of a token to move laterally, as described in the procedure, aligns with the 'Remote Services' technique, which involves using protocols like SSH.",
+            "F": "Tokens generally suggest authentication or session management, which can be associated with remote services."
+        },
+        "source_procedures": ["ATM-P0021"]
+    },
+    {
+        "question": "Accessing a USB debug interface on an Electronic Control Unit (ECU) is an example of exploiting via removable media.",
+        "options": {
+            "T": "True: Connecting to a USB debug interface can be considered exploitation via removable media.",
+            "F": "False: USB debug interfaces do not constitute removable media exploitation."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The scenario involves connecting to a USB port which can be categorized under removable media exploitation techniques.",
+            "F": "USB ports are recognized as a type of removable media interface according to the technique description."
+        },
+        "source_procedures": ["ATM-P0056"]
+    },
+    {
+        "question": "Discovering unsecured login credentials for an SSH service on a Tesla's CID indicates the use of relay communications.",
+        "options": {
+            "T": "True: The use of unsecured credentials involves relaying communication between devices.",
+            "F": "False: Unsecured credentials discovery is not related to relay communications but rather to finding insecurely stored credentials."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Relay communications involve moving data between devices to appear closer than they are, which is not described in the unsecured credentials discovery.",
+            "F": "The discovery of unsecured credentials does not involve relaying communication but rather focuses on finding credentials stored insecurely."
+        },
+        "source_procedures": ["ATM-P0122"]
+    },
+    {
+        "question": "Browsing a website that exploits vulnerabilities in media parsers could lead to a Denial of Service (DoS) attack on a vehicle's functionality.",
+        "options": {
+            "T": "True: Such exploitation could crash processes, resulting in a Denial of Service.",
+            "F": "False: Browsing vulnerabilities generally target data exfiltration, not direct DoS attacks."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The browser compromise through media parser vulnerabilities can lead to system crashes, aligning with a DoS scenario due to the crash.",
+            "F": "Although browser vulnerabilities are often exploited for data, in this case, they directly cause process crashes leading to DoS."
+        },
+        "source_procedures": ["ATM-P0118"]
+    },
+    {
+        "question": "The retrieval of VPN keys from removable memory cards is directly related to the 'Exploit via Removable Media' technique.",
+        "options": {
+            "T": "True: Retrieving data from removable media is an example of exploiting via removable media.",
+            "F": "False: This scenario involves data exfiltration, which is not the same as exploiting via removable media."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "While it involves removable media, the action here is about data retrieval, which does not exploit the media itself.",
+            "F": "The focus is on securing data via removable media, rather than exploiting the media to gain access or execute code."
+        },
+        "source_procedures": ["ATM-P0159"]
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "question": "An adversary gaining physical access to a vehicle's OBD-II port can directly access all Electronic Control Units (ECUs) connected to both low and high-speed Controller Area Network (CAN) networks, allowing them to modify firmware and install other malicious software.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Physical access to the OBD-II port allows direct access to ECUs for firmware modification and software installation.",
+            "F": "If the statement were false, physical access via OBD-II would not allow this type of control, contradicting the dataset."
+        },
+        "source_procedures": ["ATM-P0076"]
+    },
+    {
+        "question": "Researchers found that acquiring seeds/keys via brute force is not feasible on any Electronic Control Units (ECUs) on a vehicle's Controller Area Network (CAN).",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "If true, brute forcing seeds/keys would be infeasible, but the dataset indicates it is attainable.",
+            "F": "The dataset specifies that obtaining seeds/keys via brute force is attainable in a matter of days."
+        },
+        "source_procedures": ["ATM-P0178"]
+    },
+    {
+        "question": "A malfunctioning Bluetooth interface can allow an adversary to perform remote exploitation on essential Electronic Control Units (ECUs) by leveraging vulnerabilities in the cellular network interface.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "If true, a Bluetooth interface malfunction would directly involve cellular network vulnerabilities, but the dataset describes separate vulnerabilities for each.",
+            "F": "The dataset describes different interfaces (such as radio or cellular) as paths for remote exploitation, not a direct connection between Bluetooth and cellular vulnerabilities."
+        },
+        "source_procedures": ["ATM-P0095"]
+    },
+    {
+        "question": "Exploiting insecurely stored credentials can allow attackers to gain access without needing to bypass code-signing mechanisms.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The dataset describes situations where accessing hardcoded or insecure credentials can make authentication unnecessary.",
+            "F": "Without accessing insecure credentials, bypassing code-signing would be necessary, which is not applicable here."
+        },
+        "source_procedures": ["ATM-P0178"]
+    },
+    {
+        "question": "Using a modified ECU increases the risk of executing denial-of-service (DoS) attacks on the vehicle's Controller Area Network (CAN).",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "A modified ECU can be used to flood the CAN bus with high-priority messages, preventing normal communication.",
+            "F": "If false, modifying an ECU would not increase DoS attack risk, contradictory to the dataset's description of risks."
+        },
+        "source_procedures": ["ATM-P0181"]
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "question": "In the context of a CAN (Controller Area Network) Message Injection attack aimed at manipulating a vehicle's steering, forcing the Power Steering Control Module (PSCM) into Bootrom enables the adversary to spoof speed-related messages and control the steering wheel.",
+        "options": {
+            "T": "True, forcing the PSCM into Bootrom can facilitate the injection of spoofed messages that enable steering control.",
+            "F": "False, forcing the PSCM into Bootrom does not allow the injection of spoofed messages for steering control."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The procedure specifies that researchers were able to control the steering wheel at any speed by putting the PSCM into Bootrom mode and then sending spoofed messages.",
+            "F": "The false option contradicts the provided procedure that clearly states the possibility of controlling the steering through bootrom mode."
+        },
+        "source_procedures": ["ATM-P0174"]
+    },
+    {
+        "question": "A CAN Message Injection attack that simulates button pushes for cruise control can arbitrarily alter the speed of the vehicle, either accelerating or decelerating it.",
+        "options": {
+            "T": "True, simulating button pushes allows alteration of vehicle speed through cruise control.",
+            "F": "False, simulating button pushes cannot alter vehicle speed regarding cruise control."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The procedure discusses using simulated button pushes in cruise control to manipulate the vehicle's speed.",
+            "F": "The false option is incorrect as the attack specifically outlines manipulating speed via button simulation."
+        },
+        "source_procedures": ["ATM-P0172"]
+    },
+    {
+        "question": "An adversary can manipulate a vehicle's Electronic Parking Brake by using the unintended vehicle network message technique to activate its functions.",
+        "options": {
+            "T": "True, unintended vehicle network messages can be used to activate the Electronic Parking Brake functions.",
+            "F": "False, the unintended vehicle network message technique is unsuitable for activating the Electronic Parking Brake."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "The true option is incorrect because the unintended vehicle network message technique focuses on sending messages that disrupt the intended sequence, not directly activating vehicle functions like the Electronic Parking Brake.",
+            "F": "The false option correctly identifies that unintended message techniques are more about incorrect timing and sequence rather than directly using diagnostic services to activate functions."
+        },
+        "source_procedures": ["ATM-P0036"]
+    },
+    {
+        "question": "In a CAN Message Injection attack, an adversary can utilize aftermarket or dealer equipment connected to the OBD-II port as an entry point to send unintended messages and control ECU functions.",
+        "options": {
+            "T": "True, aftermarket or dealer equipment can provide access for sending unintended messages and controlling ECU functions.",
+            "F": "False, aftermarket or dealer equipment cannot be used to send unintended messages for ECU control."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The procedure indicates that such equipment can be used for entry and message control in the vehicle network.",
+            "F": "The false option incorrectly denies the technical possibility of using such equipment for CAN message injection through the OBD-II port."
+        },
+        "source_procedures": ["ATM-P0136"]
+    },
+    {
+        "question": "Modifying the OS (Operating System) kernel or boot partition is a technique likely used during a CAN Message Injection to spoof RPM messages and control the Power Steering Control Module.",
+        "options": {
+            "T": "True, modifying the OS kernel or boot partition aids in spoofing RPM messages for PSCM control.",
+            "F": "False, modifying the OS kernel or boot partition is not discussed as a method for spoofing RPM messages."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "The true option is incorrect as the dataset does not highlight OS modification as a method for RPM spoofing within the context of PSCM control.",
+            "F": "The false option correctly identifies that steering control and RPM message spoofing are not linked with OS kernel modification in the provided scenarios."
+        },
+        "source_procedures": ["ATM-P0173"]
+    }
+]

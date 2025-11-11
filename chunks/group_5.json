@@ -1,0 +1,219 @@
+[
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers reflashed the media player ECU to send arbitrary CAN packets when a particular message arrives over the FM RDS channel.",
+        "technique": [
+            {
+                "title": "Short Range Wireless Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's short range wireless communication capabilities, including Bluetooth and Wi-Fi, in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.157Z",
+                "mitreId": "T0065",
+                "updatedAt": "2024-08-30T19:19:12.540Z",
+                "id": "ATM-T0065",
+                "lastModifiedAt": "2024-08-30T19:19:12.539Z"
+            },
+            {
+                "title": "Receive Only Communication",
+                "type": "technique",
+                "description": "<p>The adversary can use a receive-only communication channel, such as Radio Data System (RDS) or TPMS to send commands to the compromised vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.151Z",
+                "mitreId": "T0064",
+                "updatedAt": "2024-08-30T19:19:03.897Z",
+                "id": "ATM-T0064",
+                "lastModifiedAt": "2024-08-30T19:19:03.897Z"
+            },
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:41:52.461Z",
+        "updatedAt": "2025-01-30T17:36:03.189Z",
+        "id": "ATM-P0083",
+        "mitreId": "P0083"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers compromised the PassThru device by injecting Bourne Shell commands when exploiting the unauthenticated proprietary API of the device.",
+        "technique": [
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:48:10.826Z",
+        "updatedAt": "2025-01-30T17:36:03.194Z",
+        "id": "ATM-P0084",
+        "mitreId": "P0084"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers injected, through Bluetooth malicious code to persistently pair with a malicious MAC address and accept remote commands post compromise.",
+        "technique": [
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            },
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:50:22.105Z",
+        "updatedAt": "2025-01-30T17:36:03.200Z",
+        "id": "ATM-P0085",
+        "mitreId": "P0085"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers injected CAN packets remotely through the compromised telematics unit by using the telematics exploit to run malicious IRC code that communicates with a malicious IRC server sending commands.",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:53:46.345Z",
+        "updatedAt": "2025-01-30T17:36:03.204Z",
+        "id": "ATM-P0086",
+        "mitreId": "P0086"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers injected arbitrary CAN packets remotely by reflashing the tire pressure ECU via CAN to detect wireless trigger packets and using a custom packet generator to generate packets that worked with the tire pressure ECU.",
+        "technique": [
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            },
+            {
+                "title": "Reprogram ECU for Lateral Movement",
+                "type": "technique",
+                "description": "<p>The adversary may attempt to move laterally in a vehicle's network by reprogramming an ECU via its software update mechanisms. This can be successful if an ECU on the vehicle network does not possess a mechanism to verify the authenticity of a software update. Flaws in the verification mechanism, including weak cryptography, coding errors, and the failure to address version rollback attacks, can result in <a href=\"Bypass-code-signing_285147204.html\">Bypass code signing</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.156Z",
+                "mitreId": "T0054",
+                "updatedAt": "2024-08-30T19:17:07.926Z",
+                "id": "ATM-T0054",
+                "lastModifiedAt": "2024-08-30T19:17:07.925Z"
+            },
+            {
+                "title": "Bypass UDS Security Access",
+                "type": "technique",
+                "description": "<p>Adversaries may find ways to bypass or defeat the Universal Diagnostic Services \u201cSecurity Access / mode 0x27\u201d security mechanism. Implementation details for this mechanism are not part of the standard and an adversary could seek to defeat mechanisms that use a common secret value on all devices of a given make and model, static challenge-response mechanisms, mechanisms that use short secrets susceptible to brute forcing, and other approaches including diagnostic session hijacking.</p>",
+                "createdAt": "2023-08-09T09:51:19.140Z",
+                "mitreId": "T0033",
+                "updatedAt": "2024-08-30T19:14:00.987Z",
+                "id": "ATM-T0033",
+                "lastModifiedAt": "2024-08-30T19:14:00.987Z"
+            },
+            {
+                "title": "Abuse UDS for Collection",
+                "type": "technique",
+                "description": "<p>The adversary can attempt to abuse UDS 'read' capabilities, such as 'read memory by address' to access customer information from an ECU's storage or memory.</p>",
+                "createdAt": "2023-08-09T09:51:19.125Z",
+                "mitreId": "T0055",
+                "updatedAt": "2024-08-30T19:17:20.377Z",
+                "id": "ATM-T0055",
+                "lastModifiedAt": "2024-08-30T19:17:20.377Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:55:10.721Z",
+        "updatedAt": "2025-01-30T17:36:03.209Z",
+        "id": "ATM-P0087",
+        "mitreId": "P0087"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers communicated with a PassThru device (device connecting to OBD-II) by connecting to the local wireless network and exploiting unauthenticated communication between the device and a Windows computer.",
+        "technique": [
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:47:29.795Z",
+        "updatedAt": "2025-01-30T17:36:03.289Z",
+        "id": "ATM-P0097",
+        "mitreId": "P0097"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers injected pre-programmed CAN messages by installing and executing a malicious binary on the PassThru device which is connected to a vehicle.",
+        "technique": [
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            },
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:48:42.956Z",
+        "updatedAt": "2025-01-30T17:36:03.293Z",
+        "id": "ATM-P0098",
+        "mitreId": "P0098"
+    }
+]

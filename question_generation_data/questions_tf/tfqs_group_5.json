@@ -1,0 +1,67 @@
+[
+    {
+        "question": "In the 'Comprehensive Experimental Analyses of Automotive Attack Surfaces' procedure, researchers reflashed the media player ECU to send arbitrary Controller Area Network (CAN) packets using an exploit on the Radio Data System (RDS) channel. This scenario involves using a short-range wireless communication technique for post-exploitation command and control.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Explanation for why T is correct/incorrect",
+            "F": "This statement is false because the technique used involved receive-only communication, specifically through the RDS, rather than short-range wireless communication such as Bluetooth or Wi-Fi."
+        },
+        "source_procedures": ["ATM-P0083"]
+    },
+    {
+        "question": "The technique 'Reprogram ECU for Lateral Movement' is demonstrated in a scenario where researchers remotely injected arbitrary CAN packets by reflashing the tire pressure ECU to recognize wireless trigger packets.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This statement is true because the researchers used reprogramming of the ECU to create a new behavior in the tire pressure ECU, which is lateral movement within the vehicle's network.",
+            "F": "Explanation for why F is correct/incorrect"
+        },
+        "source_procedures": ["ATM-P0087"]
+    },
+    {
+        "question": "In a documented attack scenario, exploiting the PassThru device involved the transmission of malicious commands over a USB connection, leveraging unauthenticated communication with a Windows computer.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Explanation for why T is correct/incorrect",
+            "F": "This statement is false. The PassThru device was exploited through the local wireless network, not a USB connection, indicating the use of wireless communication vulnerabilities."
+        },
+        "source_procedures": ["ATM-P0097"]
+    },
+    {
+        "question": "The researchers used the technique 'Unintended Vehicle Network Message' to send unauthorized CAN messages through a compromised telematics unit by executing malicious Internet Relay Chat (IRC) code.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This statement is true as the scenario describes sending unintended CAN messages via a compromised communication system, fitting the definition of the 'Unintended Vehicle Network Message' technique.",
+            "F": "Explanation for why F is correct/incorrect"
+        },
+        "source_procedures": ["ATM-P0086"]
+    },
+    {
+        "question": "The 'Modify OS Kernel, Boot Partition, or System Partition' technique was used to persistently pair with a malicious Media Access Control (MAC) address using Bluetooth in an automotive attack scenario.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Explanation for why T is correct/incorrect",
+            "F": "This statement is false because the persistence described was achieved through injecting malicious Bluetooth code, not by modifying the OS kernel, boot partition, or system partition."
+        },
+        "source_procedures": ["ATM-P0085"]
+    }
+]

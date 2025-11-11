@@ -1,0 +1,23 @@
+[
+    {
+        "type": "procedure",
+        "title": "Extracting SecOC secrets from an ECU",
+        "description": "The researcher installed RAM-based code to read out the SecOC keys, credentials include all security-related secrets (e.g., keys, passwords, etc) other than personal user information",
+        "technique": [
+            {
+                "title": "ECU Credential Dumping",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password, from the operating system and software. Credentials can then be used to perform&nbsp;<a href=\"https://attack.mitre.org/tactics/TA0008\">Lateral Movement</a>&nbsp;and access restricted information.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1003/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.160Z",
+                "mitreId": "T0039",
+                "updatedAt": "2024-08-30T19:14:58.704Z",
+                "id": "ATM-T0039",
+                "lastModifiedAt": "2024-08-30T19:14:58.703Z"
+            }
+        ],
+        "createdAt": "2024-08-23T21:02:10.479Z",
+        "updatedAt": "2025-01-30T17:36:03.799Z",
+        "id": "ATM-P0196",
+        "mitreId": "P0196"
+    }
+]

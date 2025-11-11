@@ -1,0 +1,316 @@
+[
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "By having physical access to the OBD-II port, the researchers were able to directly access all ECUs connected to low and high-speed CAN networks, allowing for firmware modification and installation of other malicious software.",
+        "technique": [
+            {
+                "title": "Physical Modification",
+                "type": "technique",
+                "description": "<p>The adversary can make physical modifications to the vehicle's ECUs, wiring harnesses, and can replace ECUs.</p><p>Some ECUs possess physical debug interfaces that are not exposed outside their enclosures. With sufficient time, an adversary can partially disassemble the vehicle to obtain physical access to these ECUs, remove their enclosures, and connect or solder cables to access these debug interfaces.</p><p>Direct physical access can also be used by an adversary to attempt different types of glitching attacks, side channel attacks, memory removal, reprogramming, and replacement, as well as others.</p><p>To gain access to a vehicle an adversary could replace an ECU with one they have modified ahead of time (e.g., a modified service or junkyard part).</p>",
+                "createdAt": "2023-08-09T09:51:19.165Z",
+                "mitreId": "T0016",
+                "updatedAt": "2024-08-30T19:09:25.323Z",
+                "id": "ATM-T0016",
+                "lastModifiedAt": "2024-08-30T19:09:25.323Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:00:41.041Z",
+        "updatedAt": "2025-01-30T17:36:03.153Z",
+        "id": "ATM-P0076",
+        "mitreId": "P0076"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "The telematics module was reprogrammed to allow for bridging of the two networks and thus lateral movement throughout the vehicle's internal networks.",
+        "technique": [
+            {
+                "title": "Reprogram ECU for Lateral Movement",
+                "type": "technique",
+                "description": "<p>The adversary may attempt to move laterally in a vehicle's network by reprogramming an ECU via its software update mechanisms. This can be successful if an ECU on the vehicle network does not possess a mechanism to verify the authenticity of a software update. Flaws in the verification mechanism, including weak cryptography, coding errors, and the failure to address version rollback attacks, can result in <a href=\"Bypass-code-signing_285147204.html\">Bypass code signing</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.156Z",
+                "mitreId": "T0054",
+                "updatedAt": "2024-08-30T19:17:07.926Z",
+                "id": "ATM-T0054",
+                "lastModifiedAt": "2024-08-30T19:17:07.925Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:02:52.271Z",
+        "updatedAt": "2025-01-30T17:36:03.158Z",
+        "id": "ATM-P0077",
+        "mitreId": "P0077"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "The researchers were able to dump the memory from nearly any ECU connected to the CAN networks.",
+        "technique": [
+            {
+                "title": "Abuse UDS for Collection",
+                "type": "technique",
+                "description": "<p>The adversary can attempt to abuse UDS 'read' capabilities, such as 'read memory by address' to access customer information from an ECU's storage or memory.</p>",
+                "createdAt": "2023-08-09T09:51:19.125Z",
+                "mitreId": "T0055",
+                "updatedAt": "2024-08-30T19:17:20.377Z",
+                "id": "ATM-T0055",
+                "lastModifiedAt": "2024-08-30T19:17:20.377Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:03:43.143Z",
+        "updatedAt": "2025-01-30T17:36:03.163Z",
+        "id": "ATM-P0078",
+        "mitreId": "P0078"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "The researchers could modify the firmware of the telematics module to allow attackers to exfiltrate data.",
+        "technique": [
+            {
+                "title": "Internet Communication",
+                "type": "technique",
+                "description": "<p>The adversary can use a compromised ECU's internet connection (if available) for command and control and to exfiltrate data.</p>",
+                "createdAt": "2023-08-09T09:51:19.144Z",
+                "mitreId": "T0063",
+                "updatedAt": "2024-08-30T19:18:15.781Z",
+                "id": "ATM-T0063",
+                "lastModifiedAt": "2024-08-30T19:18:15.781Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:05:25.231Z",
+        "updatedAt": "2025-01-30T17:36:03.169Z",
+        "id": "ATM-P0079",
+        "mitreId": "P0079"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "Radio and other telematics-related interfaces were used to gain initial access: \u201cIn our car we identified no fewer than five kinds of digital radio interfaces accepting outside input, some over only a short range and others over indefinite distance\u2026We have developed the ability to remotely compromise key ECUs in our car via externally-facing vulnerabilities.\u201c",
+        "technique": [
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:00:21.502Z",
+        "updatedAt": "2025-01-30T17:36:03.279Z",
+        "id": "ATM-P0095",
+        "mitreId": "P0095"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "The telematics modules or any other ECU can be modified to include malicious code that allows for persistence of attack.",
+        "technique": [
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:00:58.711Z",
+        "updatedAt": "2025-01-30T17:36:03.284Z",
+        "id": "ATM-P0096",
+        "mitreId": "P0096"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "A laptop plugged into the OBD-II port of the vehicle was used to gain initial access for the execution of attacks by using the researchers' custom CAN analysis and modification tool. Other aftermarket equipment containing malicious software can be installed in the vehicle to introduce a mode of access to execute attacks.",
+        "technique": [
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:59:49.488Z",
+        "updatedAt": "2025-01-30T17:36:03.541Z",
+        "id": "ATM-P0146",
+        "mitreId": "P0146"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "\u201c\u2026acquiring the seeds/keys via bruteforce is attainable in a matter of days. Additionally, there are some keys/seeds that are hardcoded, thus making credential access even easier.\u201d In some cases it was also found that the challenge-response algorithm's result was never used, thus removing the need for credential authentication at all to run attacks.",
+        "technique": [
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:01:44.390Z",
+        "updatedAt": "2025-01-30T17:36:03.715Z",
+        "id": "ATM-P0178",
+        "mitreId": "P0178"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "The researchers can collect many types of telemetry data, including vehicle speed, acceleration, fuel level, and brake pressure. This data can be used as part of a further attack by giving the attacker information they can use to modify vehicle performance or change what the occupants see.",
+        "technique": [
+            {
+                "title": "Access vehicle telemetry",
+                "type": "technique",
+                "description": "\n<p>Adversaries may try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p></div>\n</div>\n<div class=\"cell aside\" data-type=\"aside\">\n",
+                "createdAt": "2023-08-09T09:51:19.144Z",
+                "mitreId": "T0057",
+                "updatedAt": "2023-08-09T13:56:07.964Z",
+                "id": "ATM-T0057"
+            }
+        ],
+        "createdAt": "2023-12-07T18:03:25.188Z",
+        "updatedAt": "2025-01-30T17:36:03.720Z",
+        "id": "ATM-P0179",
+        "mitreId": "P0179"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "The researchers could use CARSHARK to send unintended CAN messages to affect vehicle function via nearly any ECU in the vehicle.",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:03:59.697Z",
+        "updatedAt": "2025-01-30T17:36:03.725Z",
+        "id": "ATM-P0180",
+        "mitreId": "P0180"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "CAN is inherently susceptible to DoS attacks, and the researchers highlighted this in their report. With their tools, it would seem trivial to execute one of these attacks to affect vehicle function.",
+        "technique": [
+            {
+                "title": "CAN Bus Denial of Service",
+                "type": "technique",
+                "description": "<p>An adversary with access to one of the vehicle's CAN busses may be able to perform a denial-of-service attack by flooding the bus with high-priority messages, preventing other ECUs from being able to communicate.</p>",
+                "createdAt": "2023-08-09T09:51:19.145Z",
+                "mitreId": "T0068",
+                "updatedAt": "2024-08-30T19:20:39.803Z",
+                "id": "ATM-T0068",
+                "lastModifiedAt": "2024-08-30T19:20:39.803Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:04:21.277Z",
+        "updatedAt": "2025-01-30T17:36:03.729Z",
+        "id": "ATM-P0181",
+        "mitreId": "P0181"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "The researchers were able to develop \u201cthe ability to remotely compromise key ECUs in our car via externally-facing vulnerabilities, amplify the impact of these remote compromises using the results in this paper, and ultimately monitor and control our car remotely over the Internet.\u201c",
+        "technique": [
+            {
+                "title": "Short Range Wireless Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's short range wireless communication capabilities, including Bluetooth and Wi-Fi, in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.157Z",
+                "mitreId": "T0065",
+                "updatedAt": "2024-08-30T19:19:12.540Z",
+                "id": "ATM-T0065",
+                "lastModifiedAt": "2024-08-30T19:19:12.539Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:04:50.473Z",
+        "updatedAt": "2025-01-30T17:36:03.734Z",
+        "id": "ATM-P0182",
+        "mitreId": "P0182"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "After connecting to the OBD-II port, the researchers determined what ECUs were connected to the internal CAN networks in order to determine where to facilitate different attacks.",
+        "technique": [
+            {
+                "title": "System Network Connections Discovery",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to get a listing of network connections to or from the compromised system they are currently accessing or from remote systems by querying for information over the network.</p><p>An adversary who gains access to a system that is part of a cloud-based environment may map out Virtual Private Clouds or Virtual Networks in order to determine what systems and services are connected. The actions performed are likely the same types of discovery techniques depending on the operating system, but the resulting information may include details about the networked cloud environment relevant to the adversary's goals. Cloud providers may have different ways in which their virtual networks operate.<a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html\">[1]</a><a href=\"https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview\">[2]</a><a href=\"https://cloud.google.com/vpc/docs/vpc\">[3]</a></p><p>Utilities and commands that acquire this information include&nbsp;netstat, \"net use,\" and \"net session\" with&nbsp;Net. In Linux,&nbsp;netstat&nbsp;and&nbsp;<code>lsof</code>&nbsp;can be used to list current connections.&nbsp;<code>who -a</code>&nbsp;and&nbsp;<code>w</code>&nbsp;can be used to show which users are currently logged in, similar to \"net session\".</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1049/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.170Z",
+                "mitreId": "T0049",
+                "updatedAt": "2024-08-30T19:16:10.924Z",
+                "id": "ATM-T0049",
+                "lastModifiedAt": "2024-08-30T19:16:10.924Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:02:06.881Z",
+        "updatedAt": "2025-01-30T17:36:03.756Z",
+        "id": "ATM-P0187",
+        "mitreId": "P0187"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile",
+        "description": "To be able to execute their attacks, the researchers moved laterally through the internal CAN networks of the vehicle. This included transitioning between the low and high-speed networks for accessing different ECUs.",
+        "technique": [
+            {
+                "title": "Bridge Vehicle Networks",
+                "type": "technique",
+                "description": "<p>The adversary may seek to bridge vehicle vehicle networks to obtain their objectives.</p><p>Some ECUs may possess multiple interfaces to the vehicle network, including interfaces that use different networking technologies, and an adversary could modify these ECUs to bridge networks that would otherwise be separated.</p><p>For example, an adversary that has gained initial access on an ECU with a connection to a vehicle's Ethernet network may attempt to modify an ECU that is connected to the vehicle's Ethernet and CAN networks so that they can extend their reach to ECU on the vehicle's CAN network.</p>",
+                "createdAt": "2023-08-09T09:51:19.132Z",
+                "mitreId": "T0051",
+                "updatedAt": "2024-08-30T19:16:42.863Z",
+                "id": "ATM-T0051",
+                "lastModifiedAt": "2024-08-30T19:16:42.863Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:02:24.802Z",
+        "updatedAt": "2025-01-30T17:36:03.761Z",
+        "id": "ATM-P0188",
+        "mitreId": "P0188"
+    },
+    {
+        "type": "procedure",
+        "title": "Experimental Security Analysis of a Modern Automobile ",
+        "description": "The researchers can collect many types of telemetry data, including vehicle speed, acceleration, fuel level, and brake pressure. This data can be used as part of a further attack by giving the attacker information they can use to modify vehicle performance or change what the occupants see. ",
+        "technique": [
+            {
+                "title": "Network Sniffing",
+                "type": "technique",
+                "description": "<p>Adversaries may sniff vehicle network traffic to capture information about an environment, including authentication material passed over the vehicle network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless vehicle network connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.</p><p>Data captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.</p><p>Network sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.</p><p>Adversaries may also try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1040/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.155Z",
+                "mitreId": "T0038",
+                "updatedAt": "2024-08-30T19:14:51.336Z",
+                "id": "ATM-T0038",
+                "lastModifiedAt": "2024-08-30T19:14:51.335Z"
+            }
+        ],
+        "createdAt": "2024-08-23T21:02:04.407Z",
+        "updatedAt": "2025-01-30T17:36:03.788Z",
+        "id": "ATM-P0194",
+        "mitreId": "P0194"
+    }
+]

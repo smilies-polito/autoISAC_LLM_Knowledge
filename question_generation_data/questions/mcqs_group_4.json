@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the scenario where researchers were able to activate brakes using the Anti-lock Braking System, which two systems did the researchers disable before replaying the collision event messages?",
+        "options": {
+            "A": "Adaptive Cruise Control (ACC) and Front Facing Camera Module (FFCM)",
+            "B": "Electronic Control Unit (ECU) and Speedometer",
+            "C": "Engine Control Module (ECM) and Steering Column Control Module (SCCM)",
+            "D": "Battery Management System (BMS) and Transmission Control Module (TCM)"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. The researchers disabled both Adaptive Cruise Control (ACC) and Front Facing Camera Module (FFCM) before replaying the messages.",
+            "B": "Incorrect. ECU and Speedometer were not the systems disabled in this scenario.",
+            "C": "Incorrect. ECM and SCCM are not the systems mentioned in this scenario.",
+            "D": "Incorrect. BMS and TCM were not involved in this procedure."
+        },
+        "source_procedures": ["ATM-P0034"]
+    },
+    {
+        "question": "What method did researchers utilize to lock the parking brake indefinitely in a stationary car?",
+        "options": {
+            "A": "By disabling the ABS and repeatedly applying the service brake",
+            "B": "By engaging the parking brake and forcing the Electronic Parking Module into Bootrom",
+            "C": "By sending continuous CAN messages to the traction control system",
+            "D": "By removing the power supply to the parking brake system"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. This method involves disabling ABS, which is not mentioned in the procedure.",
+            "B": "Correct. The technique involved engaging the parking brake and forcing the Electronic Parking Module into Bootrom.",
+            "C": "Incorrect. The use of continuous CAN messages to the traction control system was not part of this procedure.",
+            "D": "Incorrect. Removing power supply was not the method used."
+        },
+        "source_procedures": ["ATM-P0037"]
+    },
+    {
+        "question": "What could an adversary use to gain initial access into a vehicle's network, as outlined in the Auto-ISAC procedures?",
+        "options": {
+            "A": "A customer paired smartphone via Bluetooth",
+            "B": "A direct physical connection to the vehicle's battery",
+            "C": "A mechanical override of the vehicle’s ignition system",
+            "D": "A satellite link to the vehicle’s navigation system"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. A customer paired smartphone can serve as an initial access point through its Bluetooth and Wi-Fi connections.",
+            "B": "Incorrect. A direct physical connection to the battery is not mentioned as an access method.",
+            "C": "Incorrect. There is no mention of mechanical override of the ignition system for network access.",
+            "D": "Incorrect. There is no mention of using a satellite link for gaining initial access."
+        },
+        "source_procedures": ["ATM-P0031"]
+    },
+    {
+        "question": "Which vulnerability involving ECU reprogramming allows adversaries to perform lateral movement in a vehicle's network?",
+        "options": {
+            "A": "Weak cryptography in software update mechanism",
+            "B": "Inadequate physical security of the vehicle",
+            "C": "Publicly exposed CAN message logs",
+            "D": "Lack of firewall between vehicle's subsystems"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. Weak cryptography in the software update mechanism can be exploited for lateral movement.",
+            "B": "Incorrect. Physical security is not the focus of the ECU reprogramming vulnerability.",
+            "C": "Incorrect. Public exposure of CAN message logs is not related to ECU reprogramming.",
+            "D": "Incorrect. The lack of a firewall is relevant to network security but not specifically to ECU reprogramming."
+        },
+        "source_procedures": ["ATM-P0031"]
+    },
+    {
+        "question": "How can adversaries leverage 'Unsecured Credentials' to undermine a vehicle's ECU security according to the dataset?",
+        "options": {
+            "A": "By exploiting vulnerabilities in the ECU's firmware",
+            "B": "By searching compromised systems for insecurely stored credentials",
+            "C": "By intercepting radio signals from the vehicle",
+            "D": "By conducting hardware-based attacks on the ECU"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. The exploitation of firmware vulnerabilities is a different approach.",
+            "B": "Correct. Adversaries may find and obtain insecurely stored credentials to undermine ECU security.",
+            "C": "Incorrect. Intercepting radio signals is not mentioned in this context.",
+            "D": "Incorrect. Hardware-based attacks do not involve the use of unsecured credentials."
+        },
+        "source_procedures": ["ATM-P0032", "ATM-P0033"]
+    }
+]

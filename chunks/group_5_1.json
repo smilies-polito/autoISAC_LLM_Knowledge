@@ -1,0 +1,232 @@
+
+[
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers found that the aqLink protocol supported larger packet sizes than used in the custom code related to the Command protocol. They can exploit a buffer overflow from this vulnerability.",
+        "technique": [
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:51:26.619Z",
+        "updatedAt": "2025-01-30T17:36:03.298Z",
+        "id": "ATM-P0099",
+        "mitreId": "P0099"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers forced the telematics unit to download and execute arbitrary payload from the internet by exploiting the call authentication and buffer overflow vulnerabilities.",
+        "technique": [
+            {
+                "title": "Reprogram ECU for Lateral Movement",
+                "type": "technique",
+                "description": "<p>The adversary may attempt to move laterally in a vehicle's network by reprogramming an ECU via its software update mechanisms. This can be successful if an ECU on the vehicle network does not possess a mechanism to verify the authenticity of a software update. Flaws in the verification mechanism, including weak cryptography, coding errors, and the failure to address version rollback attacks, can result in <a href=\"Bypass-code-signing_285147204.html\">Bypass code signing</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.156Z",
+                "mitreId": "T0054",
+                "updatedAt": "2024-08-30T19:17:07.926Z",
+                "id": "ATM-T0054",
+                "lastModifiedAt": "2024-08-30T19:17:07.925Z"
+            },
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:52:12.620Z",
+        "updatedAt": "2025-01-30T17:36:03.303Z",
+        "id": "ATM-P0100",
+        "mitreId": "P0100"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers injected arbitrary payloads from a compromised ECU that monitored broadcasted tire pressure signals and used them as a trigger.",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            },
+            {
+                "title": "Short Range Wireless Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's short range wireless communication capabilities, including Bluetooth and Wi-Fi, in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.157Z",
+                "mitreId": "T0065",
+                "updatedAt": "2024-08-30T19:19:12.540Z",
+                "id": "ATM-T0065",
+                "lastModifiedAt": "2024-08-30T19:19:12.539Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:53:58.646Z",
+        "updatedAt": "2025-01-30T17:36:03.307Z",
+        "id": "ATM-P0101",
+        "mitreId": "P0101"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers prepared to exploit the media player's read functions by overwriting function pointers. They developed an in-system debugger to overwrite the function pointers through an unused serial port of the media player.",
+        "technique": [
+            {
+                "title": "Exploit via Removable Media",
+                "type": "technique",
+                "description": "<p>Adversaries may gain initial access to an automotive environment by copying malware to removable media and taking advantage of Autorun features or automatic parsing of file (e.g., MP3s) when the device is inserted into a system and executes. This may occur through manual manipulation of the media, modification of systems used to initially format the media, or modification to the media's firmware itself.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1091/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.146Z",
+                "mitreId": "T0013",
+                "updatedAt": "2024-08-30T19:09:09.313Z",
+                "id": "ATM-T0013",
+                "lastModifiedAt": "2024-08-30T19:09:09.312Z"
+            },
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:40:12.078Z",
+        "updatedAt": "2025-01-30T17:36:03.738Z",
+        "id": "ATM-P0183",
+        "mitreId": "P0183"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers injected arbitrary payloads through bluetooth to the telematics system by using a paired Android phone with a malicious Trojan Horse application. They exploited the custom telematics program which had unsafe usages of the strcpy function to the stack when handling a Bluetooth configuration command.",
+        "technique": [
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:49:27.887Z",
+        "updatedAt": "2025-01-30T17:36:03.743Z",
+        "id": "ATM-P0184",
+        "mitreId": "P0184"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers sniffed the vehicle's Bluetooth MAC address using the Bluesniff package and a USRP-based software radio. Researchers also were able to obtain the MAC address by sniffing the Bluetooth traffic when a previous device was paired to the vehicle.",
+        "technique": [
+            {
+                "title": "Network Sniffing",
+                "type": "technique",
+                "description": "<p>Adversaries may sniff vehicle network traffic to capture information about an environment, including authentication material passed over the vehicle network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless vehicle network connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.</p><p>Data captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.</p><p>Network sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.</p><p>Adversaries may also try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1040/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.155Z",
+                "mitreId": "T0038",
+                "updatedAt": "2024-08-30T19:14:51.336Z",
+                "id": "ATM-T0038",
+                "lastModifiedAt": "2024-08-30T19:14:51.335Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:49:48.294Z",
+        "updatedAt": "2025-01-30T17:36:03.748Z",
+        "id": "ATM-P0185",
+        "mitreId": "P0185"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers were able to have unauthorized communication with the telematics unit by creating a custom aqLink-compatible software modem by reverse engineering the aqLink protocol and telematics proprietary Command protocol.",
+        "technique": [
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:51:13.085Z",
+        "updatedAt": "2025-01-30T17:36:03.752Z",
+        "id": "ATM-P0186",
+        "mitreId": "P0186"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers injected arbitrary CAN packets by exploiting the media player's CD data reflashing logic and overwritten function pointers. They burned a malicious WMA audio file onto a CD which sent the CAN packets when played.",
+        "technique": [
+            {
+                "title": "Exploit via Removable Media",
+                "type": "technique",
+                "description": "<p>Adversaries may gain initial access to an automotive environment by copying malware to removable media and taking advantage of Autorun features or automatic parsing of file (e.g., MP3s) when the device is inserted into a system and executes. This may occur through manual manipulation of the media, modification of systems used to initially format the media, or modification to the media's firmware itself.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1091/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.146Z",
+                "mitreId": "T0013",
+                "updatedAt": "2024-08-30T19:09:09.313Z",
+                "id": "ATM-T0013",
+                "lastModifiedAt": "2024-08-30T19:09:09.312Z"
+            },
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:40:47.457Z",
+        "updatedAt": "2025-01-30T17:36:03.770Z",
+        "id": "ATM-P0190",
+        "mitreId": "P0190"
+    },
+    {
+        "type": "procedure",
+        "title": "Comprehensive Experimental Analyses of Automotive Attack Surfaces",
+        "description": "Researchers connected a malicious device to the vehicle using the sniffed MAC address and using a laptop to brute-force the Bluetooth pairing PIN used for the Bluetooth pairing request.",
+        "technique": [
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:50:04.762Z",
+        "updatedAt": "2025-01-30T17:36:03.774Z",
+        "id": "ATM-P0191",
+        "mitreId": "P0191"
+    }
+]

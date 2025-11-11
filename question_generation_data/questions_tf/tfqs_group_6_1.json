@@ -1,0 +1,67 @@
+[
+    {
+        "question": "An adversary attempting to send spoofed Controller Area Network (CAN) messages to a vehicle's Electronic Control Unit (ECU) to cause unintended vehicle functions, such as activating the brakes through the Pre-Collision System, is utilizing the technique of Unintended Vehicle Network Message.",
+        "options": {
+            "T": "True, this matches the technique of Unintended Vehicle Network Message which includes sending messages the host is not supposed to send.",
+            "F": "False, this scenario does not relate to Unintended Vehicle Network Message, as activating brakes through spoofed messages is covered by a different technique."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "True is correct because the described scenario involves sending unauthorized or wrongly timed messages to vehicle systems, which aligns with the Unintended Vehicle Network Message technique.",
+            "F": "False is incorrect because the misuse of CAN messages in the described scenario is a textbook case of the Unintended Vehicle Network Message technique."
+        },
+        "source_procedures": ["ATM-P0165", "ATM-P0128"]
+    },
+    {
+        "question": "Using Techstream software and a J2534 pass-thru device to manipulate a vehicle without performing real-world tasks reflects the Abuse UDS for Affecting Vehicle Function technique.",
+        "options": {
+            "T": "True, using diagnostic tools to control vehicle functions without real-world tasks matches this technique.",
+            "F": "False, this activity does not relate to abusing Universal Diagnostic Services and reflects a different technique."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "True is incorrect because the scenario primarily involves manipulating vehicle functions, which falls under the category of diagnostic equipment abuse, not specifically UDS abuse.",
+            "F": "False is correct. The scenario involves manipulating vehicle functions through diagnostic equipment, which is a different technique involving aftermarket or dealer equipment."
+        },
+        "source_procedures": ["ATM-P0131", "ATM-P0168"]
+    },
+    {
+        "question": "By exploiting weaknesses in authentication mechanisms to bypass Universal Diagnostic Services (UDS) security and create keys, an adversary is engaging in the Bypass UDS Security Access technique.",
+        "options": {
+            "T": "True, bypassing UDS security to generate keys matches the Bypass UDS Security Access technique.",
+            "F": "False, exploiting authentication mechanisms like this does not fall under the Bypass UDS Security Access technique."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "True is correct because the described scenario explicitly involves bypassing UDS security mechanisms, which is central to the Bypass UDS Security Access technique.",
+            "F": "False is incorrect because the scenario is clearly about bypassing security in UDS, fitting the Bypass UDS Security Access technique."
+        },
+        "source_procedures": ["ATM-P0167"]
+    },
+    {
+        "question": "Replaying CAN packets to manipulate the Internal Combustion Engine of a vehicle indicates the use of Abuse UDS for Affecting Vehicle Function.",
+        "options": {
+            "T": "True, replaying CAN packets to affect the engine uses the Abuse UDS technique.",
+            "F": "False, this scenario involves Unintended Vehicle Network Message rather than Abuse UDS."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "True is incorrect because the scenario involves replaying CAN packets, which fits the Unintended Vehicle Network Message technique rather than Abuse UDS.",
+            "F": "False is correct since the action of replaying CAN packets corresponds to sending unintended vehicle network messages, not directly related to UDS manipulation."
+        },
+        "source_procedures": ["ATM-P0166"]
+    },
+    {
+        "question": "Taking control of a vehicle's Electronic Control Units (ECUs) by writing arbitrary CAN packets aligns with the Reprogram ECU for Lateral Movement technique.",
+        "options": {
+            "T": "True, sending arbitrary CAN packets to control ECUs fits the Reprogram ECU for Lateral Movement technique.",
+            "F": "False, writing arbitrary CAN packets does not align with reprogramming ECUs for lateral movement."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "True is incorrect because while writing CAN packets involves network manipulation, reprogramming ECUs for lateral movement usually involves updating ECU software.",
+            "F": "False is correct as the technique of Reprogram ECU for Lateral Movement involves updating or changing the ECU's software, not just sending arbitrary packets."
+        },
+        "source_procedures": ["ATM-P0195"]
+    }
+]

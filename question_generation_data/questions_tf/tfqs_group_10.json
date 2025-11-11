@@ -1,0 +1,67 @@
+[
+    {
+        "question": "An attacker uses the Multi-Sensor Fusion (MSF) system's design weakness to spoof GPS signals, causing a vehicle to trust inaccurate location coordinates more than other sources. The in-vehicle system sends unintended messages because of these false coordinates, helping the vehicle to remain in lane safely.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This would mean the spoofing attack makes the vehicle stay in lane, which contradicts the procedure of causing lane departure.",
+            "F": "The correct interpretation is that spoofing the GPS signals causes the vehicle to miscalculate its position, potentially leading to lane departure, not safe lane keeping."
+        },
+        "source_procedures": ["ATM-P0013", "ATM-P0048", "ATM-P0155"]
+    },
+    {
+        "question": "An attacker uses unintended vehicle network messages to manipulate a vehicle's actions, such as unauthorized diagnostic functions and controlling headlamps.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Unintended messages do not specifically relate to diagnostic functions or headlamp control; these actions are related to the abuse of Universal Diagnostic Services (UDS).",
+            "F": "Correct, the abuse of UDS relates to diagnostic functions and control, while unintended messages are a separate vector."
+        },
+        "source_procedures": ["ATM-P0061"]
+    },
+    {
+        "question": "By utilizing third-party OBD-II accessories, adversaries can gain initial access to a vehicle's network, potentially allowing them to exfiltrate data using paired devices.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Correct, third-party OBD-II accessories can provide a wireless ingress point, and paired devices can be used for data exfiltration.",
+            "F": "This statement is incorrect because it aligns with the described techniques of using aftermarket or dealer equipment to gain access."
+        },
+        "source_procedures": ["ATM-P0014", "ATM-P0154"]
+    },
+    {
+        "question": "An adversary exploits a Bluetooth connection vulnerability to gain remote code execution in a vehicle by targeting its short-range wireless communication capabilities.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Correct, targeting Bluetooth for remote code execution through wireless communication capabilities matches the described procedure.",
+            "F": "This is incorrect because the procedure specifically involves exploiting Bluetooth, supporting remote code execution via wireless capabilities."
+        },
+        "source_procedures": ["ATM-P0060", "ATM-P0124"]
+    },
+    {
+        "question": "Exploiting the vehicle's Wi-Fi network to execute remote commands through an exposed diagnostic interface aligns with the described use of aftermarket equipment.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "The true statement would involve exploiting the vehicle's diagnostic tools through direct access, not just Wi-Fi exploitation.",
+            "F": "Correct, aftermarket equipment exploitation pertains to initial access through devices like the OBD-II port, not just Wi-Fi network exploitation."
+        },
+        "source_procedures": ["ATM-P0022", "ATM-P0014"]
+    }
+]

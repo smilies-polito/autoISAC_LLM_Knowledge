@@ -1,0 +1,87 @@
+[
+    {
+        "question": "What method is used by adversaries to gain escalated privileges through unpatched vulnerabilities in the operating system?",
+        "options": {
+            "A": "By exploiting the Universal Diagnostic Services (UDS) security mechanism",
+            "B": "By exploiting an operating system (OS) kernel vulnerability",
+            "C": "By using Telnet for lateral movement",
+            "D": "By setting up a rogue Wi-Fi access point"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Exploiting UDS security is related to bypassing diagnostic security, not OS vulnerabilities.",
+            "B": "Correct. Adversaries exploit OS kernel vulnerabilities to escalate privileges.",
+            "C": "Telnet is used for lateral movement, not for exploiting OS vulnerabilities.",
+            "D": "A rogue Wi-Fi access point is used for network attacks, not OS vulnerabilities."
+        },
+        "source_procedures": ["ATM-P0001"]
+    },
+    {
+        "question": "Which technique involves unauthorized transmission of messages on the in-vehicle network, potentially leading to unintended vehicle functions being triggered?",
+        "options": {
+            "A": "Bypass Universal Diagnostic Services (UDS) Security Access",
+            "B": "Rogue Wi-Fi Access Point",
+            "C": "Unintended Vehicle Network Message",
+            "D": "Remote Services"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Bypassing UDS involves defeating access mechanisms, not sending messages.",
+            "B": "Rogue Wi-Fi involves network-based attacks, not vehicle network messages.",
+            "C": "Correct. This technique involves sending unauthorized messages on the vehicle network.",
+            "D": "Remote services involve logging into remote connections, not sending vehicle messages."
+        },
+        "source_procedures": ["ATM-P0045"]
+    },
+    {
+        "question": "What is a method used by adversaries to access the Gateway ECU through the CID using static credentials?",
+        "options": {
+            "A": "By exploiting an OS kernel vulnerability",
+            "B": "By sniffing network traffic to capture credentials",
+            "C": "By accessing stored static credentials in the firmware",
+            "D": "By setting up a rogue Wi-Fi hotspot"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Exploiting OS vulnerabilities is unrelated to using stored static credentials.",
+            "B": "Network sniffing captures credentials in transit, but does not directly involve stored static credentials.",
+            "C": "Correct. Static credentials stored in the firmware were used to access the Gateway ECU.",
+            "D": "A rogue Wi-Fi hotspot facilitates network attacks, not accessing stored credentials."
+        },
+        "source_procedures": ["ATM-P0105"]
+    },
+    {
+        "question": "Which protocol was used for lateral movement to the 'Parrot' ECU, providing adversaries the ability to perform actions as the logged-on user?",
+        "options": {
+            "A": "Telnet",
+            "B": "Universal Diagnostic Services (UDS)",
+            "C": "Secure Shell (SSH)",
+            "D": "Hypertext Transfer Protocol (HTTP)"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. Telnet was used for lateral movement to the 'Parrot' ECU.",
+            "B": "UDS is used for diagnostic services, not direct user actions.",
+            "C": "SSH is a secure protocol for remote access, but the technique specifies Telnet.",
+            "D": "HTTP is used for web communication and not suitable for direct lateral movement."
+        },
+        "source_procedures": ["ATM-P0005"]
+    },
+    {
+        "question": "What technique involves the modification of the ECU's software to run customized code permanently by bypassing update verification?",
+        "options": {
+            "A": "Phishing",
+            "B": "Modify OS Kernel, Boot Partition, or System Partition",
+            "C": "Bypass Mandatory Access Control",
+            "D": "Network Sniffing"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Phishing involves social engineering, not ECU software modification.",
+            "B": "Correct. Modifying OS kernel, boot partition, or system partition involves updating ECU software to run customized code.",
+            "C": "Bypassing mandatory access control deals with access policies, not software modification.",
+            "D": "Network sniffing involves capturing data in transit, not modifying ECU software."
+        },
+        "source_procedures": ["ATM-P0148"]
+    }
+]

@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the context of exploiting the Tesla gateway and ECU, which procedure allows adversaries to circumvent code integrity protections and gain unauthorized control over the vehicle's systems?",
+        "options": {
+            "A": "Exploiting a web browser vulnerability for arbitrary code execution.",
+            "B": "Manipulating unsecured credentials to access vehicle commands.",
+            "C": "Using hardware fault injection to bypass authentication states.",
+            "D": "Bypassing a code signing mechanism via boot image parameter manipulation."
+        },
+        "correct_answer": "D",
+        "Explanation": {
+            "A": "This option refers to exploiting vulnerabilities in web browsers, which is not related to code signing.",
+            "B": "This involves using unsecured credentials but does not specifically address bypassing code integrity.",
+            "C": "Hardware fault injection involves affecting physical hardware, not bypassing software code signing mechanisms.",
+            "D": "Correct. The procedure to bypass Tesla's code signing protection involves modifying the boot.img parameter."
+        },
+        "source_procedures": ["ATM-P0017", "ATM-P0170"]
+    },
+    {
+        "question": "What vulnerabilities can adversaries exploit to achieve privilege escalation within the Tesla APE system via the ape-updater executable?",
+        "options": {
+            "A": "Exploiting weak cryptography in ECU communication.",
+            "B": "Leveraging hardware fault injection to bypass kernel protections.",
+            "C": "Abusing elevation control mechanisms by executing root privileged commands over TCP ports.",
+            "D": "Conducting a Wi-Fi jamming attack to disrupt connectivity."
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "The scenario does not involve cryptographic flaws but insecure execution privileges.",
+            "B": "This refers to hardware manipulation, not software-based privilege escalation.",
+            "C": "Correct. Adversaries use TCP ports opened by the ape-updater to execute commands with root privileges.",
+            "D": "Jamming affects connectivity but does not relate to privilege escalation in this context."
+        },
+        "source_procedures": ["ATM-P0054", "ATM-P0157"]
+    },
+    {
+        "question": "Which attack technique involves adversaries remotely accessing services on Tesla vehicles using predefined ports and hard-coded passwords?",
+        "options": {
+            "A": "Remote Services via telnet connection.",
+            "B": "Exploit OS Vulnerability for privilege escalation.",
+            "C": "Jamming or Denial of Service to block network traffic.",
+            "D": "Command and Scripting Interpreter for executing scripts."
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. This technique involves using remote access services like telnet with predetermined credentials.",
+            "B": "This technique refers to exploiting OS vulnerabilities, not using remote services.",
+            "C": "Jamming impacts connectivity but does not involve predefined port access.",
+            "D": "While interpreters execute commands, this scenario primarily involves remote access."
+        },
+        "source_procedures": ["ATM-P0116", "ATM-P0156"]
+    },
+    {
+        "question": "How did researchers exploit a vulnerability in the Wi-Fi stack to gain command execution on a Tesla Model 3?",
+        "options": {
+            "A": "By modifying firmware on removable media.",
+            "B": "By sending a corrupt data frame to spray memory and exploit the Wi-Fi chip.",
+            "C": "By using a hardware fault injection method on the Wi-Fi interface.",
+            "D": "By exploiting a kernel vulnerability to bypass AppArmor."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "This involves physical media manipulation, unrelated to Wi-Fi exploits.",
+            "B": "Correct. This method involves exploiting the Wi-Fi chip by sending corrupt data to achieve code execution.",
+            "C": "Hardware injection is a different approach not mentioned in the context.",
+            "D": "Exploiting a kernel vulnerability bypasses security measures, but it is not related to Wi-Fi chip exploitation."
+        },
+        "source_procedures": ["ATM-P0070", "ATM-P0089"]
+    },
+    {
+        "question": "What method did researchers use to achieve persistence on a Tesla vehicle by modifying its system partitions?",
+        "options": {
+            "A": "Using a web browser exploit for executing arbitrary code.",
+            "B": "Altering app permissions via command and script interpreters.",
+            "C": "By exploiting vulnerabilities in the bootloader or firmware signature checks.",
+            "D": "Compromising kernel drivers for network sniffing."
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Web browser exploits are not related to modifying system partitions.",
+            "B": "Command interpreters adjust permissions but do not directly alter system partitions.",
+            "C": "Correct. This involves exploiting bootloader weaknesses or signature checks to modify system partitions.",
+            "D": "Kernel driver vulnerabilities might allow privilege escalation, but they do not inherently involve modifying system partitions."
+        },
+        "source_procedures": ["ATM-P0117", "ATM-P0142"]
+    }
+]

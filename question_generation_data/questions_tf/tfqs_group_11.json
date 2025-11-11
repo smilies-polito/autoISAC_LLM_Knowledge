@@ -1,0 +1,67 @@
+[
+    {
+        "question": "By placing a network interface into promiscuous mode, adversaries can passively access data in transit over the vehicle network, potentially capturing configuration details such as IP addresses, hostnames, and VLAN IDs.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Placing a network interface into promiscuous mode allows adversaries to monitor or capture data sent over the network, which can include configuration details like IP addresses, hostnames, and VLAN IDs.",
+            "F": "Placing a network interface into promiscuous mode indeed enables adversaries to capture network traffic, including sensitive configuration details."
+        },
+        "source_procedures": ["ATM-P0072", "ATM-P0090"]
+    },
+    {
+        "question": "Using electromagnetic fault injection, adversaries can manipulate communication networks to spoof GPS coordinates without requiring direct physical access to the vehicle.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Electromagnetic fault injection is typically used for hardware fault injection, like bypassing the privilege check for a debug interface, not for manipulating communication networks like GPS spoofing.",
+            "F": "Electromagnetic fault injection is primarily used for injecting faults in hardware systems rather than manipulating network communications such as GPS data."
+        },
+        "source_procedures": ["ATM-P0088"]
+    },
+    {
+        "question": "An attacker could exfiltrate arbitrary data files from a vehicle using a custom tool through the vehicle's cellular communication system.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The vehicle's cellular communication system can be used as a channel for command and control or data exfiltration, enabling an attacker to exfiltrate data files using a custom tool.",
+            "F": "Actually, the vehicle's cellular communication system can be leveraged for data exfiltration, making this option incorrect."
+        },
+        "source_procedures": ["ATM-P0143"]
+    },
+    {
+        "question": "Network Service Scanning involves capturing information from vehicle network traffic to gather authentication details and telemetry data.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Network Service Scanning focuses on discovering services running on a system rather than capturing network traffic for authentication or telemetry data.",
+            "F": "Network Service Scanning is about listing services on ECUs, not capturing network traffic for authentication and telemetry data."
+        },
+        "source_procedures": ["ATM-P0071"]
+    },
+    {
+        "question": "Manipulating Communications and GPS spoofing can be conducted without any physical access to the vehicle using network vulnerabilities.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Manipulating Communications, including GPS spoofing, can exploit network vulnerabilities remotely and does not necessarily require physical access to the vehicle.",
+            "F": "Manipulating Communications, such as GPS spoofing, can indeed be performed remotely by exploiting network vulnerabilities."
+        },
+        "source_procedures": ["ATM-P0072", "ATM-P0091", "ATM-P0092"]
+    }
+]

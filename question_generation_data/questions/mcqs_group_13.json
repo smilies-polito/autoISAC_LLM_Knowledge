@@ -1,0 +1,87 @@
+[
+    {
+        "question": "What technique can be used to capture sensitive information such as user credentials or network characteristics over a vehicle's network?",
+        "options": {
+            "A": "Short Range Wireless Communication",
+            "B": "Exploit via Radio Interface",
+            "C": "Network Sniffing",
+            "D": "Denial of Service on Vehicle Function"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Short Range Wireless Communication is used for command and control and exfiltration, not capturing information.",
+            "B": "Exploit via Radio Interface targets vehicle vulnerabilities through radio interfaces, not capturing network traffic.",
+            "C": "Network Sniffing involves monitoring or capturing information sent over a network to gather sensitive data.",
+            "D": "Denial of Service on Vehicle Function disrupts vehicle functionality, not capturing network information."
+        },
+        "source_procedures": ["ATM-P0069", "ATM-P0175"]
+    },
+    {
+        "question": "In which scenario can a rogue Wi-Fi access point be utilized to compromise a vehicle's system?",
+        "options": {
+            "A": "To manipulate tire pressure values displayed on the dashboard.",
+            "B": "To intercept login requests and retrieve credentials from a mobile app.",
+            "C": "To send an unintended vehicle network message.",
+            "D": "To disrupt the TPMS ECU by repeatedly triggering the warning system."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Manipulating tire pressure values involves spoofing TPMS messages, not using a rogue Wi-Fi access point.",
+            "B": "Intercepting login requests and retrieving credentials from a mobile app involves setting up a rogue Wi-Fi access point.",
+            "C": "Sending unintended vehicle network messages involves network message manipulation, not rogue Wi-Fi.",
+            "D": "Disrupting the TPMS ECU involves denial of service, not rogue Wi-Fi access points."
+        },
+        "source_procedures": ["ATM-P0038", "ATM-P0069"]
+    },
+    {
+        "question": "Which technique might be used by an adversary to remotely track the physical location of a vehicle?",
+        "options": {
+            "A": "Internet Communication",
+            "B": "Location Tracking",
+            "C": "Data from Local System",
+            "D": "Unintended Vehicle Network Message"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Internet Communication involves using a compromised ECU's internet connection for command and control, not location tracking.",
+            "B": "Location Tracking uses applications to track a vehicle's physical location through system APIs.",
+            "C": "Data from Local System involves searching for files on a local system, not tracking physical location.",
+            "D": "Unintended Vehicle Network Message involves sending unauthorized messages on a network, not location tracking."
+        },
+        "source_procedures": ["ATM-P0175"]
+    },
+    {
+        "question": "How did researchers in a tire pressure monitoring system case study affect the display of tire pressure values?",
+        "options": {
+            "A": "By performing a Denial of Service attack",
+            "B": "By manipulating network communications",
+            "C": "By spoofing TPMS messages using a custom packet generator",
+            "D": "By exploiting a baseband vulnerability"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Denial of Service attacks disrupt functionality but do not affect dashboard displays as described.",
+            "B": "Manipulating network communications does not specifically affect dashboard tire pressure displays as described.",
+            "C": "Researchers spoofed TPMS messages using a custom packet generator to affect dashboard displays.",
+            "D": "Exploiting baseband vulnerabilities targets radio interfaces, not manipulating tire pressure displays."
+        },
+        "source_procedures": ["ATM-P0023"]
+    },
+    {
+        "question": "Which technique involves using the vehicle's short range wireless communication for post-exploitation objectives?",
+        "options": {
+            "A": "Exploit via Radio Interface",
+            "B": "Short Range Wireless Communication",
+            "C": "Network Sniffing",
+            "D": "Internet Communication"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Exploit via Radio Interface involves targeting radio interface vulnerabilities, not short range wireless for post-exploitation.",
+            "B": "Short Range Wireless Communication uses capabilities like Bluetooth and Wi-Fi for command and control post-exploitation.",
+            "C": "Network Sniffing involves capturing network traffic, not using short range wireless for command and control.",
+            "D": "Internet Communication employs internet connections for data exfiltration, not short range wireless communication."
+        },
+        "source_procedures": ["ATM-P0163", "ATM-P0189"]
+    }
+]

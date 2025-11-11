@@ -1,0 +1,87 @@
+[
+    {
+        "question": "Which technique involves sending malicious SMS messages to exploit vulnerabilities in a vehicle's radio interfaces like cellular or Bluetooth?",
+        "options": {
+            "A": "Aftermarket, Customer, or Dealer Equipment",
+            "B": "Exploit via Radio Interface",
+            "C": "Command and Scripting Interpreter",
+            "D": "Unintended Vehicle Network Message"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. This technique involves using equipment as an access point into the vehicle.",
+            "B": "Correct. Exploit via Radio Interface includes sending SMS messages to exploit vulnerabilities.",
+            "C": "Incorrect. This technique involves executing commands or scripts.",
+            "D": "Incorrect. This involves sending unauthorized messages on the vehicle network."
+        },
+        "source_procedures": ["P0060", "P0124"]
+    },
+    {
+        "question": "What is the role of aftermarket or dealer equipment in vehicle cyber attacks?",
+        "options": {
+            "A": "Initiates command and control by reprogramming the vehicle's ECUs",
+            "B": "Acts as an initial access point into the vehicle using paired devices with valid credentials",
+            "C": "Sends unauthorized diagnostic CAN messages to execute diagnostic functions",
+            "D": "Replaces ECUs with modified versions to gain complete access"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. This is not directly related to aftermarket or dealer equipment.",
+            "B": "Correct. Paired devices often serve as access points into the vehicle.",
+            "C": "Incorrect. This is specific to unauthorized diagnostic messages.",
+            "D": "Incorrect. This relates to physical modification of hardware."
+        },
+        "source_procedures": ["P0014", "P0154"]
+    },
+    {
+        "question": "In the context of GPS spoofing attacks on autonomous vehicles, how can an attacker increase the effectiveness of their spoofed signals?",
+        "options": {
+            "A": "By timing attacks during periods of high GPS reliability",
+            "B": "Using aftermarket equipment to access the vehicle network",
+            "C": "By modifying the vehicle's OS kernel or system partition",
+            "D": "By physically replacing vehicle ECUs with pre-modified components"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. Attacks are more effective when timed during periods of high GPS reliability.",
+            "B": "Incorrect. This is related to accessing the vehicle network, not timing of GPS spoofing.",
+            "C": "Incorrect. This involves gaining higher levels of control but is not related to timing GPS spoofing.",
+            "D": "Incorrect. This is related to physical attacks, not spoofing timing."
+        },
+        "source_procedures": ["P0013", "P0048"]
+    },
+    {
+        "question": "What vulnerability allows researchers to gain remote code execution by exploiting a Bluetooth connection during its creation?",
+        "options": {
+            "A": "Heap buffer overflow",
+            "B": "Use of aftermarket equipment",
+            "C": "Physical modification of vehicle ECUs",
+            "D": "Execution of unintended vehicle network messages"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. The Bluetooth connection vulnerability involved a heap buffer overflow.",
+            "B": "Incorrect. This does not relate to the code execution over Bluetooth.",
+            "C": "Incorrect. This relates to physical changes to vehicle hardware.",
+            "D": "Incorrect. This involves sending unauthorized CAN messages but not related to Bluetooth."
+        },
+        "source_procedures": ["P0060", "P0124"]
+    },
+    {
+        "question": "When utilizing the technique of unintended vehicle network messages, what is a potential consequence if the adversary controls an ECU's CAN communication system?",
+        "options": {
+            "A": "Access to modify the system partition of the vehicle",
+            "B": "Unauthorized diagnostic functions execution",
+            "C": "Issuing messages that are out of intended sequence or with unintended parameters",
+            "D": "Remote code execution through Wi-Fi hotspot connection"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Incorrect. Modifying the system partition involves different privileges and techniques.",
+            "B": "Incorrect. This relates specifically to unauthorized use of diagnostic messages.",
+            "C": "Correct. Unintended vehicle network messages can be out of sequence or have unintended parameters.",
+            "D": "Incorrect. This relates to remote code execution, not network messaging."
+        },
+        "source_procedures": ["P0155", "P0162"]
+    }
+]

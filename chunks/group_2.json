@@ -1,0 +1,291 @@
+[
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers found in the firmware the password file containing encrypted user credentials and cracked the weak passwords. An account had root access.",
+        "mitreId": "P0020",
+        "technique": [
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.857Z",
+        "id": "ATM-P0020"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "The researchers used a token to move laterally from the \u201cIC\u201d device to the \u201cCID\u201d.",
+        "mitreId": "P0021",
+        "technique": [
+            {
+                "title": "Remote Services",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to log into a service specifically designed to accept remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1021/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.150Z",
+                "mitreId": "T0053",
+                "updatedAt": "2024-08-30T19:16:58.014Z",
+                "id": "ATM-T0053",
+                "lastModifiedAt": "2024-08-30T19:16:58.014Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.862Z",
+        "id": "ATM-P0021"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "The researchers were able to connect to a USB debug interface on one of the ECUs: \u201cWe were able to connect to the USB port on the CID's board and boot the device into an NVIDIA Tegra recovery mode.\u201c",
+        "mitreId": "P0056",
+        "technique": [
+            {
+                "title": "Exploit via Removable Media",
+                "type": "technique",
+                "description": "<p>Adversaries may gain initial access to an automotive environment by copying malware to removable media and taking advantage of Autorun features or automatic parsing of file (e.g., MP3s) when the device is inserted into a system and executes. This may occur through manual manipulation of the media, modification of systems used to initially format the media, or modification to the media's firmware itself.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1091/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.146Z",
+                "mitreId": "T0013",
+                "updatedAt": "2024-08-30T19:09:09.313Z",
+                "id": "ATM-T0013",
+                "lastModifiedAt": "2024-08-30T19:09:09.312Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.047Z",
+        "id": "ATM-P0056"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Wi-Fi credentials for the Tesla Service Wi-Fi network were discovered: \u201cThe Tesla Service Wi-Fi network used in service centers used a permanent, static WPA key that is contained in one of the binaries in the firmware\u201c",
+        "mitreId": "P0057",
+        "technique": [
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.052Z",
+        "id": "ATM-P0057"
+    },
+    {
+        "type": "procedure",
+        "title": "NFC Relay Attack on Tesla Model Y",
+        "description": "<p>Josep Pi Rodriguez, Principal Security Consultant, walks you through the proof-of-concept and technical details of exploitation for the NFC relay attack research on the newest Tesla vehicle, the Model Y. To successfully carry out the attack, IOActive reverse-engineered the NFC protocol Tesla uses between the NFC card and the vehicle, and we then created custom firmware modifications that allowed a Proxmark RDV4.0 device to relay NFC communications over Bluetooth/Wi-Fi using the Proxmark's BlueShark module.</p><p>It is known in the vehicle security industry that NFC relay attacks (as well as Radio Frequency relay attacks) are currently being used to steal cars. This type of attack consists of relaying cryptographic material between the vehicle and the virtual key (NFC card or smartphone).</p>",
+        "technique": [
+            {
+                "title": "Relay Communications",
+                "type": "technique",
+                "description": "<p>The adversary may be able to relay communications to make a device that the vehicle trusts appear closer to the vehicle than it really is. An example of this technique is the use of a key fob relay attack, which a car thief could use to unlock, start, and drive away with a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.158Z",
+                "mitreId": "T0007",
+                "updatedAt": "2024-08-30T19:07:59.339Z",
+                "id": "ATM-T0007",
+                "lastModifiedAt": "2024-08-30T19:07:59.339Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:18:39.330Z",
+        "updatedAt": "2025-02-04T21:42:29.796Z",
+        "id": "ATM-P0082",
+        "mitreId": "P0082"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers used a web browser vulnerability to make the browser crash.",
+        "mitreId": "P0118",
+        "technique": [
+            {
+                "title": "Browser Compromise",
+                "type": "technique",
+                "description": "<p>Based on <a href=\"https://attack.mitre.org/techniques/T1456/\">MITRE ATT&amp;CK's 'Drive-by Compromise' technique</a>, a browser compromise is when an adversary gains access to a system through a user visiting a website over the normal course of browsing. With this technique, the user's web browser is targeted for exploitation. For example, a website may contain malicious media content intended to exploit vulnerabilities in media parsers as demonstrated by the Android Stagefright vulnerability.</p>",
+                "createdAt": "2023-08-09T09:51:19.127Z",
+                "mitreId": "T0011",
+                "updatedAt": "2024-08-30T19:08:47.586Z",
+                "id": "ATM-T0011",
+                "lastModifiedAt": "2024-08-30T19:08:47.586Z"
+            },
+            {
+                "title": "Denial of Service on Vehicle Function",
+                "type": "technique",
+                "description": "<p><span style=\"color:black;\">Adversaries may perform Denial of Service (DoS) attacks to disrupt expected vehicle functionality. Examples of DoS attacks include overwhelming an ECU with a high volume of requests in a short time period and sending an ECU a request it does not know how to handle. Vulnerabilities that cause processes to crash can result in a denial of service.</span></p><p><span style=\"color:black;\">&nbsp;In some cases, disrupting the availability of some vehicle functions may cause the vehicle to try to default to a known 'safe state' that could result in reduced or blocked vehicle propulsion, further impacting the road user.</span></p><p>This technique was adopted from <a href=\"https://attack.mitre.org/techniques/T0814/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.152Z",
+                "mitreId": "T0072",
+                "updatedAt": "2024-08-30T19:20:50.381Z",
+                "id": "ATM-T0072",
+                "lastModifiedAt": "2024-08-30T19:20:50.380Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.388Z",
+        "id": "ATM-P0118"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers used a web browser vulnerability to make the browser crash.",
+        "mitreId": "P0119",
+        "id": "ATM-P0119",
+        "updatedAt": "2025-01-30T17:36:03.393Z"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers located the firmware download URL when the status output of a component displayed it",
+        "mitreId": "P0120",
+        "technique": [
+            {
+                "title": "System Network Connections Discovery",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to get a listing of network connections to or from the compromised system they are currently accessing or from remote systems by querying for information over the network.</p><p>An adversary who gains access to a system that is part of a cloud-based environment may map out Virtual Private Clouds or Virtual Networks in order to determine what systems and services are connected. The actions performed are likely the same types of discovery techniques depending on the operating system, but the resulting information may include details about the networked cloud environment relevant to the adversary's goals. Cloud providers may have different ways in which their virtual networks operate.<a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html\">[1]</a><a href=\"https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview\">[2]</a><a href=\"https://cloud.google.com/vpc/docs/vpc\">[3]</a></p><p>Utilities and commands that acquire this information include&nbsp;netstat, \"net use,\" and \"net session\" with&nbsp;Net. In Linux,&nbsp;netstat&nbsp;and&nbsp;<code>lsof</code>&nbsp;can be used to list current connections.&nbsp;<code>who -a</code>&nbsp;and&nbsp;<code>w</code>&nbsp;can be used to show which users are currently logged in, similar to \"net session\".</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1049/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.170Z",
+                "mitreId": "T0049",
+                "updatedAt": "2024-08-30T19:16:10.924Z",
+                "id": "ATM-T0049",
+                "lastModifiedAt": "2024-08-30T19:16:10.924Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.398Z",
+        "id": "ATM-P0120"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers gained root access to the main infotainment systems by accessing a component, observing a security token being sent in plain text after being updated every 24 hours.",
+        "mitreId": "P0121",
+        "technique": [
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.403Z",
+        "id": "ATM-P0121"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Unsecured login credentials for the IC's SSH service were discovered on the CID: \u201cThe CID contains a DSA key it uses to log into the IC via SSH\u201c",
+        "mitreId": "P0122",
+        "technique": [
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.408Z",
+        "id": "ATM-P0122"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers were able to power off and cause the vehicle to perform various actions during driving after sending vehicle API commands to the gateway: \u201cAt low speed (below approximately 5 MPH), the car would immediately apply its brakes and lurch to a stop. At speeds above 5 MPH, the car would effectively shift into neutral and no longer accelerate, without applying the brake. Notably, the driver still retains control over steering and braking of the vehicle at this point.\u201c",
+        "mitreId": "P0123",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.412Z",
+        "id": "ATM-P0123"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers retrieved VPN keys from removable memory cards: \u201cOne of the memory cards contained a file, carkeys.tar, which included the car's OpenVPN credentials, specifically an x509 certificate, an RSA private key, and an OpenVPN static key.\u201d",
+        "mitreId": "P0159",
+        "technique": [
+            {
+                "title": "Removable Media",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to exfiltrate data via a physical medium, such as a removable drive. Such media could be an external hard drive, USB drive, cellular phone, MP3 player, or other removable storage and processing device.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1052/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.152Z",
+                "mitreId": "T0006",
+                "updatedAt": "2024-08-30T19:19:36.451Z",
+                "id": "ATM-T0006",
+                "lastModifiedAt": "2024-08-30T19:19:36.451Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.622Z",
+        "id": "ATM-P0159"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers used the obtained VPN keys to establish a VPN connection",
+        "mitreId": "P0160",
+        "technique": [],
+        "updatedAt": "2025-01-30T17:36:03.627Z",
+        "id": "ATM-P0160"
+    },
+    {
+        "title": "Hacking a Tesla Model S: What we found and what we learned",
+        "type": "procedure",
+        "description": "Researchers downloaded firmware from the firmware server",
+        "mitreId": "P0161",
+        "technique": [
+            {
+                "title": "Internet Communication",
+                "type": "technique",
+                "description": "<p>The adversary can use a compromised ECU's internet connection (if available) for command and control and to exfiltrate data.</p>",
+                "createdAt": "2023-08-09T09:51:19.144Z",
+                "mitreId": "T0063",
+                "updatedAt": "2024-08-30T19:18:15.781Z",
+                "id": "ATM-T0063",
+                "lastModifiedAt": "2024-08-30T19:18:15.781Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.632Z",
+        "id": "ATM-P0161"
+    },
+    {
+        "type": "procedure",
+        "title": "Unlocking the Drive: Exploiting Tesla Model 3",
+        "description": "Security researchers exploit the Wi-Fi / Bluetooth chipset's RAM firmware to elevate their privileges to a level that allows them to communicate with Linux kernel drivers on the main SoC\n",
+        "technique": [
+            {
+                "title": "Exploit Co-Located Computing Device for Privilege Escalation",
+                "type": "technique",
+                "description": "<p>Adversaries may be able to leverage their access on one of an ECU's computing devices to gain control of another computing device on the same ECU. For example, it may be possible for a compromised USB controller or Wi-Fi/Bluetooth chip to gain control of the operating system running on a separate chip but still part of the same ECU.</p>",
+                "createdAt": "2023-08-09T09:51:19.129Z",
+                "mitreId": "T0025",
+                "updatedAt": "2024-08-30T19:12:28.036Z",
+                "id": "ATM-T0025",
+                "lastModifiedAt": "2024-08-30T19:12:28.035Z"
+            }
+        ],
+        "createdAt": "2024-08-22T17:30:28.673Z",
+        "updatedAt": "2025-01-30T17:36:03.784Z",
+        "id": "ATM-P0193",
+        "mitreId": "P0193"
+    }
+]

@@ -1,0 +1,230 @@
+[
+    {
+        "type": "procedure",
+        "title": "IoT backdoors in cars",
+        "description": "Researchers discovered the connected ECUs by probing and intercepting the communications of the GSM Modem located in the vehicle, which uses a SIM card, and analyzing the packets.",
+        "technique": [
+            {
+                "title": "System Network Connections Discovery",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to get a listing of network connections to or from the compromised system they are currently accessing or from remote systems by querying for information over the network.</p><p>An adversary who gains access to a system that is part of a cloud-based environment may map out Virtual Private Clouds or Virtual Networks in order to determine what systems and services are connected. The actions performed are likely the same types of discovery techniques depending on the operating system, but the resulting information may include details about the networked cloud environment relevant to the adversary's goals. Cloud providers may have different ways in which their virtual networks operate.<a href=\"https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html\">[1]</a><a href=\"https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview\">[2]</a><a href=\"https://cloud.google.com/vpc/docs/vpc\">[3]</a></p><p>Utilities and commands that acquire this information include&nbsp;netstat, \"net use,\" and \"net session\" with&nbsp;Net. In Linux,&nbsp;netstat&nbsp;and&nbsp;<code>lsof</code>&nbsp;can be used to list current connections.&nbsp;<code>who -a</code>&nbsp;and&nbsp;<code>w</code>&nbsp;can be used to show which users are currently logged in, similar to \"net session\".</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1049/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.170Z",
+                "mitreId": "T0049",
+                "updatedAt": "2024-08-30T19:16:10.924Z",
+                "id": "ATM-T0049",
+                "lastModifiedAt": "2024-08-30T19:16:10.924Z"
+            },
+            {
+                "title": "Network Service Scanning",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to get a listing of services running on a vehicle's ECUs, including those that may be vulnerable to remote software exploitation. Methods to acquire this information include port scans and vulnerability scans using tools that are brought onto a system.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1046/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.142Z",
+                "mitreId": "T0044",
+                "updatedAt": "2024-08-30T19:15:30.829Z",
+                "id": "ATM-T0044",
+                "lastModifiedAt": "2024-08-30T19:15:30.828Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:45:01.025Z",
+        "updatedAt": "2025-01-30T17:36:03.118Z",
+        "id": "ATM-P0071",
+        "mitreId": "P0071"
+    },
+    {
+        "type": "procedure",
+        "title": "IoT backdoors in cars",
+        "description": "Researchers were able to obtain update files from the OTA backend by sending spoofed OTA update requests using a dongle.",
+        "technique": [
+            {
+                "title": "Manipulate Communications",
+                "type": "technique",
+                "description": "<p>If network traffic between the vehicle and a remote server or mobile device is not securely protected, then an attacker positioned on the network may be able to manipulate network communication without being detected. For example, FireEye researchers found in 2014 that 68% of the top 1,000 free applications in the Google Play Store had at least one Transport Layer Security (TLS) implementation vulnerability potentially opening the applications' network traffic to man-in-the-middle attacks&nbsp;<a href=\"https://www.fireeye.com/blog/threat-research/2014/08/ssl-vulnerabilities-who-listens-when-android-applications-talk.html\">[1]</a>.</p><p>V2X spoofing, GPS spoofing, etc., can also be considered as another form of manipulate communication.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1463/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.153Z",
+                "mitreId": "T0003",
+                "updatedAt": "2024-08-30T19:07:53.948Z",
+                "id": "ATM-T0003",
+                "lastModifiedAt": "2024-08-30T19:07:53.948Z"
+            },
+            {
+                "title": "Network Sniffing",
+                "type": "technique",
+                "description": "<p>Adversaries may sniff vehicle network traffic to capture information about an environment, including authentication material passed over the vehicle network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless vehicle network connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.</p><p>Data captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.</p><p>Network sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.</p><p>Adversaries may also try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1040/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.155Z",
+                "mitreId": "T0038",
+                "updatedAt": "2024-08-30T19:14:51.336Z",
+                "id": "ATM-T0038",
+                "lastModifiedAt": "2024-08-30T19:14:51.335Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:47:43.242Z",
+        "updatedAt": "2025-01-30T17:36:03.123Z",
+        "id": "ATM-P0072",
+        "mitreId": "P0072"
+    },
+    {
+        "type": "procedure",
+        "title": "There Will Be Glitches Extracting and Analyzing Automotive Firmware Efficiently",
+        "description": "Researchers were able to extract the firmware by performing electromagnetic fault injection to bypass the privilege check for JTAG debug interface.",
+        "technique": [
+            {
+                "title": "Hardware Fault Injection",
+                "type": "technique",
+                "description": "<p>The adversary may attempt fault injection attacks to elevate privileges by 'flipping' bits that control authentication states. For example, through voltage or clock glitching it may be possible to bypass password authentication on debug interfaces. Many different fault injection attacks exist, some require direct physical access to the target ECU and specialized tools (e.g., ChipSHOUTER), while others can be implemented in software (e.g., Row hammer).</p>",
+                "createdAt": "2023-08-09T09:51:19.154Z",
+                "mitreId": "T0028",
+                "updatedAt": "2024-08-30T19:12:51.211Z",
+                "id": "ATM-T0028",
+                "lastModifiedAt": "2024-08-30T19:12:51.210Z"
+            },
+            {
+                "title": "Physical Modification",
+                "type": "technique",
+                "description": "<p>The adversary can make physical modifications to the vehicle's ECUs, wiring harnesses, and can replace ECUs.</p><p>Some ECUs possess physical debug interfaces that are not exposed outside their enclosures. With sufficient time, an adversary can partially disassemble the vehicle to obtain physical access to these ECUs, remove their enclosures, and connect or solder cables to access these debug interfaces.</p><p>Direct physical access can also be used by an adversary to attempt different types of glitching attacks, side channel attacks, memory removal, reprogramming, and replacement, as well as others.</p><p>To gain access to a vehicle an adversary could replace an ECU with one they have modified ahead of time (e.g., a modified service or junkyard part).</p>",
+                "createdAt": "2023-08-09T09:51:19.165Z",
+                "mitreId": "T0016",
+                "updatedAt": "2024-08-30T19:09:25.323Z",
+                "id": "ATM-T0016",
+                "lastModifiedAt": "2024-08-30T19:09:25.323Z"
+            }
+        ],
+        "createdAt": "2023-12-07T19:12:46.630Z",
+        "updatedAt": "2025-01-30T17:36:03.214Z",
+        "id": "ATM-P0088",
+        "mitreId": "P0088"
+    },
+    {
+        "type": "procedure",
+        "title": "IoT backdoors in cars",
+        "description": "Researchers were able to read file names, server path, port, version, and other information of unencrypted OTA updates from the GSM Modem by using a logic analyzer, a Python script, and Wireshark.",
+        "technique": [
+            {
+                "title": "Network Sniffing",
+                "type": "technique",
+                "description": "<p>Adversaries may sniff vehicle network traffic to capture information about an environment, including authentication material passed over the vehicle network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless vehicle network connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.</p><p>Data captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.</p><p>Network sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.</p><p>Adversaries may also try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1040/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.155Z",
+                "mitreId": "T0038",
+                "updatedAt": "2024-08-30T19:14:51.336Z",
+                "id": "ATM-T0038",
+                "lastModifiedAt": "2024-08-30T19:14:51.335Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:46:52.522Z",
+        "updatedAt": "2025-01-30T17:36:03.227Z",
+        "id": "ATM-P0090",
+        "mitreId": "P0090"
+    },
+    {
+        "type": "procedure",
+        "title": "IoT backdoors in cars",
+        "description": "Researchers were able to spoof GPS coordinates updates by putting a SIM card into a target modem and changing the vehicle's location through the modem web interface.",
+        "technique": [
+            {
+                "title": "Manipulate Communications",
+                "type": "technique",
+                "description": "<p>If network traffic between the vehicle and a remote server or mobile device is not securely protected, then an attacker positioned on the network may be able to manipulate network communication without being detected. For example, FireEye researchers found in 2014 that 68% of the top 1,000 free applications in the Google Play Store had at least one Transport Layer Security (TLS) implementation vulnerability potentially opening the applications' network traffic to man-in-the-middle attacks&nbsp;<a href=\"https://www.fireeye.com/blog/threat-research/2014/08/ssl-vulnerabilities-who-listens-when-android-applications-talk.html\">[1]</a>.</p><p>V2X spoofing, GPS spoofing, etc., can also be considered as another form of manipulate communication.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1463/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.153Z",
+                "mitreId": "T0003",
+                "updatedAt": "2024-08-30T19:07:53.948Z",
+                "id": "ATM-T0003",
+                "lastModifiedAt": "2024-08-30T19:07:53.948Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:47:29.841Z",
+        "updatedAt": "2025-01-30T17:36:03.232Z",
+        "id": "ATM-P0091",
+        "mitreId": "P0091"
+    },
+    {
+        "type": "procedure",
+        "title": "IoT backdoors in cars",
+        "description": "Researchers were able to hack nearby dongles of other vehicles by reverse engineering exfiltrated firmware and modifying it to create a custom MITM setup.",
+        "technique": [
+            {
+                "title": "Manipulate Communications",
+                "type": "technique",
+                "description": "<p>If network traffic between the vehicle and a remote server or mobile device is not securely protected, then an attacker positioned on the network may be able to manipulate network communication without being detected. For example, FireEye researchers found in 2014 that 68% of the top 1,000 free applications in the Google Play Store had at least one Transport Layer Security (TLS) implementation vulnerability potentially opening the applications' network traffic to man-in-the-middle attacks&nbsp;<a href=\"https://www.fireeye.com/blog/threat-research/2014/08/ssl-vulnerabilities-who-listens-when-android-applications-talk.html\">[1]</a>.</p><p>V2X spoofing, GPS spoofing, etc., can also be considered as another form of manipulate communication.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1463/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.153Z",
+                "mitreId": "T0003",
+                "updatedAt": "2024-08-30T19:07:53.948Z",
+                "id": "ATM-T0003",
+                "lastModifiedAt": "2024-08-30T19:07:53.948Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:48:50.339Z",
+        "updatedAt": "2025-01-30T17:36:03.263Z",
+        "id": "ATM-P0092",
+        "mitreId": "P0092"
+    },
+    {
+        "type": "procedure",
+        "title": "There Will Be Glitches Extracting and Analyzing Automotive Firmware Efficiently",
+        "description": "Researchers were able to extract the firmware from several ECUs using voltage fault injection attacks to glitch the read memory UDS service using ChipWhisperer and Inspector FI which can perform fault injection.",
+        "technique": [
+            {
+                "title": "Hardware Fault Injection",
+                "type": "technique",
+                "description": "<p>The adversary may attempt fault injection attacks to elevate privileges by 'flipping' bits that control authentication states. For example, through voltage or clock glitching it may be possible to bypass password authentication on debug interfaces. Many different fault injection attacks exist, some require direct physical access to the target ECU and specialized tools (e.g., ChipSHOUTER), while others can be implemented in software (e.g., Row hammer).</p>",
+                "createdAt": "2023-08-09T09:51:19.154Z",
+                "mitreId": "T0028",
+                "updatedAt": "2024-08-30T19:12:51.211Z",
+                "id": "ATM-T0028",
+                "lastModifiedAt": "2024-08-30T19:12:51.210Z"
+            },
+            {
+                "title": "Abuse UDS for Collection",
+                "type": "technique",
+                "description": "<p>The adversary can attempt to abuse UDS 'read' capabilities, such as 'read memory by address' to access customer information from an ECU's storage or memory.</p>",
+                "createdAt": "2023-08-09T09:51:19.125Z",
+                "mitreId": "T0055",
+                "updatedAt": "2024-08-30T19:17:20.377Z",
+                "id": "ATM-T0055",
+                "lastModifiedAt": "2024-08-30T19:17:20.377Z"
+            },
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            },
+            {
+                "title": "Bypass UDS Security Access",
+                "type": "technique",
+                "description": "<p>Adversaries may find ways to bypass or defeat the Universal Diagnostic Services \u201cSecurity Access / mode 0x27\u201d security mechanism. Implementation details for this mechanism are not part of the standard and an adversary could seek to defeat mechanisms that use a common secret value on all devices of a given make and model, static challenge-response mechanisms, mechanisms that use short secrets susceptible to brute forcing, and other approaches including diagnostic session hijacking.</p>",
+                "createdAt": "2023-08-09T09:51:19.140Z",
+                "mitreId": "T0033",
+                "updatedAt": "2024-08-30T19:14:00.987Z",
+                "id": "ATM-T0033",
+                "lastModifiedAt": "2024-08-30T19:14:00.987Z"
+            }
+        ],
+        "createdAt": "2023-12-07T19:11:20.514Z",
+        "updatedAt": "2025-01-30T17:36:03.312Z",
+        "id": "ATM-P0102",
+        "mitreId": "P0102"
+    },
+    {
+        "type": "procedure",
+        "title": "IoT backdoors in cars",
+        "description": "Researchers were able to exfiltrate arbitrary data files from the vehicle by using a custom tool.",
+        "technique": [
+            {
+                "title": "Cellular Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's cellular communication system (e.g., SMS) in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0062",
+                "updatedAt": "2024-08-30T19:18:07.880Z",
+                "id": "ATM-T0062",
+                "lastModifiedAt": "2024-08-30T19:18:07.880Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:49:12.054Z",
+        "updatedAt": "2025-01-30T17:36:03.525Z",
+        "id": "ATM-P0143",
+        "mitreId": "P0143"
+    }
+]

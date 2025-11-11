@@ -1,0 +1,67 @@
+[
+    {
+        "question": "An attacker could exploit a vulnerability to escalate privileges and modify the operating system kernel of an automotive system, leading to persistent malicious code even after device resets.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This scenario describes the use of the technique to 'Modify OS Kernel, Boot Partition, or System Partition,' which involves escalating privileges to place malicious code that may persist after device resets.",
+            "F": "The statement is accurate according to the described technique of modifying system partitions to maintain malicious code."
+        },
+        "source_procedures": ["ATM-P0031"]
+    },
+    {
+        "question": "Using the Universal Diagnostic Services (UDS), an attacker can deactivate the Anti-lock Braking System (ABS) of a vehicle without directly interacting with the system's firmware.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "While UDS can be used to actuate vehicle functions, directly deactivating ABS without interacting with the firmware is not feasible as per the data.",
+            "F": "The 'Abuse UDS for Affecting Vehicle Function' technique involves modifying the ECU's firmware to actuate functions, indicating firmware interaction would be required."
+        },
+        "source_procedures": ["ATM-P0034", "ATM-P0037"]
+    },
+    {
+        "question": "The presence of weak cryptography in ECU software update mechanisms can enable lateral movement across a vehicle's network by reprogramming the Electronic Control Units (ECUs).",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Weak cryptography in ECU updates can be exploited to reprogram ECUs for lateral movement within a vehicle network.",
+            "F": "The statement is correct as weak cryptography allows for exploitation in software update mechanisms, facilitating lateral movement."
+        },
+        "source_procedures": ["ATM-P0031"]
+    },
+    {
+        "question": "Researchers found that sending spoofed Controller Area Network (CAN) messages to the speedometer is a technique used for privilege escalation in a vehicle's network.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Spoofing CAN messages to the speedometer is related to sending unintended network messages, not privilege escalation.",
+            "F": "The 'Unintended Vehicle Network Message' technique describes spoofing CAN messages, which follows privilege escalation but is not itself a technique for privilege escalation."
+        },
+        "source_procedures": ["ATM-P0067"]
+    },
+    {
+        "question": "Brute-forcing a checksum in less than nine hours to inject modified firmware into an ECU is considered a plausible attack scenario by researchers.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The scenario describes a brute-force attack on a 16-bit checksum, which was concluded feasible by researchers within nine hours.",
+            "F": "This is incorrect as researchers indeed found it plausible to brute-force a 16-bit checksum in under nine hours for firmware injection."
+        },
+        "source_procedures": ["ATM-P0031"]
+    }
+]

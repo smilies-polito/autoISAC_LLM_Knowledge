@@ -1,0 +1,468 @@
+[
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Security researchers indicate that they can gain initial access to an ECU by modifying software on a removable SD card: \u201cWe can pull the SD card out and directly write our boot.img in it. Since bootloader does not verify if the image is correct, the gateway would execute it directly\u201d.",
+        "mitreId": "P0017",
+        "technique": [
+            {
+                "title": "Exploit via Removable Media",
+                "type": "technique",
+                "description": "<p>Adversaries may gain initial access to an automotive environment by copying malware to removable media and taking advantage of Autorun features or automatic parsing of file (e.g., MP3s) when the device is inserted into a system and executes. This may occur through manual manipulation of the media, modification of systems used to initially format the media, or modification to the media's firmware itself.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1091/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.146Z",
+                "mitreId": "T0013",
+                "updatedAt": "2024-08-30T19:09:09.313Z",
+                "id": "ATM-T0013",
+                "lastModifiedAt": "2024-08-30T19:09:09.312Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.843Z",
+        "id": "ATM-P0017"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Security researchers caused the APE device to expose credentials to other devices on the vehicle network: \u201c(\u2026)we served the file /var/etc/saccess/tesla1 and downloaded it from the simple HTTP server in ape-updater. Its content is the password of the account tesla1 which could be used to pass the \"auth\" command.\u201d",
+        "mitreId": "P0018",
+        "technique": [
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.847Z",
+        "id": "ATM-P0018"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Security researchers used the compromised ECUs' functions to choreograph their own \u201cEaster egg\u201d: \u201cwe also reversed and then customized the body control ECUs to play the Model X \"Holiday Show\" Easter Egg for fun\u201c",
+        "mitreId": "P0019",
+        "technique": [
+            {
+                "title": "Local Function",
+                "type": "technique",
+                "description": "<p>Once the adversary has gained some level of access to an ECU they will have partial or complete control of the functions actuated by that device. For example, an adversary that can execute arbitrary code on a body controller ECU will likely be able to exercise door lock / unlock functions.</p>",
+                "createdAt": "2023-08-09T09:51:19.158Z",
+                "mitreId": "T0069",
+                "updatedAt": "2024-08-30T19:20:57.347Z",
+                "id": "ATM-T0069",
+                "lastModifiedAt": "2024-08-30T19:20:57.347Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:02.852Z",
+        "id": "ATM-P0019"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Researchers exploited a known vulnerability in the web browser framework to gain initial access: \u201c\u2026their Webkit was kept 534.34 for a long time, without fixing all the vulnerabilities. Thus, our exploit utilizes only one vulnerability to achieve arbitrary code execution.\u201d",
+        "mitreId": "P0052",
+        "technique": [
+            {
+                "title": "Browser Compromise",
+                "type": "technique",
+                "description": "<p>Based on <a href=\"https://attack.mitre.org/techniques/T1456/\">MITRE ATT&amp;CK's 'Drive-by Compromise' technique</a>, a browser compromise is when an adversary gains access to a system through a user visiting a website over the normal course of browsing. With this technique, the user's web browser is targeted for exploitation. For example, a website may contain malicious media content intended to exploit vulnerabilities in media parsers as demonstrated by the Android Stagefright vulnerability.</p>",
+                "createdAt": "2023-08-09T09:51:19.127Z",
+                "mitreId": "T0011",
+                "updatedAt": "2024-08-30T19:08:47.586Z",
+                "id": "ATM-T0011",
+                "lastModifiedAt": "2024-08-30T19:08:47.586Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.027Z",
+        "id": "ATM-P0052"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "The security researchers moved laterally through the vehicle network by reprogramming ECUs: \u201cNow, we can program our customized code into gateway and ECUs like what we did last year.\u201d",
+        "mitreId": "P0053",
+        "technique": [
+            {
+                "title": "Reprogram ECU for Lateral Movement",
+                "type": "technique",
+                "description": "<p>The adversary may attempt to move laterally in a vehicle's network by reprogramming an ECU via its software update mechanisms. This can be successful if an ECU on the vehicle network does not possess a mechanism to verify the authenticity of a software update. Flaws in the verification mechanism, including weak cryptography, coding errors, and the failure to address version rollback attacks, can result in <a href=\"Bypass-code-signing_285147204.html\">Bypass code signing</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.156Z",
+                "mitreId": "T0054",
+                "updatedAt": "2024-08-30T19:17:07.926Z",
+                "id": "ATM-T0054",
+                "lastModifiedAt": "2024-08-30T19:17:07.925Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.032Z",
+        "id": "ATM-P0053"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Researchers abused remote services to move laterally from the compromised vehicle gateway to the \u201cAPE\u201d device: \u201cThe vulnerability we utilized to get root privilege on APE exists in ape-updater, an executable file works for updating the whole APE system. The ape-updater runs with root privilege and opens two TCP ports 25974 and 28496.\u201d",
+        "mitreId": "P0054",
+        "technique": [
+            {
+                "title": "Remote Services",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to log into a service specifically designed to accept remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1021/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.150Z",
+                "mitreId": "T0053",
+                "updatedAt": "2024-08-30T19:16:58.014Z",
+                "id": "ATM-T0053",
+                "lastModifiedAt": "2024-08-30T19:16:58.014Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.037Z",
+        "id": "ATM-P0054"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "The security researchers used ECU reprogramming functions to move laterally to the CID device and body controllers (BC CEN and BC FRONT): \u201cBefore we decide to patch the body control ECUs, we should find a way to flash the ECUs. Fortunately, by using the vulnerability mentioned before, we can bypass the signature check in the gateway to program our custom firmware to those body control ECUs\u201c.",
+        "mitreId": "P0055",
+        "technique": [
+            {
+                "title": "Reprogram ECU for Lateral Movement",
+                "type": "technique",
+                "description": "<p>The adversary may attempt to move laterally in a vehicle's network by reprogramming an ECU via its software update mechanisms. This can be successful if an ECU on the vehicle network does not possess a mechanism to verify the authenticity of a software update. Flaws in the verification mechanism, including weak cryptography, coding errors, and the failure to address version rollback attacks, can result in <a href=\"Bypass-code-signing_285147204.html\">Bypass code signing</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.156Z",
+                "mitreId": "T0054",
+                "updatedAt": "2024-08-30T19:17:07.926Z",
+                "id": "ATM-T0054",
+                "lastModifiedAt": "2024-08-30T19:17:07.925Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.042Z",
+        "id": "ATM-P0055"
+    },
+    {
+        "type": "procedure",
+        "title": "Exploiting Wi-Fi Stack on Tesla Model S",
+        "description": "Researchers were able to gain code execution in the Wi-Fi chip and Linux command execution for a Tesla Model 3 by spraying the memory and sending a corrupt data frame to exploit a vulnerability.",
+        "technique": [
+            {
+                "title": "Exploit via Radio Interface",
+                "type": "technique",
+                "description": "<p>The vehicle may be targeted for exploitation through its interface to cellular networks or other radio interfaces.</p><h3>Baseband Vulnerability Exploitation</h3><p>A message sent over a radio interface such as cellular, Bluetooth, GPS, NFC, Wi-Fi<a href=\"https://googleprojectzero.blogspot.com/2017/04/over-air-exploiting-broadcoms-wi-fi_4.html\">[1]</a>, TPMS, DAB, or others to the vehicle could exploit a vulnerability<a href=\"http://www.theregister.co.uk/2015/11/12/mobile_pwn2own1/\">[2]</a><a href=\"https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf\">[3]</a>.</p><h3>Malicious SMS Message</h3><p>An SMS message could contain content designed to exploit vulnerabilities in the SMS parser on the receiving device<a href=\"http://www.forbes.com/2009/07/28/hackers-iphone-apple-technology-security-hackers.html\">[4]</a>. An SMS message could also contain a link to a web site containing malicious content designed to exploit the device web browser. Vulnerable SIM cards may be remotely exploited and reprogrammed via SMS messages<a href=\"https://srlabs.de/bites/rooting-sim-cards/\">[5]</a>.</p><p>This technique was adapted from <a href=\"https://attack.mitre.org/techniques/T1477/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0012",
+                "updatedAt": "2024-08-30T19:08:57.133Z",
+                "id": "ATM-T0012",
+                "lastModifiedAt": "2024-08-30T19:08:57.133Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:40:16.257Z",
+        "updatedAt": "2025-01-30T17:36:03.113Z",
+        "id": "ATM-P0070",
+        "mitreId": "P0070"
+    },
+    {
+        "type": "procedure",
+        "title": "Exploiting Wi-Fi Stack on Tesla Model S",
+        "description": "Researchers were able to pivot from the Wi-Fi chip to the host system by taking advantage of a vulnerability in the host's kernel: \u201cThe vulnerability in kernel driver can be trigger by sending data from chip through SDIO interface.\u201c",
+        "technique": [
+            {
+                "title": "Exploit Co-Located Computing Device for Privilege Escalation",
+                "type": "technique",
+                "description": "<p>Adversaries may be able to leverage their access on one of an ECU's computing devices to gain control of another computing device on the same ECU. For example, it may be possible for a compromised USB controller or Wi-Fi/Bluetooth chip to gain control of the operating system running on a separate chip but still part of the same ECU.</p>",
+                "createdAt": "2023-08-09T09:51:19.129Z",
+                "mitreId": "T0025",
+                "updatedAt": "2024-08-30T19:12:28.036Z",
+                "id": "ATM-T0025",
+                "lastModifiedAt": "2024-08-30T19:12:28.035Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:42:36.309Z",
+        "updatedAt": "2025-01-30T17:36:03.222Z",
+        "id": "ATM-P0089",
+        "mitreId": "P0089"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Researchers exploited a kernel vulnerability to bypass AppArmor mandatory access control: \u201cIn our exploit, we patched aa_g_profile_mode with APPARMOR_COMPLAIN in the kernel to disable AppArmor, we also patched syscall setresuid(), so any process can setresuid() to root.\u201d",
+        "mitreId": "P0113",
+        "technique": [
+            {
+                "title": "Exploit OS Vulnerability",
+                "type": "technique",
+                "description": "<p>A malicious app can exploit unpatched vulnerabilities in the operating system to obtain escalated privileges.</p><p>Adapted from <a href=\"https://attack.mitre.org/techniques/T1404/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.138Z",
+                "mitreId": "T0026",
+                "updatedAt": "2024-08-30T19:12:35.503Z",
+                "id": "ATM-T0026",
+                "lastModifiedAt": "2024-08-30T19:12:35.502Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.365Z",
+        "id": "ATM-P0113"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Mandatory access control was bypassed: \u201cIn our exploit, we patched aa_g_profile_mode with APPARMOR_COMPLAIN in the kernel to disable AppArmor, we also patched syscall setresuid(), so any process can setresuid() to root.\u201d",
+        "mitreId": "P0114",
+        "technique": [
+            {
+                "title": "Bypass Mandatory Access Control",
+                "type": "technique",
+                "description": "<p>Adversaries may find ways to defeat mandatory access control mechanisms such as SELinux or AppArmor. This could include finding a 'hole' in the policy, or exploiting a vulnerability in the operating system, kernel, or trusted execution environment that allows the adversary to disable mandatory access control.</p>",
+                "createdAt": "2023-08-09T09:51:19.148Z",
+                "mitreId": "T0034",
+                "updatedAt": "2024-08-30T19:14:12.309Z",
+                "id": "ATM-T0034",
+                "lastModifiedAt": "2024-08-30T19:14:12.309Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.369Z",
+        "id": "ATM-P0114"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Lateral movement from the compromised \u201cCID\u201d device to the vehicle gateway was possible by accessing remote services: \u201cport 3500 on the gateway is acting as the command port. In the version being tested by us, the following commands are available: \\x12\\x01: Open a shell at port 23, with hard-coded password \"1q3e5t7u\". \\x00: Reboot, \\x08: Reboot for update.\u201d",
+        "mitreId": "P0116",
+        "technique": [
+            {
+                "title": "Remote Services",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to log into a service specifically designed to accept remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1021/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.150Z",
+                "mitreId": "T0053",
+                "updatedAt": "2024-08-30T19:16:58.014Z",
+                "id": "ATM-T0053",
+                "lastModifiedAt": "2024-08-30T19:16:58.014Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.379Z",
+        "id": "ATM-P0116"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Persistence on the vehicle could be accomplished by modifying ECU firmware: \u201c(\u2026) the ECU itself have no secure boot mechanism, and even does not check firmware's signature, except for a CRC checksum. That means nothing can stop us from programming the ECU after bypassed the only check in Gateway.\u201c",
+        "mitreId": "P0117",
+        "technique": [
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.383Z",
+        "id": "ATM-P0117"
+    },
+    {
+        "type": "procedure",
+        "title": "Exploiting Wi-Fi Stack on Tesla Model S",
+        "description": "Researchers were able to obtain the MAC address of a Tesla Model 3 by sending de-authentication frames to all nearby APs and sniffing the traffic when the Tesla reconnects.",
+        "technique": [
+            {
+                "title": "Jamming or Denial of Service",
+                "type": "technique",
+                "description": "<p>An attacker could jam radio signals (e.g. Wi-Fi, cellular, GPS, key fobs) to prevent the mobile device from communicating.</p><p>Adapted from <a href=\"https://attack.mitre.org/techniques/T1464/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.146Z",
+                "mitreId": "T0002",
+                "updatedAt": "2024-08-30T19:07:48.175Z",
+                "id": "ATM-T0002",
+                "lastModifiedAt": "2024-08-30T19:07:48.173Z"
+            },
+            {
+                "title": "Network Sniffing",
+                "type": "technique",
+                "description": "<p>Adversaries may sniff vehicle network traffic to capture information about an environment, including authentication material passed over the vehicle network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless vehicle network connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.</p><p>Data captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.</p><p>Network sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.</p><p>Adversaries may also try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1040/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.155Z",
+                "mitreId": "T0038",
+                "updatedAt": "2024-08-30T19:14:51.336Z",
+                "id": "ATM-T0038",
+                "lastModifiedAt": "2024-08-30T19:14:51.335Z"
+            },
+            {
+                "title": "Rogue Wi-Fi Access Point",
+                "type": "technique",
+                "description": "<p>From <a href=\"https://attack.mitre.org/techniques/T1465/\">MITRE ATT&amp;CK for Mobile</a>:</p><p>An adversary could set up unauthorized Wi-Fi access points or compromise existing access points and, if the device connects to them, carry out network-based attacks such as eavesdropping on or modifying network communication</p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0009",
+                "updatedAt": "2024-08-30T19:08:17.374Z",
+                "id": "ATM-T0009",
+                "lastModifiedAt": "2024-08-30T19:08:17.374Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:39:30.613Z",
+        "updatedAt": "2025-01-30T17:36:03.516Z",
+        "id": "ATM-P0141",
+        "mitreId": "P0141"
+    },
+    {
+        "type": "procedure",
+        "title": "Exploiting Wi-Fi Stack on Tesla Model S",
+        "description": "Researchers modified the compromised system to make it accessible over a Wi-Fi telnet interface: \u201cAttacker setups an AP and a DHCP server in this AP\u201d, \u201cThe attacker can telnet to port 23\u201c",
+        "technique": [
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            },
+            {
+                "title": "Remote Services",
+                "type": "technique",
+                "description": "<p>Adversaries may attempt to log into a service specifically designed to accept remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1021/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.150Z",
+                "mitreId": "T0053",
+                "updatedAt": "2024-08-30T19:16:58.014Z",
+                "id": "ATM-T0053",
+                "lastModifiedAt": "2024-08-30T19:16:58.014Z"
+            },
+            {
+                "title": "Short Range Wireless Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's short range wireless communication capabilities, including Bluetooth and Wi-Fi, in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.157Z",
+                "mitreId": "T0065",
+                "updatedAt": "2024-08-30T19:19:12.540Z",
+                "id": "ATM-T0065",
+                "lastModifiedAt": "2024-08-30T19:19:12.539Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:43:03.911Z",
+        "updatedAt": "2025-01-30T17:36:03.521Z",
+        "id": "ATM-P0142",
+        "mitreId": "P0142"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "A hard-coded password was used to secure in-vehicle remote services.",
+        "mitreId": "P0156",
+        "technique": [
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.607Z",
+        "id": "ATM-P0156"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "Researchers used the ape-updater executable file which opens 2 TCP ports that accept update instructions and HTTP communication. A user file was served through HTTP and then downloaded through the ape-updater which allowed any root privileged command to be executed",
+        "mitreId": "P0157",
+        "technique": [
+            {
+                "title": "Abuse Elevation Control Mechanism",
+                "type": "technique",
+                "description": "<p>Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. Many modern systems contain native elevation control mechanisms that are intended to limit privileges that a user can perform on an ECU. Authorization has to be granted to specific system users or system processes in order to perform tasks that can be considered of higher risk. An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system.</p><p>Adapted from <a href=\"https://attack.mitre.org/techniques/T1548/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.119Z",
+                "mitreId": "T0024",
+                "updatedAt": "2024-08-30T19:11:17.932Z",
+                "id": "ATM-T0024",
+                "lastModifiedAt": "2024-08-30T19:11:17.932Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.612Z",
+        "id": "ATM-P0157"
+    },
+    {
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "type": "procedure",
+        "description": "A command and scripting interpreter was used to execute commands on the APE device: \u201c(\u2026) the command \"system\" can be used to execute any Linux command with ROOT privilege.\u201d",
+        "mitreId": "P0158",
+        "technique": [
+            {
+                "title": "Command and Scripting Interpreter",
+                "type": "technique",
+                "description": "<p>From <a href=\"https://attack.mitre.org/techniques/T1059/\">MITRE ATT&amp;CK</a>:</p><p>Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and scripting capabilities.</p><p>There are also cross-platform interpreters such as&nbsp;Python, as well as those commonly associated with client applications such as&nbsp;JavaScript&nbsp;and&nbsp;Visual Basic.</p><p>Adversaries may abuse these technologies in various ways as a means of executing arbitrary commands. Commands and scripts can be embedded in&nbsp;Initial Access&nbsp;payloads delivered to victims as lure documents or as secondary payloads downloaded from an existing C2. Adversaries may also execute commands through interactive terminals/shells.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0018",
+                "updatedAt": "2024-08-30T19:09:44.747Z",
+                "id": "ATM-T0018",
+                "lastModifiedAt": "2024-08-30T19:09:44.734Z"
+            }
+        ],
+        "updatedAt": "2025-01-30T17:36:03.617Z",
+        "id": "ATM-P0158"
+    },
+    {
+        "type": "procedure",
+        "title": "OVER-THE-AIR: HOW WE REMOTELY COMPROMISED THE GATEWAY, BCM, AND AUTOPILOT ECUS OF TESLA CARS",
+        "description": "Security researchers were able to bypass a code signing mechanism: \u201cThis parameter can bypass Tesla's check and transform new_name to boot.img by FatFs. By using this vulnerability, we bypassed code signing protection and executed our code in the gateway.\u201c",
+        "technique": [
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            },
+            {
+                "title": "Reprogram ECU for Lateral Movement",
+                "type": "technique",
+                "description": "<p>The adversary may attempt to move laterally in a vehicle's network by reprogramming an ECU via its software update mechanisms. This can be successful if an ECU on the vehicle network does not possess a mechanism to verify the authenticity of a software update. Flaws in the verification mechanism, including weak cryptography, coding errors, and the failure to address version rollback attacks, can result in <a href=\"Bypass-code-signing_285147204.html\">Bypass code signing</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.156Z",
+                "mitreId": "T0054",
+                "updatedAt": "2024-08-30T19:17:07.926Z",
+                "id": "ATM-T0054",
+                "lastModifiedAt": "2024-08-30T19:17:07.925Z"
+            },
+            {
+                "title": "Bypass Code Integrity Protections",
+                "type": "technique",
+                "description": "<p>Adversaries may seek to circumvent various code integrity protections to install unauthorized firmware or software on the device.</p>",
+                "createdAt": "2023-08-09T09:51:19.120Z",
+                "mitreId": "T0031",
+                "updatedAt": "2024-08-30T19:13:30.269Z",
+                "id": "ATM-T0031",
+                "lastModifiedAt": "2024-08-30T19:13:30.269Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:40:46.764Z",
+        "updatedAt": "2025-01-30T17:36:03.676Z",
+        "id": "ATM-P0170",
+        "mitreId": "P0170"
+    },
+    {
+        "type": "procedure",
+        "title": "New Example: Jailbreaking an Electric Vehicle in 2023 or What It Means to Hotwire Tesla's x86-Based Seat Heater",
+        "description": "From ATM meeting: Suggested to add this new example for Hardware Fault Injection",
+        "technique": [
+            {
+                "title": "Hardware Fault Injection",
+                "type": "technique",
+                "description": "<p>The adversary may attempt fault injection attacks to elevate privileges by 'flipping' bits that control authentication states. For example, through voltage or clock glitching it may be possible to bypass password authentication on debug interfaces. Many different fault injection attacks exist, some require direct physical access to the target ECU and specialized tools (e.g., ChipSHOUTER), while others can be implemented in software (e.g., Row hammer).</p>",
+                "createdAt": "2023-08-09T09:51:19.154Z",
+                "mitreId": "T0028",
+                "updatedAt": "2024-08-30T19:12:51.211Z",
+                "id": "ATM-T0028",
+                "lastModifiedAt": "2024-08-30T19:12:51.210Z"
+            }
+        ],
+        "mitreId": "P0197",
+        "id": "ATM-P0197",
+        "createdAt": "2025-02-12T20:32:32.796Z",
+        "updatedAt": "2025-02-12T20:32:32.796Z"
+    }
+]

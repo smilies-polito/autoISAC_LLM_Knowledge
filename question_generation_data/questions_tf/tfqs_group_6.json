@@ -1,0 +1,67 @@
+[
+    {
+        "question": "In a scenario where researchers used a custom diagnostic packet to engage the brakes and lock the accelerator of a stationary Ford Escape, this is an example of abusing Universal Diagnostic Services (UDS) to affect vehicle functions.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This scenario describes the exploitation of UDS to actuate vehicle functions such as brakes, aligning with the technique of abusing UDS for affecting vehicle function.",
+            "F": "The scenario does involve UDS abuse, as it uses diagnostic commands to actuate the brakes and lock the accelerator."
+        },
+        "source_procedures": ["ATM-P0027"]
+    },
+    {
+        "question": "By replaying diagnostic packets to control the headlamps of a Toyota Prius, researchers were demonstrating the technique of a CAN Bus Denial of Service attack.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This would be incorrect as the scenario involves sending diagnostic commands rather than creating a denial-of-service condition.",
+            "F": "Correct, because replaying packets to control headlamps aligns with abusing UDS rather than denial-of-service attacks."
+        },
+        "source_procedures": ["ATM-P0030"]
+    },
+    {
+        "question": "Reprogramming the Smart Junction Box of a Ford Escape to continuously flash interior lights is an example of reprogramming an Electronic Control Unit (ECU) for lateral movement.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This action aligns with the technique of reprogramming an ECU to gain control over vehicle functions by exploiting software update mechanisms.",
+            "F": "This scenario is indeed about lateral movement, not a misconfiguration or simple message injection."
+        },
+        "source_procedures": ["ATM-P0029"]
+    },
+    {
+        "question": "The researchers' ability to steer the Ford Escape by replaying packets through the Power Steering Control Module demonstrates the technique of modifying the OS kernel or system partition.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect as modifying the OS kernel or system partition involves altering system software, not manipulating network messages.",
+            "F": "Correct, because steering the vehicle via replaying packets is about sending unintended vehicle network messages, not OS modifications."
+        },
+        "source_procedures": ["ATM-P0063"]
+    },
+    {
+        "question": "Researchers sending flood CAN packets to alter a Ford Escape's speedometer and odometer is an example of sending unintended vehicle network messages.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Correct, as this scenario involves sending unauthorized or out-of-sequence messages to the vehicle's CAN system.",
+            "F": "Flooding CAN packets to alter vehicle readings is indeed about unintended network messages, not a separate issue like ECU reprogramming."
+        },
+        "source_procedures": ["ATM-P0062"]
+    }
+]

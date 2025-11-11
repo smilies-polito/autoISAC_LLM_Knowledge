@@ -1,0 +1,67 @@
+[
+    {
+        "question": "The procedure of injecting arbitrary CAN packets by exploiting the media player's CD data reflashing logic is associated with exploiting vulnerabilities via removable media.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Arbitrary CAN packets were injected by exploiting the media player's CD data reflashing logic, which aligns with vulnerabilities that can be exploited via removable media.",
+            "F": "The procedure does indeed describe an attack involving removable media, thus this option is incorrect."
+        },
+        "source_procedures": ["ATM-P0190"]
+    },
+    {
+        "question": "Overwriting function pointers of the media player's read functions can be achieved through exploiting the in-vehicle network's short-range wireless communication capabilities.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "The exploitation of media player's read functions is related to the manipulation through a serial port, not through short-range wireless communication.",
+            "F": "The procedure did not mention using short-range wireless communication for overwriting function pointers, thus this option is correct."
+        },
+        "source_procedures": ["ATM-P0183"]
+    },
+    {
+        "question": "Exploiting baseband vulnerabilities over a radio interface may involve using a malicious SMS message as a vector.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The technique describes a scenario where a malicious SMS message can be used to exploit baseband vulnerabilities over a radio interface.",
+            "F": "The option is incorrect because the technique does describe the use of SMS messages to exploit vulnerabilities over a radio interface."
+        },
+        "source_procedures": ["ATM-P0099", "ATM-P0184", "ATM-P0186"]
+    },
+    {
+        "question": "An adversary injecting payloads into a telematics system through Bluetooth is an example of exploiting unintended vehicle network messages.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "The scenario involves exploiting Bluetooth for injecting payloads, which aligns with radio interface exploitation, not with unintended vehicle network messages.",
+            "F": "This is correct because the injection via Bluetooth is a technique related to exploiting radio interfaces rather than unintended network messages."
+        },
+        "source_procedures": ["ATM-P0184"]
+    },
+    {
+        "question": "Utilizing network sniffing to capture the vehicle's Bluetooth MAC address is associated with exploiting via removable media.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Capturing a Bluetooth MAC address involves network sniffing rather than exploiting via removable media.",
+            "F": "The question correctly identifies that the use of network sniffing is unrelated to removable media exploitation."
+        },
+        "source_procedures": ["ATM-P0185"]
+    }
+]

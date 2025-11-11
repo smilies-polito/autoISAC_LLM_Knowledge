@@ -1,0 +1,67 @@
+[
+    {
+        "question": "Researchers can change the head unit's display state of a Jeep Cherokee by exploiting the system's radio interface through cellular networks.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect because the manipulation of the head unit's display was achieved by sending arbitrary commands to the Uconnect system, not through radio interface exploitation.",
+            "F": "This is correct because the head unit's display state was controlled by sending arbitrary commands to the Uconnect system, not through the radio interface."
+        },
+        "source_procedures": ["ATM-P0145"]
+    },
+    {
+        "question": "Adversaries may leverage unintended vehicle network messages to manipulate the turn signals, door locks, and tachometer of a Jeep Cherokee through the SPI communication to the Uconnect system.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This is correct as the procedure describes the use of unintended vehicle network messages to control various vehicle functions via SPI communication.",
+            "F": "This is incorrect as it does describe the correct method used in the scenario involving unintended network messages and SPI communication."
+        },
+        "source_procedures": ["ATM-P0192"]
+    },
+    {
+        "question": "An adversary could control the heating and air conditioning of a Jeep Cherokee by exploiting the radio interface of the Uconnect system over Wi-Fi.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect as the control was achieved by sending arbitrary commands to the Uconnect system, not specifically by exploiting the radio interface over Wi-Fi.",
+            "F": "This is correct because the control was achieved by sending arbitrary commands directly to the Uconnect system, without specific mention of Wi-Fi exploitation."
+        },
+        "source_procedures": ["ATM-P0144"]
+    },
+    {
+        "question": "Injecting malicious firmware into the Jeep Cherokee's Uconnect system was achieved by exploiting the D-sub service to initiate system update mode.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "This is correct as the procedure explains that malicious firmware was injected through the D-sub service to initiate system update mode.",
+            "F": "This is incorrect because the procedure specifically describes using the D-sub service to inject malicious firmware."
+        },
+        "source_procedures": ["ATM-P0075"]
+    },
+    {
+        "question": "Command and Scripting Interpreter techniques were used to control the turn signals of a Jeep Cherokee by exploiting the CAN network.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect as the control of turn signals was achieved by manipulating CAN messages through SPI communication, not by using Command and Scripting Interpreter techniques.",
+            "F": "This is correct because the procedure did not involve the use of Command and Scripting Interpreter techniques for controlling turn signals."
+        },
+        "source_procedures": ["ATM-P0192"]
+    }
+]

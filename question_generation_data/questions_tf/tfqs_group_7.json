@@ -1,0 +1,67 @@
+[
+    {
+        "question": "An adversary could set up a rogue cellular base station to eavesdrop on or manipulate a vehicle's cellular communications. This could be used to maintain remote access as long as the station is in range.",
+        "options": {
+            "T": "True, a rogue cellular base station can be used to maintain remote access.",
+            "F": "False, a rogue cellular base station cannot maintain remote access without additional techniques."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The use of a rogue cellular base station can indeed allow adversaries to eavesdrop on or manipulate communications, which can be used to maintain remote access.",
+            "F": "While a rogue cellular base station is used to eavesdrop or manipulate communications, it can also maintain remote access to the vehicle."
+        },
+        "source_procedures": ["ATM-P0006", "ATM-P0047"]
+    },
+    {
+        "question": "Physical modification by replacing ECUs is achieved solely via radio interfaces like Bluetooth or cellular networks.",
+        "options": {
+            "T": "True, radio interfaces are sufficient for physical modification.",
+            "F": "False, physical access is required to replace ECUs."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Physical modification techniques require direct physical access to the vehicle’s components and cannot be achieved solely via radio interfaces.",
+            "F": "Adversaries gain access to ECUs through physical modifications, which require direct access to the vehicle."
+        },
+        "source_procedures": ["ATM-P0108"]
+    },
+    {
+        "question": "To achieve privilege escalation from a co-located computing device, adversaries may use a compromised USB controller.",
+        "options": {
+            "T": "True, a compromised USB controller can be used for privilege escalation.",
+            "F": "False, a compromised USB controller is not used for privilege escalation."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Adversaries can leverage access to a compromised USB controller for privilege escalation to gain control over another device on the same ECU.",
+            "F": "USB controllers can indeed be vectors for privilege escalation within ECUs."
+        },
+        "source_procedures": ["ATM-P0007"]
+    },
+    {
+        "question": "Bluetooth vulnerabilities can be used to gain system information discovery in a vehicle's internal compute systems.",
+        "options": {
+            "T": "True, Bluetooth vulnerabilities enable system information discovery.",
+            "F": "False, system information discovery involves accessing files and directories, not Bluetooth vulnerabilities."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Bluetooth vulnerabilities typically result in communication disruptions or unauthorized access, not directly in system information discovery.",
+            "F": "System information discovery is achieved by examining system files and configurations rather than exploiting Bluetooth vulnerabilities."
+        },
+        "source_procedures": ["ATM-P0153", "ATM-P0011"]
+    },
+    {
+        "question": "Universal Diagnostic Services (UDS) can be abused to send unexpected messages to manipulate Electronic Control Units (ECUs) even without proper authentication.",
+        "options": {
+            "T": "True, UDS can be abused to manipulate ECUs with unauthorized messages.",
+            "F": "False, UDS cannot be used to send unauthorized messages to ECUs."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "UDS can be exploited by adversaries to send unauthorized or unintended messages to ECUs, affecting their operations.",
+            "F": "UDS exploitation allows adversaries to bypass authentication, enabling them to send unauthorized messages to ECUs."
+        },
+        "source_procedures": ["ATM-P0111"]
+    }
+]

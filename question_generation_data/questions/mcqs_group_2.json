@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the procedure involving lateral movement from the 'IC' device to the 'CID', which technique was employed using a token?",
+        "options": {
+            "A": "Remote Services",
+            "B": "Unsecured Credentials",
+            "C": "Exploit via Removable Media",
+            "D": "Relay Communications"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "The use of a token to move laterally between devices corresponds to the 'Remote Services' technique, where adversaries log into services designed to accept remote connections.",
+            "B": "Unsecured Credentials involves searching for insecurely stored credentials, not using tokens for movement.",
+            "C": "Exploit via Removable Media involves malware on removable media, which is unrelated to token movement.",
+            "D": "Relay Communications involves making devices appear closer than they are, not lateral movement using tokens."
+        },
+        "source_procedures": ["ATM-P0021"]
+    },
+    {
+        "question": "What was discovered in the firmware that helped facilitate a compromise of the Tesla Service Wi-Fi network?",
+        "options": {
+            "A": "A DSA key used for SSH access",
+            "B": "A permanent, static WPA key",
+            "C": "VPN keys in a carkeys.tar file",
+            "D": "A security token sent in plain text"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "A DSA key was related to SSH access but not to the Wi-Fi compromise.",
+            "B": "A permanent, static WPA key in the firmware was used to access the Tesla Service Wi-Fi network.",
+            "C": "VPN keys were found in a carkeys.tar file, unrelated to the Wi-Fi network.",
+            "D": "A security token sent in plain text was related to a root access compromise, not the Wi-Fi network."
+        },
+        "source_procedures": ["ATM-P0057"]
+    },
+    {
+        "question": "When researchers used a web browser vulnerability, what two techniques were involved during the exploitation process?",
+        "options": {
+            "A": "Remote Services and Relay Communications",
+            "B": "Browser Compromise and Denial of Service on Vehicle Function",
+            "C": "System Network Connections Discovery and Internet Communication",
+            "D": "Exploit via Removable Media and Unsecured Credentials"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Remote Services and Relay Communications are unrelated to the browser vulnerability.",
+            "B": "A web browser vulnerability made use of Browser Compromise and resulted in a Denial of Service situation by crashing the browser.",
+            "C": "System Network Connections Discovery and Internet Communication relate to network activities, not a browser vulnerability.",
+            "D": "Exploit via Removable Media and Unsecured Credentials involve media and credential security, not a browser vulnerability."
+        },
+        "source_procedures": ["ATM-P0118"]
+    },
+    {
+        "question": "How did researchers establish a VPN connection after retrieving certain data from a removable memory card?",
+        "options": {
+            "A": "Using SSH keys found in a plaintext file",
+            "B": "Relaying communications via Bluetooth",
+            "C": "Utilizing OpenVPN credentials from a carkeys.tar file",
+            "D": "Gaining root access through a web vulnerability"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "SSH keys were related to unsecured credentials on a device, not VPN connection.",
+            "B": "Relaying communications via Bluetooth pertains to NFC attacks, not VPN.",
+            "C": "OpenVPN credentials retrieved from a carkeys.tar file on a memory card were used for establishing a VPN connection.",
+            "D": "Root access through a web vulnerability is unrelated to the VPN connection."
+        },
+        "source_procedures": ["ATM-P0159", "ATM-P0160"]
+    },
+    {
+        "question": "What technique allows adversaries to gain initial access to an automotive environment by using removable media?",
+        "options": {
+            "A": "Unintended Vehicle Network Message",
+            "B": "Exploit via Removable Media",
+            "C": "System Network Connections Discovery",
+            "D": "Relay Communications"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Unintended Vehicle Network Message deals with sending unauthorized network messages.",
+            "B": "Exploit via Removable Media involves gaining access by using removable media, exploiting autorun or automatic parsing features.",
+            "C": "System Network Connections Discovery involves network mapping, not removable media.",
+            "D": "Relay Communications pertains to relaying signals, not using removable media."
+        },
+        "source_procedures": ["ATM-P0056"]
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "question": "An adversary could exploit unpatched vulnerabilities in an operating system to gain escalated privileges by abusing the OS kernel vulnerabilities.",
+        "options": {
+            "T": "True, exploiting OS vulnerabilities can lead to privilege escalation.",
+            "F": "False, exploiting OS vulnerabilities typically does not lead to privilege escalation."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Exploiting vulnerabilities in the operating system, especially those in the kernel, can allow adversaries to elevate their privileges.",
+            "F": "The statement that exploiting OS vulnerabilities does not lead to privilege escalation is incorrect; such exploitation commonly aims at elevating privileges."
+        },
+        "source_procedures": ["ATM-P0001"]
+    },
+    {
+        "question": "Utilizing Telnet for lateral movement from a compromised 'CID' (Central Information Display) to the 'Parrot' ECU (Electronic Control Unit) is an example of bypassing mandatory access control.",
+        "options": {
+            "T": "True, Telnet usage for lateral movement involves bypassing mandatory access control.",
+            "F": "False, using Telnet for lateral movement involves remote services, not bypassing mandatory access control."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect; using Telnet relates to remote services rather than bypassing mandatory access control.",
+            "F": "This is correct because Telnet usage represents an attempt to log into remote services rather than bypass mandatory access control mechanisms."
+        },
+        "source_procedures": ["ATM-P0005"]
+    },
+    {
+        "question": "SSH (Secure Shell) can be used for lateral movement from a compromised CID (Central Information Display) to the IC (Instrument Cluster) ECU (Electronic Control Unit), representing a technique of remote services exploitation.",
+        "options": {
+            "T": "True, SSH is a remote service and can be used for lateral movement.",
+            "F": "False, SSH is not used for lateral movements and does not exploit remote services."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "SSH is indeed a remote service that adversaries might exploit for lateral movement.",
+            "F": "This answer is incorrect because SSH is specifically designed for secure remote login, which can be exploited during lateral movement."
+        },
+        "source_procedures": ["ATM-P0106"]
+    },
+    {
+        "question": "The use of unsecured SSH (Secure Shell) credentials stored in plain text in the CID's .ssh folder is a technique related to exploiting OS vulnerabilities.",
+        "options": {
+            "T": "True, unsecured SSH credentials relate to OS vulnerabilities exploitation.",
+            "F": "False, unsecured SSH credentials are related to unsecured credentials, not OS vulnerabilities."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect; unsecured SSH credentials are not directly related to OS vulnerabilities exploitation.",
+            "F": "This is correct because unsecured SSH credentials indicate poor security practices rather than exploiting inherent OS vulnerabilities."
+        },
+        "source_procedures": ["ATM-P0004"]
+    },
+    {
+        "question": "The bypass of UDS (Universal Diagnostic Services) security access by breaking weak cryptography on the gateway ECU (Electronic Control Unit) involves exploiting unintended vehicle network messages.",
+        "options": {
+            "T": "True, bypassing UDS security access can involve unintended messages.",
+            "F": "False, bypassing UDS security access involves cryptographic techniques, not unintended messages."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect because bypassing UDS security is primarily related to defeating security mechanisms, not sending unintended messages.",
+            "F": "This is correct, as bypassing UDS security involves exploiting weak cryptography and security mechanisms rather than unintended messages."
+        },
+        "source_procedures": ["ATM-P0002"]
+    }
+]

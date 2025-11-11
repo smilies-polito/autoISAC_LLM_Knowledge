@@ -1,0 +1,97 @@
+[
+    {
+        "question": "In the context of CAN (Controller Area Network) Message Injection, how can an adversary simulate pressing the vehicle's cruise control buttons physically?",
+        "options": {
+            "A": "By using aftermarket OBD-II (On-Board Diagnostics) dongles.",
+            "B": "By spoofing RPM (Revolutions Per Minute) CAN messages.",
+            "C": "By sending diagnostic messages at arbitrary speeds.",
+            "D": "By incrementing the third byte of a CAN message to create unique messages.",
+            "E": "None of the above"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Aftermarket OBD-II dongles can be used by adversaries as an entry point into the vehicle's system.",
+            "B": "Spoofing RPM messages is used to trick the vehicle into thinking it is not moving.",
+            "C": "Sending diagnostic messages at arbitrary speeds involves blocking specific CAN IDs.",
+            "D": "Incrementing the third byte is used to exploit the handling of duplicate messages.",
+            "E": "Option A is correct, hence 'None of the above' is incorrect."
+        },
+        "source_procedures": ["ATM-P0172", "ATM-P0173", "ATM-P0138"]
+    },
+    {
+        "question": "What can adversaries achieve by placing an ECU (Electronic Control Unit) in Bootrom mode during a CAN message injection attack?",
+        "options": {
+            "A": "Control over the vehicle's steering at any speed.",
+            "B": "Direct access to the vehicle's Bluetooth network.",
+            "C": "The ability to simulate the cruise control button presses.",
+            "D": "Activation of the vehicle's emergency parking brake.",
+            "E": "All of the above"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Bootrom mode allows adversaries to modify the firmware leading to control over the vehicle's steering.",
+            "B": "Access to the Bluetooth network is usually gained through paired devices, not Bootrom mode.",
+            "C": "Simulating cruise control button presses involves sending unintended messages at arbitrary speeds.",
+            "D": "Activating the emergency parking brake involves replaying messages related to the brake system.",
+            "E": "Only option A is correct, hence 'All of the above' is incorrect."
+        },
+        "source_procedures": ["ATM-P0137", "ATM-P0174", "ATM-P0172"]
+    },
+    {
+        "question": "Which technique allows adversaries to affect vehicle functions through the universal diagnostic services (UDS)?",
+        "options": {
+            "A": "Sending unintended messages at the wrong rate.",
+            "B": "Modifying the ECU's firmware using write memory by address.",
+            "C": "Utilizing paired devices for Bluetooth access.",
+            "D": "Using a custom hardware to block CAN IDs.",
+            "E": "None of the above"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Sending messages at the wrong rate is part of sending unintended messages, not UDS.",
+            "B": "UDS allows adversaries to affect vehicle functions such as modifying the firmware.",
+            "C": "Bluetooth access is typically gained via paired devices, unrelated to UDS.",
+            "D": "Blocking CAN IDs relates to bypassing message conflicts, not UDS.",
+            "E": "Option B is correct, hence 'None of the above' is incorrect."
+        },
+        "source_procedures": ["ATM-P0036", "ATM-P0173", "ATM-P0174"]
+    },
+    {
+        "question": "How can adversaries exploit unintended vehicle network messages?",
+        "options": {
+            "A": "By using aftermarket OBD-II dongles.",
+            "B": "By intercepting and modifying Bluetooth communications.",
+            "C": "By sending messages that the host is not supposed to send.",
+            "D": "By utilizing manufacturer-specified diagnostic tools.",
+            "E": "All of the above"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "OBD-II dongles provide access but are not directly related to unintended messages.",
+            "B": "Intercepting Bluetooth communications is unrelated to unintended vehicle network messages.",
+            "C": "Adversaries can send messages that are not supposed to be sent by the host, which is considered unintended.",
+            "D": "Diagnostic tools are used for maintenance and debugging, not for sending unintended messages.",
+            "E": "Only option C is correct, hence 'All of the above' is incorrect."
+        },
+        "source_procedures": ["ATM-P0136", "ATM-P0172", "ATM-P0173"]
+    },
+    {
+        "question": "What risk is associated with using paired devices like smartphones for vehicle connectivity?",
+        "options": {
+            "A": "Adversaries can use them for lateral movement within vehicle systems.",
+            "B": "They can be used to simulate the pressing of physical buttons.",
+            "C": "They provide access to phone projection technologies, potentially leading to security risks.",
+            "D": "They allow unauthorized firmware updates on ECU.",
+            "E": "All of the above"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Lateral movement is related to reprogramming an ECU, not paired devices.",
+            "B": "Simulating button presses involves unintended messages, not paired devices.",
+            "C": "Smartphones possess credentials for Bluetooth and Wi-Fi, making them access points.",
+            "D": "Firmware updates require specific access unrelated to paired devices.",
+            "E": "Only option C is correct, hence 'All of the above' is incorrect."
+        },
+        "source_procedures": ["ATM-P0136", "ATM-P0173"]
+    }
+]

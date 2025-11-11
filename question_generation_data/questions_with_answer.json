@@ -1,0 +1,428 @@
+[
+    {
+        "question": "In which scenario can a rogue Wi-Fi access point be utilized to compromise a vehicle's system?",
+        "options": {
+            "A": "To manipulate tire pressure values displayed on the dashboard.",
+            "B": "To intercept login requests and retrieve credentials from a mobile app.",
+            "C": "To send an unintended vehicle network message.",
+            "D": "To disrupt the TPMS ECU by repeatedly triggering the warning system."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Manipulating tire pressure values involves spoofing TPMS messages, not using a rogue Wi-Fi access point.",
+            "B": "Intercepting login requests and retrieving credentials from a mobile app involves setting up a rogue Wi-Fi access point.",
+            "C": "Sending unintended vehicle network messages involves network message manipulation, not rogue Wi-Fi.",
+            "D": "Disrupting the TPMS ECU involves denial of service, not rogue Wi-Fi access points."
+        },
+        "source_procedures": [
+            "ATM-P0038",
+            "ATM-P0069"
+        ]
+    },
+    {
+        "question": "What technique involves the modification of the ECU's software to run customized code permanently by bypassing update verification?",
+        "options": {
+            "A": "Unintended Vehicle Network Message",
+            "B": "Modify OS Kernel, Boot Partition, or System Partition",
+            "C": "Bypass Mandatory Access Control",
+            "D": "Network Sniffing"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Phishing involves social engineering, not ECU software modification.",
+            "B": "Correct. Modifying OS kernel, boot partition, or system partition involves updating ECU software to run customized code.",
+            "C": "Bypassing mandatory access control deals with access policies, not software modification.",
+            "D": "Network sniffing involves capturing data in transit, not modifying ECU software."
+        },
+        "source_procedures": [
+            "ATM-P0148"
+        ]
+    },
+    {
+        "question": "Which attack technique involves adversaries remotely accessing services on Tesla vehicles using predefined ports and hard-coded passwords?",
+        "options": {
+            "A": "Remote Services via telnet connection.",
+            "B": "Exploit OS Vulnerability for privilege escalation.",
+            "C": "Jamming or Denial of Service to block network traffic.",
+            "D": "Command and Scripting Interpreter for executing scripts."
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. This technique involves using remote access services like telnet with predetermined credentials.",
+            "B": "This technique refers to exploiting OS vulnerabilities, not using remote services.",
+            "C": "Jamming impacts connectivity but does not involve predefined port access.",
+            "D": "While interpreters execute commands, this scenario primarily involves remote access."
+        },
+        "source_procedures": [
+            "ATM-P0116",
+            "ATM-P0156"
+        ]
+    },
+    {
+        "question": "In the context of automotive cybersecurity, which of the following describes the 'Local Function' technique?",
+        "options": {
+            "A": "It involves executing arbitrary commands on a remote system using script interpreters.",
+            "B": "It allows adversaries to control door lock and unlock functions of a vehicle after accessing the ECU.",
+            "C": "It refers to sending unauthorized messages over a vehicle's Controller Area Network (CAN) system.",
+            "D": "It involves exploiting network configurations for information discovery purposes."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "This description is related to the 'Command and Scripting Interpreter' technique.",
+            "B": "This is correct. The 'Local Function' technique allows partial or complete control of functions actuated by the ECU, such as door lock/unlock.",
+            "C": "This description fits the 'Unintended Vehicle Network Message' technique.",
+            "D": "This relates to 'System Network Configuration Discovery'."
+        },
+        "source_procedures": [
+            "ATM-P0073",
+            "ATM-P0144",
+            "ATM-P0145",
+            "ATM-P0177"
+        ]
+    },
+    {
+        "question": "Which attack vector could be used by adversaries aiming to modify an ECU firmware?",
+        "options": {
+            "A": "Unintended network parameters",
+            "B": "Universal Diagnostic Services",
+            "C": "Performing a vehicle-to-vehicle communication attack",
+            "D": "Executing a brute force attack on vehicle key fob signals"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. Sending CAN packets with unintended parameters doesn't directly relate to firmware modification.",
+            "B": "Correct. UDS could be used to modify an ECU's firmware through memory writes.",
+            "C": "Incorrect. Vehicle-to-vehicle communication is not relevant in ECU firmware modification.",
+            "D": "Incorrect. Brute force on key fob signals is unrelated to ECU firmware modification."
+        },
+        "source_procedures": [
+            "ATM-P0027",
+            "ATM-P0129"
+        ]
+    },
+    {
+        "question": "What is the role of official aftermarket/dealer equipment in accessing vehicle systems?",
+        "options": {
+            "A": "Initiates command and control by reprogramming the vehicle's ECUs",
+            "B": "Acts as an initial access point into the vehicle using paired devices with valid credentials",
+            "C": "Sends unauthorized diagnostic CAN messages to execute diagnostic functions",
+            "D": "Replaces ECUs with modified versions to gain complete access"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. This is not directly related to aftermarket or dealer equipment.",
+            "B": "Correct. Paired devices often serve as access points into the vehicle.",
+            "C": "Incorrect. This is specific to unauthorized diagnostic messages.",
+            "D": "Incorrect. This relates to physical modification of hardware."
+        },
+        "source_procedures": [
+            "P0014",
+            "P0154"
+        ]
+    },
+    {
+        "question": "In what scenario can adversaries potentially avoid credential authentication entirely during an attack on a vehicle's ECU?",
+        "options": {
+            "A": "When the challenge-response algorithm result is not utilized.",
+            "B": "When the ECU firmware has never been updated.",
+            "C": "When network sniffing captures all communication data.",
+            "D": "When using high-frequency radio jamming."
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "This occurs when there is a flaw in the authentication process, allowing adversaries to bypass it.",
+            "B": "While being a vulnerability, it concerns firmware authenticity, not direct credential bypass.",
+            "C": "Network sniffing gathers data but doesn't inherently bypass credential checks.",
+            "D": "Radio jamming disrupts signals but does not bypass authentication processes."
+        },
+        "source_procedures": [
+            "ATM-P0178"
+        ]
+    },
+    {
+        "question": "What is one potential outcome of the 'Abuse UDS for Affecting Vehicle Function' technique?",
+        "options": {
+            "A": "Visualize a message on the infotainment system display",
+            "B": "Spoofing the fuel gauge to an arbitrary state",
+            "C": "Extracting firmware from ECUs",
+            "D": "Bypassing Authentication by generating keys"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. This involves manipulating steering, which is not directly a result of abusing UDS.",
+            "B": "Correct. This technique can lead to spoofing a vehicle's fuel gauge.",
+            "C": "Incorrect. This is related to extracting information, not affecting vehicle functions.",
+            "D": "Incorrect. This outcome involves bypassing security, not directly affecting vehicle functions."
+        },
+        "source_procedures": [
+            "ATM-P0133",
+            "ATM-P0169"
+        ]
+    },
+    {
+        "question": "What role can play the modification of the OS partitions in vehicle cyber attacks?",
+        "options": {
+            "A": "It helps in bypassing UDS security access.",
+            "B": "It allows for persistent code execution after device resets.",
+            "C": "It enables radio interface exploitation for SMS attacks.",
+            "D": "It supports reflashing of the media player ECU via CAN."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Bypassing UDS security access involves defeating specific security mechanisms.",
+            "B": "Modifying the OS kernel or boot partition can make code execution persistent after resets.",
+            "C": "Radio interface exploitation is a different method not directly related to OS modification.",
+            "D": "Reflashing via CAN relies on different exploit techniques."
+        },
+        "source_procedures": [
+            "ATM-P0085",
+            "ATM-P0087"
+        ]
+    },
+    {
+	"question": "How can an adversarial user exploit a vulnerability in the Wi-Fi stack to gain command execution on a Tesla Model 3?",
+	"options": {
+		"A": "By modifying firmware on a removable media.",
+		"B": "By sending a corrupt dataframe to spray memory exploiting the Wi-Fi chip.",
+		"C": "By using a specialized hardware fault injection module on the Wi-Fi interface.",
+		"D": "By exploiting a kernel vulnerability to bypass AppArmor."
+	},
+	"correct_answer": "B",
+	"Explanation": {
+		"A": "This involves physical media manipulation, unrelated to Wi-Fi exploits.",
+		"B": "Correct. This method involves exploiting the Wi-Fi chip by sending corrupt data to achieve code execution.",
+		"C": "Hardware injection is a different approach not mentioned in the context.",
+		"D": "Exploiting a kernel vulnerability bypasses security measures, but it is not related to Wi-Fi chip exploitation."
+	},
+	"source_procedures": ["ATM-P0070", "ATM-P0089"]
+    },
+    {
+        "question": "The operating system kernel vulnerability (CVE-2013-6282) allows adversaries to remotely access the vehicle's network without any privilege escalation.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Explanation for why T is correct/incorrect",
+            "F": "The vulnerability (CVE-2013-6282) is used to elevate privileges, not directly for remote access."
+        },
+        "source_procedures": [
+            "ATM-P0001"
+        ]
+    },
+    {
+        "question": "A diagnostic function misuse allows the injection of CAN bus messages, which can result in unintended vehicle operations such as locking or unlocking the vehicle.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The misuse of a diagnostic function allows sending arbitrary CAN messages to affect vehicle functions like locking or unlocking.",
+            "F": "Explanation for why F is correct/incorrect"
+        },
+        "source_procedures": [
+            "ATM-P0045"
+        ]
+    },
+    {
+        "question": "SSH (Secure Shell) can be used for lateral movement from a compromised CID (Central Information Display) to the IC (Instrument Cluster) ECU (Electronic Control Unit), representing a technique of remote services exploitation.",
+        "options": {
+            "T": "True, SSH is a remote service and can be used for lateral movement.",
+            "F": "False, SSH is not used for lateral movements and does not exploit remote services."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "SSH is indeed a remote service that adversaries might exploit for lateral movement.",
+            "F": "This answer is incorrect because SSH is specifically designed for secure remote login, which can be exploited during lateral movement."
+        },
+        "source_procedures": [
+            "ATM-P0106"
+        ]
+    },
+    {
+        "question": "Discovering unsecured login credentials for an SSH service on a Tesla's CID indicates the use of relay communications.",
+        "options": {
+            "T": "True: The use of unsecured credentials involves relaying communication between devices.",
+            "F": "False: Unsecured credentials discovery is not related to relay communications but rather to finding insecurely stored credentials."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Relay communications involve moving data between devices to appear closer than they are, which is not described in the unsecured credentials discovery.",
+            "F": "The discovery of unsecured credentials does not involve relaying communication but rather focuses on finding credentials stored insecurely."
+        },
+        "source_procedures": [
+            "ATM-P0122"
+        ]
+    },
+    {
+        "question": "In a scenario where adversaries bypass a mandatory access control mechanism like AppArmor, they exploit a vulnerability in the vehicle's operating system to disable access control.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "It is true that adversaries may exploit vulnerabilities in the operating system to disable mandatory access control mechanisms such as AppArmor.",
+            "F": "It is incorrect to say that adversaries can bypass mandatory access control without exploiting an operating system vulnerability, as these mechanisms are reliant on the integrity of the OS."
+        },
+        "source_procedures": [
+            "ATM-P0114"
+        ]
+    },
+    {
+        "question": "When exploiting a browser for initial access, adversaries typically gain access by exploiting services designed to accept remote connections like SSH and VNC.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This statement is incorrect because exploiting a browser typically involves targeting the browser itself, not services like SSH and VNC.",
+            "F": "It is correct that browser exploitation generally targets browser vulnerabilities, not remote connection services."
+        },
+        "source_procedures": [
+            "ATM-P0052"
+        ]
+    },
+    {
+        "question": "An attacker can typically achieve persistence on a vehicle ECU by exploiting short range wireless communication protocols like Bluetooth and Wi-Fi.",
+        "options": {
+            "T": "True",
+            "F": "False"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "False, persistence on a vehicle ECU typically involves modifying firmware or system components, not exploiting short range wireless communication.",
+            "F": "Correct, because persistence usually requires more than simply exploiting communication protocols; it involves deeper system modifications."
+        },
+        "source_procedures": [
+            "ATM-P0117"
+        ]
+    },
+    {
+        "question": "Bluetooth vulnerabilities are tipically used to perform system information discovery in a vehicle's internal compute systems.",
+        "options": {
+            "T": "True, Bluetooth vulnerabilities enable system information discovery.",
+            "F": "False, system information discovery involves accessing files and directories, not Bluetooth vulnerabilities."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Bluetooth vulnerabilities typically result in communication disruptions or unauthorized access, not directly in system information discovery.",
+            "F": "System information discovery is achieved by examining system files and configurations rather than exploiting Bluetooth vulnerabilities."
+        },
+        "source_procedures": [
+            "ATM-P0153",
+            "ATM-P0011"
+        ]
+    },
+    {
+        "question": "Researchers found that acquiring seeds/keys via brute force is not feasible on any Electronic Control Units (ECUs) on a vehicle's Controller Area Network (CAN).",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "If true, brute forcing seeds/keys would be infeasible, but the dataset indicates it is attainable.",
+            "F": "The dataset specifies that obtaining seeds/keys via brute force is attainable in a matter of days."
+        },
+        "source_procedures": [
+            "ATM-P0178"
+        ]
+    },
+    {
+        "question": "Exploiting insecurely stored credentials can allow attackers to gain access without needing to bypass code-signing mechanisms.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The dataset describes situations where accessing hardcoded or insecure credentials can make authentication unnecessary.",
+            "F": "Without accessing insecure credentials, bypassing code-signing would be necessary, which is not applicable here."
+        },
+        "source_procedures": [
+            "ATM-P0178"
+        ]
+    },
+    {
+        "question": "Using electromagnetic fault injection, adversaries can manipulate communication networks to spoof GPS coordinates without requiring direct physical access to the vehicle.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "Electromagnetic fault injection is typically used for hardware fault injection, like bypassing the privilege check for a debug interface, not for manipulating communication networks like GPS spoofing.",
+            "F": "Electromagnetic fault injection is primarily used for injecting faults in hardware systems rather than manipulating network communications such as GPS data."
+        },
+        "source_procedures": [
+            "ATM-P0088"
+        ]
+    },
+    {
+        "question": "By placing a network interface into promiscuous mode, adversaries can passively access data in transit over the vehicle network, potentially capturing configuration details such as IP addresses, hostnames, and VLAN IDs.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Placing a network interface into promiscuous mode allows adversaries to monitor or capture data sent over the network, which can include configuration details like IP addresses, hostnames, and VLAN IDs.",
+            "F": "Placing a network interface into promiscuous mode indeed enables adversaries to capture network traffic, including sensitive configuration details."
+        },
+        "source_procedures": [
+            "ATM-P0072",
+            "ATM-P0090"
+        ]
+    },
+    {
+        "question": "An adversary exploits a Bluetooth connection vulnerability to gain remote code execution in a vehicle by targeting its short-range wireless communication capabilities.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Correct, targeting Bluetooth for remote code execution through wireless communication capabilities matches the described procedure.",
+            "F": "This is incorrect because the procedure specifically involves exploiting Bluetooth, supporting remote code execution via wireless capabilities."
+        },
+        "source_procedures": [
+            "ATM-P0060",
+            "ATM-P0124"
+        ]
+    },
+    {
+        "question": "An adversary gaining physical access to a vehicle's OBD-II port can directly access all Electronic Control Units (ECUs) connected to both low and high-speed Controller Area Network (CAN) networks, allowing them to modify firmware and install other malicious software.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Physical access to the OBD-II port allows direct access to ECUs for firmware modification and software installation.",
+            "F": "If the statement were false, physical access via OBD-II would not allow this type of control, contradicting the dataset."
+        },
+        "source_procedures": [
+            "ATM-P0076"
+        ]
+    },
+    {
+        "question": "By utilizing third-party OBD-II accessories, adversaries can gain initial access to a vehicle's network, potentially allowing them to exfiltrate data using paired devices.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Correct, third-party OBD-II accessories can provide a wireless ingress point, and paired devices can be used for data exfiltration.",
+            "F": "This statement is incorrect because it aligns with the described techniques of using aftermarket or dealer equipment to gain access."
+        },
+        "source_procedures": [
+            "ATM-P0014",
+            "ATM-P0154"
+        ]
+    }
+]

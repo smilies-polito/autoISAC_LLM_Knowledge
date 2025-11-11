@@ -1,0 +1,87 @@
+[
+    {
+        "question": "What is a potential method an adversary might use to gain initial access to a vehicle using aftermarket or dealer equipment?",
+        "options": {
+            "A": "Compromise the PassThru device through the OBD-II port.",
+            "B": "Reflash the tire pressure ECU using public firmware updates.",
+            "C": "Use Bluetooth pairing to inject malicious code into the media player ECU.",
+            "D": "Exploit the FM RDS channel to send arbitrary CAN packets."
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Aftermarket or dealer equipment can provide direct access to the vehicle network through the OBD-II port.",
+            "B": "Reflashing the tire pressure ECU isn't typically associated with initial access using aftermarket or dealer equipment.",
+            "C": "Although Bluetooth can be used in post-exploitation scenarios, it is not directly related to initial access through aftermarket equipment.",
+            "D": "Exploiting the FM RDS channel involves message injection, not initial access through aftermarket equipment."
+        },
+        "source_procedures": ["ATM-P0084", "ATM-P0097", "ATM-P0098"]
+    },
+    {
+        "question": "How might an adversary utilize unintended vehicle network messages during an attack?",
+        "options": {
+            "A": "To reprogram the ECU for unauthorized software updates.",
+            "B": "To send authorized messages at the incorrect time or rate.",
+            "C": "To establish a Bluetooth command and control network.",
+            "D": "To exploit telematics units for remote data exfiltration."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Reprogramming the ECU involves software updates, not unintended messaging.",
+            "B": "Unintended vehicle network messages may be sent at incorrect times or rates.",
+            "C": "Bluetooth command and control do not involve unintended messaging.",
+            "D": "Data exfiltration requires different techniques, unrelated to unintended messaging."
+        },
+        "source_procedures": ["ATM-P0083", "ATM-P0086", "ATM-P0098"]
+    },
+    {
+        "question": "What role does the modification of the OS kernel or boot partition play in vehicle cyber attacks?",
+        "options": {
+            "A": "It helps in bypassing UDS security access.",
+            "B": "It allows for persistent code execution after device resets.",
+            "C": "It enables radio interface exploitation for SMS attacks.",
+            "D": "It supports reflashing of the media player ECU via CAN."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Bypassing UDS security access involves defeating specific security mechanisms.",
+            "B": "Modifying the OS kernel or boot partition can make code execution persistent after resets.",
+            "C": "Radio interface exploitation is a different method not directly related to OS modification.",
+            "D": "Reflashing via CAN relies on different exploit techniques."
+        },
+        "source_procedures": ["ATM-P0085", "ATM-P0087"]
+    },
+    {
+        "question": "What is the significance of exploiting the radio interface within an automotive attack?",
+        "options": {
+            "A": "It allows for direct CAN packet injection.",
+            "B": "It can exploit vulnerabilities in the SMS parser.",
+            "C": "It provides an ingress point via the OBD-II port.",
+            "D": "It facilitates the use of the media player ECU for command execution."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "CAN packet injection does not inherently involve radio interfaces.",
+            "B": "Exploiting the radio interface can target vulnerabilities in the SMS parser.",
+            "C": "Ingress points via OBD-II relate to physical or near-range access, not radio interface.",
+            "D": "The media player ECU is typically exploited through other means, such as RDS channels."
+        },
+        "source_procedures": ["ATM-P0085"]
+    },
+    {
+        "question": "Which technique involves the use of short-range wireless communication capabilities, such as Bluetooth or Wi-Fi, in a vehicle post-exploitation?",
+        "options": {
+            "A": "Reprogramming an ECU for lateral movement.",
+            "B": "Receive-only communication via RDS.",
+            "C": "Command and control using Bluetooth or Wi-Fi.",
+            "D": "Bypassing UDS security access."
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Reprogramming an ECU typically involves wired access points.",
+            "B": "Receive-only communication takes advantage of passive channels like RDS.",
+            "C": "Short-range wireless communication can be used for command and control post-exploitation.",
+            "D": "Bypassing UDS access is related to security mechanism defeat, not wireless communication."
+        },
+        "source_procedures": ["ATM-P0083"]
+    }
+]

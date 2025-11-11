@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the context of automotive cybersecurity, which technique involves using the vehicle's cellular communication system for exfiltration objectives?",
+        "options": {
+            "A": "Network Service Scanning",
+            "B": "Hardware Fault Injection",
+            "C": "Cellular Communication",
+            "D": "Physical Modification"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Network Service Scanning involves listing services running on a vehicle's ECUs, not cellular communication.",
+            "B": "Hardware Fault Injection is related to 'flipping' bits to bypass authentications, not cellular communication.",
+            "C": "Cellular Communication uses the vehicle's cellular systems for command and control and exfiltration.",
+            "D": "Physical Modification refers to making physical changes to the vehicle's ECUs, not related to cellular communications."
+        },
+        "source_procedures": ["ATM-P0143"]
+    },
+    {
+        "question": "What technique might adversaries use to gather information from a vehicle's environment, such as user credentials sent over an insecure network?",
+        "options": {
+            "A": "Network Sniffing",
+            "B": "System Network Connections Discovery",
+            "C": "Aftermarket, Customer, or Dealer Equipment",
+            "D": "Abuse UDS for Collection"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Network Sniffing involves passively monitoring or capturing vehicle network traffic.",
+            "B": "System Network Connections Discovery lists connections to or from a system, not capturing traffic.",
+            "C": "Aftermarket, Customer, or Dealer Equipment is used for accessing the vehicle, not for sniffing network traffic.",
+            "D": "Abuse UDS for Collection involves accessing ECU's storage, not sniffing network traffic."
+        },
+        "source_procedures": ["ATM-P0072", "ATM-P0090"]
+    },
+    {
+        "question": "Which method can adversaries use to manipulate network communications and potentially conduct GPS spoofing attacks on a vehicle?",
+        "options": {
+            "A": "Manipulate Communications",
+            "B": "Network Service Scanning",
+            "C": "Hardware Fault Injection",
+            "D": "System Network Connections Discovery"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Manipulate Communications involves altering network communication, possibly for GPS spoofing.",
+            "B": "Network Service Scanning is about identifying services on ECUs, not altering communications.",
+            "C": "Hardware Fault Injection is used to elevate privileges, not directly for manipulating network communications.",
+            "D": "System Network Connections Discovery is related to listing network connections, not manipulation."
+        },
+        "source_procedures": ["ATM-P0072", "ATM-P0091"]
+    },
+    {
+        "question": "What technique involves injecting faults such as voltage or clock glitching to bypass authentication processes in automotive systems?",
+        "options": {
+            "A": "System Network Connections Discovery",
+            "B": "Network Sniffing",
+            "C": "Cellular Communication",
+            "D": "Hardware Fault Injection"
+        },
+        "correct_answer": "D",
+        "Explanation": {
+            "A": "System Network Connections Discovery involves discovering network connections, not fault injection.",
+            "B": "Network Sniffing captures network data, not injecting faults.",
+            "C": "Cellular Communication involves using cellular systems, not injecting faults.",
+            "D": "Hardware Fault Injection involves injecting faults to bypass authentication processes."
+        },
+        "source_procedures": ["ATM-P0088", "ATM-P0102"]
+    },
+    {
+        "question": "In which scenario might adversaries spoof GPS coordinates by altering modem configurations through a web interface?",
+        "options": {
+            "A": "System Network Connections Discovery",
+            "B": "Physical Modification",
+            "C": "Manipulate Communications",
+            "D": "Network Service Scanning"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "System Network Connections Discovery involves discovering connections, not altering GPS coordinates.",
+            "B": "Physical Modification involves changing physical components, not modem configurations.",
+            "C": "Manipulate Communications encompasses altering network communications such as GPS spoofing.",
+            "D": "Network Service Scanning is about discovering services, not altering GPS coordinates."
+        },
+        "source_procedures": ["ATM-P0091"]
+    }
+]

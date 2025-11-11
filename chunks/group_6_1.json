@@ -1,0 +1,305 @@
+[
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers flooded CAN packets to the servo device in a Toyota Prius, which can move the steering wheel, to cause wheel movement at arbitrary speeds",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:12:52.451Z",
+        "updatedAt": "2025-01-30T17:36:03.448Z",
+        "id": "ATM-P0128",
+        "mitreId": "P0128"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers replayed a Lane Keep Assist CAN packet in Toyota Prius to cause the front wheels to turn",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:13:07.587Z",
+        "updatedAt": "2025-01-30T17:36:03.453Z",
+        "id": "ATM-P0129",
+        "mitreId": "P0129"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers were able to inject a custom diagnostic packet to shut down the Smart Junction Box (SJB) of Ford Escape to cause an arbitrary device depending on SJB to cease functionality.",
+        "technique": [
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:16:15.540Z",
+        "updatedAt": "2025-01-30T17:36:03.463Z",
+        "id": "ATM-P0130",
+        "mitreId": "P0130"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers used the Techstream software and a physical J2534 pass-thru device to send data through diagnostics which physically manipulates the vehicle without having to carry out the real-world tasks typically associated with normal operation. For instance, it was possible to test the seat belt pre-collision system without the risk of actually damaging the car.",
+        "technique": [
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            },
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:31:57.232Z",
+        "updatedAt": "2025-01-30T17:36:03.468Z",
+        "id": "ATM-P0131",
+        "mitreId": "P0131"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers replayed the diagnostic test packet in a Toyota Prius that can turn the horn on and off.",
+        "technique": [
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:37:13.192Z",
+        "updatedAt": "2025-01-30T17:36:03.473Z",
+        "id": "ATM-P0132",
+        "mitreId": "P0132"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers replayed diagnostic test packets in Toyota Prius that can spoof the fuel gauge to an arbitrary state.",
+        "technique": [
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:38:05.167Z",
+        "updatedAt": "2025-01-30T17:36:03.478Z",
+        "id": "ATM-P0133",
+        "mitreId": "P0133"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers used the Ford Integrated Diagnostic Software and various hardware to extract the firmware for various ECUs in a Ford Escape The three ECUs they tested this against were the Smart Junction Box, Powertrain Control Module, and Parking Assist Module",
+        "technique": [
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:40:21.912Z",
+        "updatedAt": "2025-01-30T17:36:03.482Z",
+        "id": "ATM-P0134",
+        "mitreId": "P0134"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers were able to cause a Toyota Prius' Pre-Collision System to activate the brakes by rapidly send spoofed CAN messages to accelerate in cruise control",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:12:03.308Z",
+        "updatedAt": "2025-01-30T17:36:03.651Z",
+        "id": "ATM-P0165",
+        "mitreId": "P0165"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers replayed CAN packets to the Internal Combustion Engine of the Power Management ECU in a Toyota Prius causing it to accelerate the speed",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:12:36.123Z",
+        "updatedAt": "2025-01-30T17:36:03.656Z",
+        "id": "ATM-P0166",
+        "mitreId": "P0166"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers were able to bypass Authentication in Toyota Prius by locating a few ECU secrets in the Toyota Calibration Update Wizard, which is a service tool, and using the secrets to generate their own keys",
+        "technique": [
+            {
+                "title": "Bypass UDS Security Access",
+                "type": "technique",
+                "description": "<p>Adversaries may find ways to bypass or defeat the Universal Diagnostic Services \u201cSecurity Access / mode 0x27\u201d security mechanism. Implementation details for this mechanism are not part of the standard and an adversary could seek to defeat mechanisms that use a common secret value on all devices of a given make and model, static challenge-response mechanisms, mechanisms that use short secrets susceptible to brute forcing, and other approaches including diagnostic session hijacking.</p>",
+                "createdAt": "2023-08-09T09:51:19.140Z",
+                "mitreId": "T0033",
+                "updatedAt": "2024-08-30T19:14:00.987Z",
+                "id": "ATM-T0033",
+                "lastModifiedAt": "2024-08-30T19:14:00.987Z"
+            },
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:33:54.572Z",
+        "updatedAt": "2025-01-30T17:36:03.661Z",
+        "id": "ATM-P0167",
+        "mitreId": "P0167"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers used the Techstream software and a J2534 pass-thru device to send diagnostic packets to a Toyota Prius and trigger the solenoids of the Anti-Lock Braking System and Electronically-Controlled Braking System",
+        "technique": [
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            },
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:34:56.711Z",
+        "updatedAt": "2025-01-30T17:36:03.665Z",
+        "id": "ATM-P0168",
+        "mitreId": "P0168"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers replayed diagnostic test packets without restriction to the Pre-Collision System of a Toyota Prius which pre-tightened the driver and passenger's seatbelts",
+        "technique": [
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:37:31.627Z",
+        "updatedAt": "2025-01-30T17:36:03.670Z",
+        "id": "ATM-P0169",
+        "mitreId": "P0169"
+    },
+    {
+        "type": "procedure",
+        "title": "Adventures in Automotive Networks and Control Units",
+        "description": "Researchers were able to write arbitrary CAN packets taking control of telematics unit could then take control of other ECUs in the Ford Escapes CAN bus ",
+        "technique": [
+            {
+                "title": "Reprogram ECU for Lateral Movement",
+                "type": "technique",
+                "description": "<p>The adversary may attempt to move laterally in a vehicle's network by reprogramming an ECU via its software update mechanisms. This can be successful if an ECU on the vehicle network does not possess a mechanism to verify the authenticity of a software update. Flaws in the verification mechanism, including weak cryptography, coding errors, and the failure to address version rollback attacks, can result in <a href=\"Bypass-code-signing_285147204.html\">Bypass code signing</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.156Z",
+                "mitreId": "T0054",
+                "updatedAt": "2024-08-30T19:17:07.926Z",
+                "id": "ATM-T0054",
+                "lastModifiedAt": "2024-08-30T19:17:07.925Z"
+            }
+        ],
+        "createdAt": "2024-08-23T21:02:07.666Z",
+        "updatedAt": "2025-01-30T17:36:03.794Z",
+        "id": "ATM-P0195",
+        "mitreId": "P0195"
+    }
+]

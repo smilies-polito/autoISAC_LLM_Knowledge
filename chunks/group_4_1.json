@@ -1,0 +1,249 @@
+[ 
+    {
+        "type": "procedure",
+        "title": "CAN Message Injection",
+        "description": "Researchers discussed the possibility for an attacker to activate brakes for a Jeep Cherokee by putting the Electronic Parking Brake in Bootrom and then replay messages that indicated the emergency parking brake is being engaged.",
+        "technique": [
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            },
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:21:12.228Z",
+        "updatedAt": "2025-01-30T17:36:02.940Z",
+        "id": "ATM-P0036",
+        "mitreId": "P0036"
+    },
+    {
+        "type": "procedure",
+        "title": "CAN Message Injection",
+        "description": "Researchers discussed the possibility to bypass message confliction and send diagnostic messages at arbitrary vehicle speeds by blocking specific CAN IDs using a custom hardware with physical access.",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            },
+            {
+                "title": "Aftermarket, Customer, or Dealer Equipment",
+                "type": "technique",
+                "description": "<p>Adversaries may take use aftermarket, customer, or dealer equipment as an initial access point into the vehicle.&nbsp;Paired devices, such as a customer's smart phone, often possess valid credentials for the vehicle's Bluetooth and Wi-Fi networks, access to phone projection technologies, and may be connected to USB ports. Dealer test and diagnostic tools are typically connected to a vehicle's OBD-II port, which may provide direct access to a vehicle network; these tools may also have access to credentials for running diagnostic procedures. Third-party OBD-II accessories, such as insurance dongles and fleet management dongles, may introduce a wireless ingress points to the vehicle through its OBD-II port.</p><p>These devices may also be used as a post-exploitation command-and-control mechanism, and to exfiltrate data from a vehicle.</p>",
+                "createdAt": "2023-08-09T09:51:19.118Z",
+                "mitreId": "T0010",
+                "updatedAt": "2024-08-30T19:08:39.372Z",
+                "id": "ATM-T0010",
+                "lastModifiedAt": "2024-08-30T19:08:39.372Z"
+            },
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:48:58.627Z",
+        "updatedAt": "2025-01-30T17:36:03.492Z",
+        "id": "ATM-P0136",
+        "mitreId": "P0136"
+    },
+    {
+        "type": "procedure",
+        "title": "CAN Message Injection",
+        "description": "Researchers demonstrated they can control the steering at higher speeds indefinitely by putting the Parking Assist Module in Bootrom mode, modifying data, and downloading new firmware.",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            },
+            {
+                "title": "Modify OS Kernel, Boot Partition, or System Partition",
+                "type": "technique",
+                "description": "<p>If an adversary can escalate privileges, he or she may be able to use those privileges to place malicious code in the system partition, operating system kernel or other boot partition components, where the code may evade detection, may persist after device resets, and may not be removable by the device user. In some cases (e.g., the Samsung Knox warranty bit), the attack may be detected but could result in the device being placed in a state that no longer allows certain functionality.</p><p>Many Android devices provide the ability to unlock the bootloader for development purposes, but doing so introduces the potential ability for others to maliciously update the kernel or other boot partition code.</p><p>If the bootloader is not unlocked, it may still be possible to exploit device vulnerabilities to update the code or escalate privileges and then modify the system partition.</p><p>This technique was adapted from MITRE ATT&amp;CK techniques <a href=\"https://attack.mitre.org/techniques/T1400/\">Modify System Partition</a> and <a href=\"https://attack.mitre.org/techniques/T1398/\">Modify OS Kernel or Boot Partition</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.137Z",
+                "mitreId": "T0022",
+                "updatedAt": "2024-08-30T19:10:37.044Z",
+                "id": "ATM-T0022",
+                "lastModifiedAt": "2024-08-30T19:10:37.044Z"
+            },
+            {
+                "title": "Reprogram ECU for Lateral Movement",
+                "type": "technique",
+                "description": "<p>The adversary may attempt to move laterally in a vehicle's network by reprogramming an ECU via its software update mechanisms. This can be successful if an ECU on the vehicle network does not possess a mechanism to verify the authenticity of a software update. Flaws in the verification mechanism, including weak cryptography, coding errors, and the failure to address version rollback attacks, can result in <a href=\"Bypass-code-signing_285147204.html\">Bypass code signing</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.156Z",
+                "mitreId": "T0054",
+                "updatedAt": "2024-08-30T19:17:07.926Z",
+                "id": "ATM-T0054",
+                "lastModifiedAt": "2024-08-30T19:17:07.925Z"
+            },
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:59:21.434Z",
+        "updatedAt": "2025-01-30T17:36:03.497Z",
+        "id": "ATM-P0137",
+        "mitreId": "P0137"
+    },
+    {
+        "type": "procedure",
+        "title": "CAN Message Injection",
+        "description": "Researchers were able to spoof messages to a Jeep Cherokee's Power Steering Control Module by exploiting how the module handled duplicate messages. They exploited the third byte of a CAN message where it was being incremented to create unique CAN messages. By incrementing and sending malicious messages before other ECU's message arrived, the ECU processed the malicious ones first.",
+        "technique": [
+            {
+                "title": "Abuse Elevation Control Mechanism",
+                "type": "technique",
+                "description": "<p>Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. Many modern systems contain native elevation control mechanisms that are intended to limit privileges that a user can perform on an ECU. Authorization has to be granted to specific system users or system processes in order to perform tasks that can be considered of higher risk. An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system.</p><p>Adapted from <a href=\"https://attack.mitre.org/techniques/T1548/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.119Z",
+                "mitreId": "T0024",
+                "updatedAt": "2024-08-30T19:11:17.932Z",
+                "id": "ATM-T0024",
+                "lastModifiedAt": "2024-08-30T19:11:17.932Z"
+            },
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:16:59.129Z",
+        "updatedAt": "2025-01-30T17:36:03.501Z",
+        "id": "ATM-P0138",
+        "mitreId": "P0138"
+    },
+    {
+        "type": "procedure",
+        "title": "CAN Message Injection",
+        "description": "Researchers discussed the possibility for an attacker to accelerate or decelerate a Jeep arbitrarily by simulating the different button pushes for cruise control.",
+        "technique": [
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T16:58:13.714Z",
+        "updatedAt": "2025-01-30T17:36:03.686Z",
+        "id": "ATM-P0172",
+        "mitreId": "P0172"
+    },
+    {
+        "type": "procedure",
+        "title": "CAN Message Injection",
+        "description": "Researchers were able to put an ECU into diagnostic mode while the vehicle is moving by spoofing the RPM CAN messages to trick the Power Steering Control Module that the car is not moving.",
+        "technique": [
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            },
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:17:55.904Z",
+        "updatedAt": "2025-01-30T17:36:03.691Z",
+        "id": "ATM-P0173",
+        "mitreId": "P0173"
+    },
+    {
+        "type": "procedure",
+        "title": "CAN Message Injection",
+        "description": "Researchers were able to control the steering wheel at any speed by forcing the Power Steering Control Module (PSCM) into Bootrom, spoofing speed related messaged through the CAN bus, and then sending spoofed Parking Assist Module messages to the PSCM to turn the steering wheel.",
+        "technique": [
+            {
+                "title": "Abuse UDS for Affecting Vehicle Function",
+                "type": "technique",
+                "description": "<p>The adversary could try to abuse universal diagnostic services to actuate vehicle functions. For example, if an adversary may try to send diagnostic commands to actuate the brakes or control headlamps. Other UDS functions, such as write memory by address, could be abused to modify an ECU's firmware and affect the functions it actuates.</p>",
+                "createdAt": "2023-08-09T09:51:19.135Z",
+                "mitreId": "T0067",
+                "updatedAt": "2024-08-30T19:20:04.020Z",
+                "id": "ATM-T0067",
+                "lastModifiedAt": "2024-08-30T19:20:04.020Z"
+            },
+            {
+                "title": "Unintended Vehicle Network Message",
+                "type": "technique",
+                "description": "<p>The adversary may try to send unintended messages on the in-vehicle network. While this technique is not specific to CAN communications, it often follows a privilege escalation technique that grants the adversary control of an ECU's CAN communication system.</p><p>Unintended message includes:</p><ul><li><p>Messages that the host is not supposed to send</p></li><li><p>Messages that the host is authorized to send, but at an incorrect time, at the wrong rate, or out of the intended sequence</p></li><li><p>Messages that the host is authorized to send, but with unintended parameters</p></li><li><p>Any messages sent by an unauthenticated host</p></li></ul><p></p>",
+                "createdAt": "2023-08-09T09:51:19.168Z",
+                "mitreId": "T0071",
+                "updatedAt": "2024-08-30T19:21:16.125Z",
+                "id": "ATM-T0071",
+                "lastModifiedAt": "2024-08-30T19:21:16.125Z"
+            },
+            {
+                "title": "Local Function",
+                "type": "technique",
+                "description": "<p>Once the adversary has gained some level of access to an ECU they will have partial or complete control of the functions actuated by that device. For example, an adversary that can execute arbitrary code on a body controller ECU will likely be able to exercise door lock / unlock functions.</p>",
+                "createdAt": "2023-08-09T09:51:19.158Z",
+                "mitreId": "T0069",
+                "updatedAt": "2024-08-30T19:20:57.347Z",
+                "id": "ATM-T0069",
+                "lastModifiedAt": "2024-08-30T19:20:57.347Z"
+            }
+        ],
+        "createdAt": "2023-12-07T17:22:46.004Z",
+        "updatedAt": "2025-01-30T17:36:03.696Z",
+        "id": "ATM-P0174",
+        "mitreId": "P0174"
+    }
+]

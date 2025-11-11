@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the automotive attack scenario 'Adventures in Automotive Networks and Control Units,' researchers achieved arbitrary device shutdown in a Ford Escape by injecting custom diagnostic packets to which component?",
+        "options": {
+            "A": "The Internal Combustion Engine",
+            "B": "The Smart Junction Box (SJB)",
+            "C": "The Power Management ECU",
+            "D": "The Telematics Unit"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "This is incorrect. The attacks did not involve the Internal Combustion Engine for this scenario.",
+            "B": "Correct. The Smart Junction Box was targeted to cause an arbitrary device shutdown.",
+            "C": "Incorrect. Though ECUs were involved, this scenario specifically targeted the Smart Junction Box.",
+            "D": "Incorrect. The Telematics Unit was not involved in this specific attack scenario."
+        },
+        "source_procedures": ["ATM-P0130"]
+    },
+    {
+        "question": "Which technique involves the use of aftermarket, customer, or dealer equipment to gain access to a vehicle's network?",
+        "options": {
+            "A": "Reprogram ECU for Lateral Movement",
+            "B": "Bypass UDS Security Access",
+            "C": "Unintended Vehicle Network Message",
+            "D": "Aftermarket, Customer, or Dealer Equipment"
+        },
+        "correct_answer": "D",
+        "Explanation": {
+            "A": "Incorrect. This technique is about reprogramming ECUs.",
+            "B": "Incorrect. This involves bypassing security mechanisms.",
+            "C": "Incorrect. This involves sending unintended messages on the network.",
+            "D": "Correct. This technique involves using aftermarket or dealer equipment to gain vehicle network access."
+        },
+        "source_procedures": ["ATM-P0131", "ATM-P0134", "ATM-P0168"]
+    },
+    {
+        "question": "What is one potential outcome of the 'Abuse UDS for Affecting Vehicle Function' technique?",
+        "options": {
+            "A": "Turning the steering wheel at arbitrary speeds",
+            "B": "Spoofing the fuel gauge to an arbitrary state",
+            "C": "Extracting firmware from ECUs",
+            "D": "Bypassing Authentication by generating keys"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Incorrect. This involves manipulating steering, which is not directly a result of abusing UDS.",
+            "B": "Correct. This technique can lead to spoofing a vehicle's fuel gauge.",
+            "C": "Incorrect. This is related to extracting information, not affecting vehicle functions.",
+            "D": "Incorrect. This outcome involves bypassing security, not directly affecting vehicle functions."
+        },
+        "source_procedures": ["ATM-P0133", "ATM-P0169"]
+    },
+    {
+        "question": "What tool and device did researchers use to trigger the solenoids of Anti-Lock Braking System and Electronically-Controlled Braking System in a Toyota Prius?",
+        "options": {
+            "A": "Ford Integrated Diagnostic Software and J2534 pass-thru device",
+            "B": "Toyota Calibration Update Wizard and J2534 pass-thru device",
+            "C": "Techstream software and J2534 pass-thru device",
+            "D": "Techstream software and OBD-II dongle"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Incorrect. Although diagnostic software was used, this option refers to Ford-related tools.",
+            "B": "Incorrect. Toyota Calibration Update Wizard was used in a different context for bypassing authentication.",
+            "C": "Correct. Researchers used Techstream software and a J2534 pass-thru device.",
+            "D": "Incorrect. Although Techstream software was used, an OBD-II dongle was not mentioned in this context."
+        },
+        "source_procedures": ["ATM-P0168"]
+    },
+    {
+        "question": "Which technique is associated with controlling a vehicle's telematics unit to affect other ECUs?",
+        "options": {
+            "A": "Reprogram ECU for Lateral Movement",
+            "B": "Bypass UDS Security Access",
+            "C": "Unsecured Credentials",
+            "D": "Unintended Vehicle Network Message"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. This technique involves reprogramming an ECU to move laterally through a vehicle's network.",
+            "B": "Incorrect. This technique focuses on bypassing security access mechanisms.",
+            "C": "Incorrect. This involves locating and exploiting unsecured credentials.",
+            "D": "Incorrect. This technique is about sending unintended messages, not reprogramming ECUs."
+        },
+        "source_procedures": ["ATM-P0195"]
+    }
+]

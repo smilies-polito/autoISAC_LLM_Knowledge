@@ -1,0 +1,87 @@
+[
+    {
+        "question": "What technique involves an adversary attempting to send unintended messages on the in-vehicle network, possibly following a privilege escalation to gain control of an Electronic Control Unit (ECU)'s Controller Area Network (CAN) communication system?",
+        "options": {
+            "A": "Abuse Universal Diagnostic Services (UDS) for Affecting Vehicle Function",
+            "B": "Unintended Vehicle Network Message",
+            "C": "Modify OS Kernel, Boot Partition, or System Partition",
+            "D": "Reprogram ECU for Lateral Movement"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Abuse UDS for Affecting Vehicle Function involves using diagnostic commands to actuate vehicle functions, not sending unintended messages.",
+            "B": "Unintended Vehicle Network Message involves sending unauthorized, incorrectly timed, or parameterized messages on the vehicle network.",
+            "C": "Modify OS Kernel, Boot Partition, or System Partition involves placing malicious code in system components, not sending unintended messages.",
+            "D": "Reprogram ECU for Lateral Movement involves moving laterally in a network by reprogramming an ECU, not sending unintended messages."
+        },
+        "source_procedures": ["ATM-P0036", "ATM-P0136", "ATM-P0137", "ATM-P0138", "ATM-P0172", "ATM-P0173", "ATM-P0174"]
+    },
+    {
+        "question": "In the context of automotive cybersecurity, what is the potential use of aftermarket, customer, or dealer equipment?",
+        "options": {
+            "A": "Sending unintended vehicle network messages",
+            "B": "As an initial access point into the vehicle",
+            "C": "Modifying the OS kernel, boot partition, or system partition",
+            "D": "Abusing UDS for affecting vehicle functions"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Sending unintended vehicle network messages is not specifically related to the use of aftermarket or dealer equipment.",
+            "B": "Aftermarket, customer, or dealer equipment can serve as an initial access point into the vehicle.",
+            "C": "Modifying the OS kernel, boot partition, or system partition is unrelated to the use of aftermarket or dealer equipment.",
+            "D": "Abusing UDS for affecting vehicle functions involves actuating vehicle functions, not using aftermarket equipment as an access point."
+        },
+        "source_procedures": ["ATM-P0136"]
+    },
+    {
+        "question": "Which attack involves the adversary gaining control over vehicle functions by exploiting the handling of duplicate messages in the Power Steering Control Module?",
+        "options": {
+            "A": "Modify OS Kernel, Boot Partition, or System Partition",
+            "B": "Unintended Vehicle Network Message",
+            "C": "Abuse Elevation Control Mechanism",
+            "D": "Reprogram ECU for Lateral Movement"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "This involves modifying boot components, not exploiting duplicate message handling.",
+            "B": "Unintended Vehicle Network Message involves sending messages not intended to be sent, such as through exploiting duplicate message handling.",
+            "C": "This involves circumventing privilege control mechanisms, not exploiting duplicate message handling.",
+            "D": "Reprogram ECU for Lateral Movement involves reprogramming ECUs, not exploiting duplicate messages."
+        },
+        "source_procedures": ["ATM-P0138"]
+    },
+    {
+        "question": "How can an adversary control steering at higher speeds by leveraging the vulnerabilities in a Parking Assist Module?",
+        "options": {
+            "A": "By putting the Parking Assist Module in Bootrom mode, modifying data, and downloading new firmware",
+            "B": "By sending unintended messages on the in-vehicle network",
+            "C": "By using aftermarket, customer, or dealer equipment",
+            "D": "None of the above"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "This describes the adversary's method to control steering at higher speeds.",
+            "B": "Sending unintended messages does not specifically explain the control of steering at higher speeds.",
+            "C": "Using aftermarket equipment involves gaining access, not directly controlling steering.",
+            "D": "Option A provides a correct explanation for controlling steering at higher speeds."
+        },
+        "source_procedures": ["ATM-P0137"]
+    },
+    {
+        "question": "What method may adversaries use to continue controlling an ECU's functions, even after a device reset?",
+        "options": {
+            "A": "Unintended Vehicle Network Message",
+            "B": "Modify OS Kernel, Boot Partition, or System Partition",
+            "C": "Reprogram ECU for Lateral Movement",
+            "D": "Abuse UDS for Affecting Vehicle Function"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Unintended Vehicle Network Message involves unauthorized network messages, not persistence after reset.",
+            "B": "Modifying the OS kernel, boot, or system partition can allow persistence after device resets.",
+            "C": "Reprogramming an ECU involves moving laterally, not necessarily providing persistence after resets.",
+            "D": "Abusing UDS affects vehicle functions but does not explain persistence after resets."
+        },
+        "source_procedures": ["ATM-P0137"]
+    }
+]

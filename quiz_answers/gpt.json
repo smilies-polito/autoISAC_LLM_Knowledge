@@ -1,0 +1,297 @@
+[
+  {
+    "question": "In which scenario can a rogue Wi-Fi access point be utilized to compromise a vehicle's system?",
+    "options": {
+      "A": "To manipulate tire pressure values displayed on the dashboard.",
+      "B": "To intercept login requests and retrieve credentials from a mobile app.",
+      "C": "To send an unintended vehicle network message.",
+      "D": "To disrupt the TPMS ECU by repeatedly triggering the warning system."
+    },
+    "answers": {
+      "gpt-4o": "B",
+      "gpt-4o-mini": "C"
+    }
+  },
+  {
+    "question": "What technique involves the modification of the ECU's software to run customized code permanently by bypassing update verification?",
+    "options": {
+      "A": "Unintended Vehicle Network Message",
+      "B": "Modify OS Kernel, Boot Partition, or System Partition",
+      "C": "Bypass Mandatory Access Control",
+      "D": "Network Sniffing"
+    },
+    "answers": {
+      "gpt-4o": "B",
+      "gpt-4o-mini": "B"
+    }
+  },
+  {
+    "question": "Which attack technique involves adversaries remotely accessing services on Tesla vehicles using predefined ports and hard-coded passwords?",
+    "options": {
+      "A": "Remote Services via telnet connection.",
+      "B": "Exploit OS Vulnerability for privilege escalation.",
+      "C": "Jamming or Denial of Service to block network traffic.",
+      "D": "Command and Scripting Interpreter for executing scripts."
+    },
+    "answers": {
+      "gpt-4o": "A",
+      "gpt-4o-mini": "A"
+    }
+  },
+  {
+    "question": "In the context of automotive cybersecurity, which of the following describes the 'Local Function' technique?",
+    "options": {
+      "A": "It involves executing arbitrary commands on a remote system using script interpreters.",
+      "B": "It allows adversaries to control door lock and unlock functions of a vehicle after accessing the Electronic Control Unit (ECU).",
+      "C": "It refers to sending unauthorized messages over a vehicle's Controller Area Network (CAN) system.",
+      "D": "It involves exploiting network configurations for information discovery purposes."
+    },
+    "answers": {
+      "gpt-4o": "B",
+      "gpt-4o-mini": "B"
+    }
+  },
+  {
+    "question": "Which attack vector could be used by adversaries aiming to modify an ECU firmware?",
+    "options": {
+      "A": "Unintended network parameters",
+      "B": "Universal Diagnostic Services",
+      "C": "Performing a vehicle-to-vehicle communication attack",
+      "D": "Executing a brute force attack on vehicle key fob signals"
+    },
+    "answers": {
+      "gpt-4o": "B",
+      "gpt-4o-mini": "B"
+    }
+  },
+  {
+    "question": "What is the role of official aftermarket/dealer equipment in accessing vehicle systems?",
+    "options": {
+      "A": "Initiates command and control by reprogramming the vehicle's ECUs",
+      "B": "Acts as an initial access point into the vehicle using paired devices with valid credentials",
+      "C": "Sends unauthorized diagnostic CAN messages to execute diagnostic functions",
+      "D": "Replaces ECUs with modified versions to gain complete access"
+    },
+    "answers": {
+      "gpt-4o": "B",
+      "gpt-4o-mini": "B"
+    }
+  },
+  {
+    "question": "In what scenario can adversaries potentially avoid credential authentication entirely during an attack on a vehicle's ECU?",
+    "options": {
+      "A": "When the challenge-response algorithm result is not utilized.",
+      "B": "When the ECU firmware has never been updated.",
+      "C": "When network sniffing captures all communication data.",
+      "D": "When using high-frequency radio jamming."
+    },
+    "answers": {
+      "gpt-4o": "A",
+      "gpt-4o-mini": "A"
+    }
+  },
+  {
+    "question": "What is one potential outcome of the 'Abuse UDS for Affecting Vehicle Function' technique?",
+    "options": {
+      "A": "Visualize a message on the infotainment system display",
+      "B": "Spoofing the fuel gauge to an arbitrary state",
+      "C": "Extracting firmware from ECUs",
+      "D": "Bypassing Authentication by generating keys"
+    },
+    "answers": {
+      "gpt-4o": "B",
+      "gpt-4o-mini": "B"
+    }
+  },
+  {
+    "question": "What role can play the modification of the OS partitions in vehicle cyber attacks?",
+    "options": {
+      "A": "It helps in bypassing UDS security access.",
+      "B": "It allows for persistent code execution after device resets.",
+      "C": "It enables radio interface exploitation for SMS attacks.",
+      "D": "It supports reflashing of the media player ECU via CAN."
+    },
+    "answers": {
+      "gpt-4o": "B",
+      "gpt-4o-mini": "B"
+    }
+  },
+  {
+    "question": "How can an adversarial user exploit a vulnerability in the Wi-Fi stack to gain command execution on a Tesla Model 3?",
+    "options": {
+      "A": "By modifying firmware on a removable media.",
+      "B": "By sending a corrupt data frame to spray memory and exploit the Wi-Fi chip.",
+      "C": "By using a specialized hardware fault injection module on the Wi-Fi interface.",
+      "D": "By exploiting a kernel vulnerability to bypass AppArmor."
+    },
+    "answers": {
+      "gpt-4o": "B",
+      "gpt-4o-mini": "B"
+    }
+  },
+  {
+    "question": "The operating system kernel vulnerability (CVE-2013-6282) allows adversaries to remotely access the vehicle's network without any privilege escalation.",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "F",
+      "gpt-4o-mini": "F"
+    }
+  },
+  {
+    "question": "A diagnostic function misuse allows the injection of CAN bus messages, which can result in unintended vehicle operations such as locking or unlocking the vehicle.",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "SSH (Secure Shell) can be used for lateral movement from a compromised CID (Central Information Display) to the IC (Instrument Cluster) ECU (Electronic Control Unit), representing a technique of remote services exploitation.",
+    "options": {
+      "T": "True, SSH is a remote service and can be used for lateral movement.",
+      "F": "False, SSH is not used for lateral movements and does not exploit remote services."
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "F"
+    }
+  },
+  {
+    "question": "Discovering unsecured login credentials for an SSH service on a Tesla's CID indicates the use of relay communications.",
+    "options": {
+      "T": "True: The use of unsecured credentials involves relaying communication between devices.",
+      "F": "False: Unsecured credentials discovery is not related to relay communications but rather to finding insecurely stored credentials."
+    },
+    "answers": {
+      "gpt-4o": "F",
+      "gpt-4o-mini": "F"
+    }
+  },
+  {
+    "question": "In a scenario where adversaries bypass a mandatory access control mechanism like AppArmor, they exploit a vulnerability in the vehicle's operating system to disable access control.",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "When exploiting a browser for initial access, adversaries typically gain access by exploiting services designed to accept remote connections like SSH and VNC.",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "answers": {
+      "gpt-4o": "F",
+      "gpt-4o-mini": "F"
+    }
+  },
+  {
+    "question": "An attacker can typically achieve persistence on a vehicle ECU by exploiting short range wireless communication protocols like Bluetooth and Wi-Fi.",
+    "options": {
+      "T": "True",
+      "F": "False"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "Bluetooth vulnerabilities are tipically used to perform system information discovery in a vehicle's internal compute systems.",
+    "options": {
+      "T": "True, Bluetooth vulnerabilities enable system information discovery.",
+      "F": "False, system information discovery involves accessing files and directories, not Bluetooth vulnerabilities."
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "Researchers found that acquiring seeds/keys via brute force is not feasible on any Electronic Control Units (ECUs) on a vehicle's Controller Area Network (CAN).",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "F",
+      "gpt-4o-mini": "F"
+    }
+  },
+  {
+    "question": "Exploiting insecurely stored credentials can allow attackers to gain access without needing to bypass code-signing mechanisms.",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "Using electromagnetic fault injection, adversaries can manipulate communication networks to spoof GPS coordinates without requiring direct physical access to the vehicle.",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "By placing a network interface into promiscuous mode, adversaries can passively access data in transit over the vehicle network, potentially capturing configuration details such as IP addresses, hostnames, and VLAN IDs.",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "An adversary exploits a Bluetooth connection vulnerability to gain remote code execution in a vehicle by targeting its short-range wireless communication capabilities.",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "An adversary gaining physical access to a vehicle's OBD-II port can directly access all Electronic Control Units (ECUs) connected to both low and high-speed Controller Area Network (CAN) networks, allowing them to modify firmware and install other malicious software.",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  },
+  {
+    "question": "By utilizing third-party OBD-II accessories, adversaries can gain initial access to a vehicle's network, potentially allowing them to exfiltrate data using paired devices.",
+    "options": {
+      "T": "True option text",
+      "F": "False option text"
+    },
+    "answers": {
+      "gpt-4o": "T",
+      "gpt-4o-mini": "T"
+    }
+  }
+]

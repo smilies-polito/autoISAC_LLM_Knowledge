@@ -1,0 +1,53 @@
+[
+    {
+        "question": "In the context of extracting security-related secrets from an Electronic Control Unit (ECU), what is the primary goal of an adversary using the ECU Credential Dumping technique?",
+        "options": {
+            "A": "To retrieve account login and credential material in hash or clear text form",
+            "B": "To damage the hardware components of the ECU",
+            "C": "To redirect vehicle navigation systems",
+            "D": "To enhance the audio system of the vehicle"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. The ECU Credential Dumping technique is used to obtain login and credential material, which can be in the form of a hash or a clear text password.",
+            "B": "Incorrect. This technique does not focus on damaging hardware components.",
+            "C": "Incorrect. Redirecting vehicle navigation systems is not a primary goal of this technique.",
+            "D": "Incorrect. Enhancing the audio system is unrelated to the ECU Credential Dumping technique."
+        },
+        "source_procedures": ["ATM-P0196"]
+    },
+    {
+        "question": "What kind of secrets does the RAM-based code installed by the researcher primarily target in the procedure described?",
+        "options": {
+            "A": "Security-related secrets like keys and passwords",
+            "B": "Personal user information",
+            "C": "Vehicle speed and engine parameters",
+            "D": "Entertainment system settings"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. The procedure targets security-related secrets such as keys and passwords, excluding personal user information.",
+            "B": "Incorrect. The procedure does not target personal user information.",
+            "C": "Incorrect. Vehicle speed and engine parameters are not the focus.",
+            "D": "Incorrect. Entertainment system settings are not targeted in this procedure."
+        },
+        "source_procedures": ["ATM-P0196"]
+    },
+    {
+        "question": "How might the credentials obtained from the ECU Credential Dumping technique be used by adversaries?",
+        "options": {
+            "A": "To perform lateral movement and access restricted information",
+            "B": "To initiate a denial-of-service attack on the ECU",
+            "C": "To reprogram the vehicle's control units for better fuel efficiency",
+            "D": "To broadcast unauthorized radio signals"
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Correct. Credentials obtained can be used for lateral movement and accessing restricted information.",
+            "B": "Incorrect. This technique focuses on credential use rather than causing a denial-of-service.",
+            "C": "Incorrect. Reprogramming for fuel efficiency is not related to the use of credentials.",
+            "D": "Incorrect. Broadcasting unauthorized radio signals is unrelated."
+        },
+        "source_procedures": ["ATM-P0196"]
+    }
+]

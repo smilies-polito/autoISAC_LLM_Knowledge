@@ -1,0 +1,67 @@
+[
+    {
+        "question": "Wireless attacks targeting the physical-layer of the Combined Charging System (CCS) are a major threat because they leverage design choices in power-line communication (PLC) that make CCS particularly susceptible to electromagnetic side-channel attacks.",
+        "options": {
+            "T": "True. PLC design choices in CCS expose it to electromagnetic attacks.",
+            "F": "False. CCS is well-protected against electromagnetic side-channel attacks due to its robust PLC design."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The procedure highlights that the design choices in power-line communication (PLC) within CCS make it susceptible to electromagnetic side-channel attacks.",
+            "F": "This is incorrect. The procedure clearly indicates the vulnerability of CCS due to its PLC design."
+        },
+        "source_procedures": ["ATM-P0016"]
+    },
+    {
+        "question": "Location tracking of Bluetooth Low Energy (BLE) devices is always reliable regardless of conditions or device characteristics.",
+        "options": {
+            "T": "True. BLE location tracking is effective under any condition.",
+            "F": "False. BLE location tracking is only reliable under limited conditions and specific device characteristics."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect. The effectiveness of BLE location tracking is contingent on certain conditions and characteristics, as noted in the procedure.",
+            "F": "The procedure specifies that BLE location tracking is reliable only under limited conditions and for devices with unique fingerprints."
+        },
+        "source_procedures": ["ATM-P0080"]
+    },
+    {
+        "question": "Adversaries may use a network interface on a system to monitor or capture information sent over a wireless vehicle network connection as part of electromagnetic side-channel attacks.",
+        "options": {
+            "T": "True. This is part of the network sniffing technique used in side-channel attacks.",
+            "F": "False. Network interfaces cannot be used for monitoring information in side-channel attacks."
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "Network sniffing involves using a network interface to capture information, as described in the network sniffing technique.",
+            "F": "This is incorrect. The network sniffing technique explicitly describes the use of network interfaces for monitoring information."
+        },
+        "source_procedures": ["ATM-P0016"]
+    },
+    {
+        "question": "In unsecured credential scenarios, adversaries might seek credentials stored in plaintext files, which is a prevalent issue in the Combined Charging System (CCS) charging infrastructure.",
+        "options": {
+            "T": "True. Plaintext files are a vulnerability in the CCS infrastructure.",
+            "F": "False. The description does not mention plaintext files as an issue in CCS."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect. The procedure does not specify plaintext files as a vulnerability in the CCS infrastructure.",
+            "F": "Correct. There is no mention of plaintext file storage as an issue in the CCS infrastructure within the provided data."
+        },
+        "source_procedures": ["ATM-P0016"]
+    },
+    {
+        "question": "In physical-layer fingerprinting attacks on Bluetooth Low Energy (BLE) devices, a highly expensive and sophisticated radio receiver is necessary.",
+        "options": {
+            "T": "True. Only expensive equipment can perform such attacks.",
+            "F": "False. A modest hobbyist-level SDR (Software Defined Radio) is sufficient for fingerprinting attacks."
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This is incorrect. The procedure indicates that a modest SDR is sufficient for such attacks.",
+            "F": "The procedure specifies that a hobbyist-level SDR, which is relatively inexpensive, can be used for physical-layer fingerprinting attacks."
+        },
+        "source_procedures": ["ATM-P0081"]
+    }
+]

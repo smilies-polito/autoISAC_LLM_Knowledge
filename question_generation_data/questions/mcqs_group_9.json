@@ -1,0 +1,87 @@
+[
+    {
+        "question": "When an adversary gains physical access to a vehicle, what attack methods can they employ on the Electronic Control Units (ECUs)?",
+        "options": {
+            "A": "Debugging using physical interfaces that are typically enclosed.",
+            "B": "Conducting firmware modification through wireless methods.",
+            "C": "Implementing network sniffing directly through the CAN bus.",
+            "D": "Utilizing secure Bluetooth connections to gain control."
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Adversaries can access debug interfaces by disassembling and manipulating the vehicle's components.",
+            "B": "Firmware modification typically requires physical access, not wireless methods.",
+            "C": "Network sniffing would not directly affect firmware, and typically requires access to network interfaces.",
+            "D": "Bluetooth connections require specific access setups and do not equate to CAN bus control."
+        },
+        "source_procedures": ["ATM-P0076"]
+    },
+    {
+        "question": "What vulnerabilities can adversaries exploit to perform lateral movement within a vehicle's network?",
+        "options": {
+            "A": "Weak cryptographic practices during software updates.",
+            "B": "Physical replacement of ECUs with modified versions.",
+            "C": "Deployment of wireless network jammers.",
+            "D": "Modifying ECU telematics firmware to allow network bridging."
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Weak cryptographic practices can lead to successful lateral movements by bypassing code signing mechanisms.",
+            "B": "This involves physical modification rather than lateral movement across networks.",
+            "C": "Jammers interrupt communications but do not facilitate lateral movement.",
+            "D": "While modifying firmware can aid network bridging, the question asks specifically about vulnerabilities exploited."
+        },
+        "source_procedures": ["ATM-P0077"]
+    },
+    {
+        "question": "In what scenario can adversaries potentially avoid credential authentication entirely during an attack on a vehicle's ECU?",
+        "options": {
+            "A": "When the challenge-response algorithm result is not utilized.",
+            "B": "When the ECU firmware is updated without signature verification.",
+            "C": "When network sniffing captures all communication data.",
+            "D": "When using high-frequency radio jamming."
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "This occurs when there is a flaw in the authentication process, allowing adversaries to bypass it.",
+            "B": "While being a vulnerability, it concerns firmware authenticity, not direct credential bypass.",
+            "C": "Network sniffing gathers data but doesn't inherently bypass credential checks.",
+            "D": "Radio jamming disrupts signals but does not bypass authentication processes."
+        },
+        "source_procedures": ["ATM-P0178"]
+    },
+    {
+        "question": "How might an adversary use a compromised ECU for data exfiltration over the internet?",
+        "options": {
+            "A": "By activating the vehicle's lock systems remotely.",
+            "B": "Through the ECU’s internet communication capabilities.",
+            "C": "By physically removing the ECU and extracting memory externally.",
+            "D": "Posting data through short-range wireless signals."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Remote activation of locks is not a method of data exfiltration.",
+            "B": "Compromised ECUs with internet access can facilitate command and control activities and data exfiltration.",
+            "C": "Physical removal is not internet-based exfiltration.",
+            "D": "Short-range wireless signals typically cover limited distances and are not effective for internet-based exfiltration."
+        },
+        "source_procedures": ["ATM-P0079"]
+    },
+    {
+        "question": "Which type of attack involves using radio interface vulnerabilities to compromise vehicle systems?",
+        "options": {
+            "A": "Exploitation via digital radio interfaces.",
+            "B": "Firmware installation through OBD-II port.",
+            "C": "Direct memory access through unsecured Bluetooth.",
+            "D": "Physical ECU modification for network bridging."
+        },
+        "correct_answer": "A",
+        "Explanation": {
+            "A": "Radio interface vulnerabilities allow adversaries to exploit and compromise vehicle systems remotely.",
+            "B": "Firmware installations require physical access, not radio interface exploitation.",
+            "C": "Bluetooth requires specific setup and access, unrelated to the radio interface directly.",
+            "D": "Network bridging through physical modifications is different from exploiting radio interfaces."
+        },
+        "source_procedures": ["ATM-P0095"]
+    }
+]

@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the given dataset, what type of adversarial method is described as setting up a rogue cellular base station to compromise a vehicle's cellular communications?",
+        "options": {
+            "A": "Exploit Co-Located Computing Device for Privilege Escalation",
+            "B": "Rogue Cellular Base Station",
+            "C": "Network Service Scanning",
+            "D": "Abuse UDS for Affecting Vehicle Function"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Exploit Co-Located Computing Device for Privilege Escalation involves leveraging control over one component to access another within the same ECU.",
+            "B": "Rogue Cellular Base Station is correct as it involves using a fake base station to intercept cellular communication.",
+            "C": "Network Service Scanning focuses on enumerating services through port and vulnerability scans.",
+            "D": "Abuse UDS for Affecting Vehicle Function involves sending diagnostic commands to alter vehicle functions."
+        },
+        "source_procedures": ["ATM-P0006"]
+    },
+    {
+        "question": "What vulnerability type was exploited to achieve privilege escalation in the dataset, specifically by using bugs in the in-vehicle browser of BMW cars?",
+        "options": {
+            "A": "Code Signing Bypass",
+            "B": "Memory Corruption",
+            "C": "NBT Vulnerabilities",
+            "D": "USB-to-Ethernet Exploit"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Code signing bypass is not directly related to the in-vehicle browser vulnerability.",
+            "B": "Memory corruption leads to forced reboots but is not the method described here for privilege escalation.",
+            "C": "NBT Vulnerabilities are correct as these were used to exploit the in-vehicle browser.",
+            "D": "USB-to-Ethernet Exploit involves network access through USB ports, not browser exploits."
+        },
+        "source_procedures": ["ATM-P0007", "ATM-P0008"]
+    },
+    {
+        "question": "According to the dataset, what kind of messages were exploited by adversaries to control ECUs via unintended actions on CAN buses?",
+        "options": {
+            "A": "Signed Diagnostic Messages",
+            "B": "Rogue Cellular Messages",
+            "C": "Unintended CAN Messages",
+            "D": "Encrypted UDS Commands"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Signed Diagnostic Messages would not typically be exploited as they're intended for legitimate use.",
+            "B": "Rogue Cellular Messages are related to cellular interference, not CAN bus actions.",
+            "C": "Unintended CAN Messages are correct as they allow manipulation of ECUs.",
+            "D": "Encrypted UDS Commands involve diagnostic services, not unintended message exploitation."
+        },
+        "source_procedures": ["ATM-P0012", "ATM-P0112"]
+    },
+    {
+        "question": "How does the exploitation of USB-to-Ethernet vulnerabilities allow adversaries access within the vehicle network, as detailed in the dataset?",
+        "options": {
+            "A": "By modifying vehicle firmware remotely",
+            "B": "By revealing internal network services through port scanning",
+            "C": "By exploiting the vehicle's SMS communication system",
+            "D": "By causing memory corruption and system reboots"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Modifying vehicle firmware remotely concerns a different type of exploitation.",
+            "B": "Revealing internal network services through port scanning is correct.",
+            "C": "Exploiting the vehicle's SMS communication is not directly related to USB-to-Ethernet vulnerabilities.",
+            "D": "Memory corruption and system reboots involve different vulnerabilities."
+        },
+        "source_procedures": ["ATM-P0009"]
+    },
+    {
+        "question": "Which technique described in the dataset involves using a vehicle's cellular communication post-exploitation for command and control?",
+        "options": {
+            "A": "Physical Modification",
+            "B": "Network Service Scanning",
+            "C": "Cellular Communication",
+            "D": "Exploit Co-Located Computing Device"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Physical Modification involves direct changes to vehicle components and is unrelated to cellular communication.",
+            "B": "Network Service Scanning is about discovering active services, not cellular exploitation.",
+            "C": "Cellular Communication is correct as it involves using the cellular system for remote control.",
+            "D": "Exploit Co-Located Computing Device is about leveraging control over one part of the system to access another."
+        },
+        "source_procedures": ["ATM-P0047"]
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "question": "Researchers were able to remotely control various vehicle functions such as door locks and engine start by exploiting a Transport Layer Security (TLS) vulnerability in a mobile application.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This would be true only if the control was achieved by exploiting a TLS vulnerability, which was not the case in the described scenario.",
+            "F": "The researcher actually accessed RemoteLink, a mobile app, using intercepted login credentials, not by exploiting a TLS vulnerability."
+        },
+        "source_procedures": ["ATM-P0038"]
+    },
+    {
+        "question": "An adversary can exploit a vehicle's Tire Pressure Monitoring System (TPMS) by repeatedly sending spoofed TPMS messages to manipulate tire pressure values displayed in the dashboard.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "The correct method described in the data involved spoofing TPMS messages to manipulate the displayed tire pressure values.",
+            "F": "Spoofing TPMS messages was indeed the technique used to affect the tire pressure values, making this false."
+        },
+        "source_procedures": ["ATM-P0023", "ATM-P0164"]
+    },
+    {
+        "question": "A researcher was able to extract TPMS (Tyre Pressure Monitoring System) timing information and sensor data by using unauthorized access to the vehicle’s Bluetooth communication.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "True if the data extraction was done through Bluetooth, but the dataset describes the use of radio data capturing equipment and Matlab decoders.",
+            "F": "The researcher used radio data capturing equipment and custom Matlab decoders, not Bluetooth, to extract the information."
+        },
+        "source_procedures": ["ATM-P0163", "ATM-P0189"]
+    },
+    {
+        "question": "Denial of Service (DoS) attacks on vehicle functions can be executed by sending requests that the Electronic Control Unit (ECU) cannot handle, potentially resulting in reduced vehicle propulsion.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "T",
+        "Explanation": {
+            "T": "DoS attacks can disrupt vehicle functionality by overwhelming the ECU, and in some cases, reduce propulsion by forcing the vehicle into a 'safe state'.",
+            "F": "The data indicates that DoS attacks can indeed lead to conditions that affect vehicle propulsion, making this statement true."
+        },
+        "source_procedures": ["ATM-P0125"]
+    },
+    {
+        "question": "An adversary can record radio waves and manipulate TPMS sensor data by using a Rogue Wi-Fi Access Point in vehicle networks.",
+        "options": {
+            "T": "True option text",
+            "F": "False option text"
+        },
+        "correct_answer": "F",
+        "Explanation": {
+            "T": "This would be true if a Rogue Wi-Fi Access Point was used for TPMS data manipulation, but that technique was not used here.",
+            "F": "The dataset specifies the use of a custom eavesdropper and radio capturing equipment for TPMS sensor data, not a Rogue Wi-Fi Access Point."
+        },
+        "source_procedures": ["ATM-P0163"]
+    }
+]

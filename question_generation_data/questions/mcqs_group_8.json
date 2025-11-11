@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the context of automotive cybersecurity, which of the following describes the 'Local Function' technique?",
+        "options": {
+            "A": "It involves executing arbitrary commands on a remote system using script interpreters.",
+            "B": "It allows adversaries to control door lock and unlock functions of a vehicle after accessing the Electronic Control Unit (ECU).",
+            "C": "It refers to sending unauthorized messages over a vehicle's Controller Area Network (CAN) system.",
+            "D": "It involves exploiting network configurations for information discovery purposes."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "This description is related to the 'Command and Scripting Interpreter' technique.",
+            "B": "This is correct. The 'Local Function' technique allows partial or complete control of functions actuated by the ECU, such as door lock/unlock.",
+            "C": "This description fits the 'Unintended Vehicle Network Message' technique.",
+            "D": "This relates to 'System Network Configuration Discovery'."
+        },
+        "source_procedures": ["ATM-P0073", "ATM-P0144", "ATM-P0145", "ATM-P0177"]
+    },
+    {
+        "question": "What risk does the 'Exploit via Radio Interface' technique pose to a vehicle's security?",
+        "options": {
+            "A": "Allows for the unauthorized sending of CAN messages within the vehicle.",
+            "B": "Enables an adversary to control heating and air conditioning settings.",
+            "C": "Permits targeting of vehicles through interfaces like cellular and Bluetooth networks.",
+            "D": "Facilitates the execution of arbitrary code on the body controller ECU."
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "This describes the 'Unintended Vehicle Network Message' technique.",
+            "B": "This is related to 'Local Function' control over ECU functions.",
+            "C": "Correct. The 'Exploit via Radio Interface' technique targets vehicles via radio interfaces like cellular and Bluetooth.",
+            "D": "This relates to the 'Local Function' technique."
+        },
+        "source_procedures": ["ATM-P0074"]
+    },
+    {
+        "question": "Why would an adversary utilize the 'System Network Configuration Discovery' technique in an automotive environment?",
+        "options": {
+            "A": "To control the vehicle's radio station settings remotely.",
+            "B": "To gather network configuration details for shaping follow-on attack behaviors.",
+            "C": "To inject arbitrary commands into the vehicle's Uconnect system.",
+            "D": "To exploit the vehicle's D-Bus service for location tracking."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "This would be related to exploiting local functions of the ECU.",
+            "B": "Correct. This technique is used to gather network information to inform subsequent attack steps.",
+            "C": "This involves the 'Command and Scripting Interpreter' technique.",
+            "D": "This relates to specific manipulation techniques using the D-Bus service."
+        },
+        "source_procedures": ["ATM-P0074", "ATM-P0093"]
+    },
+    {
+        "question": "Which technique allows an adversary to execute arbitrary shell commands on a vehicle's system?",
+        "options": {
+            "A": "Modify OS Kernel, Boot Partition, or System Partition",
+            "B": "Local Function",
+            "C": "Short Range Wireless Communication",
+            "D": "Command and Scripting Interpreter"
+        },
+        "correct_answer": "D",
+        "Explanation": {
+            "A": "This technique involves modifying system components but not executing arbitrary shell commands.",
+            "B": "This pertains to gaining control over specific functions of the ECU.",
+            "C": "This technique involves using wireless communication for control and exfiltration.",
+            "D": "Correct. The 'Command and Scripting Interpreter' technique allows the execution of arbitrary commands on a system."
+        },
+        "source_procedures": ["ATM-P0176"]
+    },
+    {
+        "question": "What is the implication of successfully exploiting the 'Unintended Vehicle Network Message' technique?",
+        "options": {
+            "A": "Accessing and modifying the GPS coordinates of a vehicle.",
+            "B": "Preventing legitimate CAN messages to send unauthorized control commands to the vehicle.",
+            "C": "Executing arbitrary code to control the temperature setting of a vehicle.",
+            "D": "Remotely updating the vehicle's system firmware to gain persistent control."
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "This involves exploiting network discovery and GPS tracking.",
+            "B": "Correct. This technique involves sending unauthorized CAN messages, as seen with the power steering ECU example.",
+            "C": "This aligns more with the 'Local Function' technique for temperature control.",
+            "D": "This refers to techniques like 'Modify OS Kernel, Boot Partition, or System Partition'."
+        },
+        "source_procedures": ["ATM-P0094", "ATM-P0192"]
+    }
+]

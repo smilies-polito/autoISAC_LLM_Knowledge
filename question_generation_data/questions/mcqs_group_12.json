@@ -1,0 +1,87 @@
+[
+    {
+        "question": "In the scenario involving electric vehicle (EV) charging, what primary threat is posed by weaknesses in the Combined Charging System (CCS)?",
+        "options": {
+            "A": "Unauthorized physical access to the vehicle",
+            "B": "Electromagnetic side-channel attacks",
+            "C": "Malware installation on vehicle systems",
+            "D": "All of the above"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Physical access is not the primary focus of the procedure.",
+            "B": "The procedure emphasizes susceptibility to electromagnetic side-channel attacks in the CCS.",
+            "C": "Malware installation is not specifically addressed in the procedure.",
+            "D": "Only electromagnetic side-channel attacks are highlighted, not all options."
+        },
+        "source_procedures": ["ATM-P0016"]
+    },
+    {
+        "question": "What is a significant risk identified in wireless EV charging infrastructures related to data security?",
+        "options": {
+            "A": "Use of strong encryption protocols",
+            "B": "Plaintext MAC-layer traffic recovery",
+            "C": "Implementation of state-of-the-art encryption",
+            "D": "All of the above"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "The procedure indicates a lack of strong encryption, not its use.",
+            "B": "Plaintext recovery is identified as a risk in the described scenario.",
+            "C": "The procedure discusses the absence rather than the presence of encryption.",
+            "D": "Only plaintext MAC-layer traffic recovery is highlighted as a risk."
+        },
+        "source_procedures": ["ATM-P0016"]
+    },
+    {
+        "question": "What technique could adversaries use to track a vehicle's location using Bluetooth Low Energy (BLE) devices?",
+        "options": {
+            "A": "Spoofing the vehicle's GPS signal",
+            "B": "Using a Software Defined Radio sniffer to exploit BLE communications",
+            "C": "Installing spyware on the driver's smartphone",
+            "D": "All of the above"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "GPS spoofing is not mentioned in the dataset.",
+            "B": "The technique involves using a Software Defined Radio to track BLE devices.",
+            "C": "Spyware installation is not specifically mentioned in the procedure.",
+            "D": "Only the use of a Software Defined Radio is discussed in the context of BLE."
+        },
+        "source_procedures": ["ATM-P0080", "ATM-P0081"]
+    },
+    {
+        "question": "How might adversaries utilize 'Network Sniffing' in the context of vehicle cybersecurity?",
+        "options": {
+            "A": "To access and modify engine performance metrics",
+            "B": "To capture sensitive information and authentication material",
+            "C": "To enhance the vehicle's wireless range",
+            "D": "To remotely control vehicle speed settings"
+        },
+        "correct_answer": "B",
+        "Explanation": {
+            "A": "Network Sniffing primarily involves data capture, not engine modification.",
+            "B": "Network Sniffing is used to capture sensitive data as described in the technique.",
+            "C": "Enhancing wireless range is unrelated to Network Sniffing.",
+            "D": "Speed control is not achieved through Network Sniffing."
+        },
+        "source_procedures": ["ATM-P0016"]
+    },
+    {
+        "question": "What common issue is found with the storage of credentials in vehicle systems, according to the dataset?",
+        "options": {
+            "A": "They are often stored in well-protected databases",
+            "B": "Credentials are securely encrypted",
+            "C": "Credentials are stored insecurely, such as in plaintext files",
+            "D": "None of the above"
+        },
+        "correct_answer": "C",
+        "Explanation": {
+            "A": "Credentials are often found stored insecurely, contrary to this option.",
+            "B": "The lack of secure encryption is highlighted in the dataset.",
+            "C": "Storing credentials in plaintext is identified as a common issue.",
+            "D": "There is specific mention of plaintext and insecure storage practices."
+        },
+        "source_procedures": ["ATM-P0016"]
+    }
+]

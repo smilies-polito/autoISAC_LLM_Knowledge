@@ -1,0 +1,84 @@
+[
+    {
+        "title": "Losing the Car Keys: Wireless PHY-Layer Insecurity in EV Charging",
+        "type": "procedure",
+        "description": "<p>We highlight the threat posed by wireless attacks on the physical-layer of the Combined Charging System (CCS), a major standard for EV charging that is deployed in many thousands of locations worldwide and used by seven of the ten largest auto manufacturers globally. We show that design choices in the use of power-line communication (PLC) make the system particularly prone to popular electromagnetic side-channel attacks. We implement the first wireless eavesdropping tool for PLC networks and use it to observe the ISO 15118 network implementation underlying CCS, in a measurement campaign of 54 real charging sessions, using modern electric vehicles and state-of-the-art CCS chargers. We find that the unintentional wireless channel is sufficient to recover messages in the vast majority of cases, with traffic intercepted from an adjacent parking bay showing 91.8% of messages validating their CRC32 checksum.</p><p>By examining the recovered traffic, we further find a host of privacy and security issues in existing charging infrastructure including plaintext MAC-layer traffic recovery, widespread absence of TLS in public locations and leakage of private information, including long-term unique identifiers. Of particular concern, elements of the recovered data are being used to authorise billing in existing charging implementations.</p><p>We discuss the implications of pervasive susceptibility to known electromagnetic eavesdropping techniques, extract lessons learnt for future development and propose specific improvements to mitigate the problems in existing chargers.</p><p></p><p><a href=\"https://www.usenix.org/system/files/sec19-baker.pdf\" title=\"https://www.usenix.org/system/files/sec19-baker.pdf\" target=\"_blank\">Source</a></p>",
+        "mitreId": "P0016",
+        "technique": [
+            {
+                "title": "Network Sniffing",
+                "type": "technique",
+                "description": "<p>Adversaries may sniff vehicle network traffic to capture information about an environment, including authentication material passed over the vehicle network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless vehicle network connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.</p><p>Data captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.</p><p>Network sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.</p><p>Adversaries may also try to collect vehicle telemetry, including propulsion system status (e.g., hard acceleration or braking), whether vehicle enclosures are locked / unlocked, etc.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1040/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.155Z",
+                "mitreId": "T0038",
+                "updatedAt": "2024-08-30T19:14:51.336Z",
+                "id": "ATM-T0038",
+                "lastModifiedAt": "2024-08-30T19:14:51.335Z"
+            },
+            {
+                "title": "Unsecured Credentials",
+                "type": "technique",
+                "description": "<p>Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g.&nbsp;bash history), operating system or application-specific repositories (e.g.&nbsp;credentials in registry), or other specialized files/artifacts (e.g.&nbsp;Private Keys).</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1552/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.166Z",
+                "mitreId": "T0040",
+                "updatedAt": "2024-08-30T19:15:04.974Z",
+                "id": "ATM-T0040",
+                "lastModifiedAt": "2024-08-30T19:15:04.974Z"
+            },
+            {
+                "title": "Short Range Wireless Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's short range wireless communication capabilities, including Bluetooth and Wi-Fi, in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.157Z",
+                "mitreId": "T0065",
+                "updatedAt": "2024-08-30T19:19:12.540Z",
+                "id": "ATM-T0065",
+                "lastModifiedAt": "2024-08-30T19:19:12.539Z"
+            }
+        ],
+        "updatedAt": "2025-01-31T21:34:49.043Z",
+        "id": "ATM-P0016"
+    },
+    {
+        "type": "procedure",
+        "title": "Evaluating Physical-Layer BLE Location Tracking Attacks on Mobile Devices",
+        "description": "In summary, we find that physical layer tracking of BLE devices is indeed feasible, but it is only reliable under limited conditions, and for specific devices with extremely unique fingerprints, and when the target device has a relatively stable temperature. The dataset and code that we used to perform this evaluation can be found at: https://github.com/ucsdsysnet/blephytracking.git",
+        "technique": [
+            {
+                "title": "Location Tracking",
+                "type": "technique",
+                "description": "<p>An adversary could use a malicious or exploited application to surreptitiously track the vehicle's physical location through use of standard operating system APIs.</p><p>This technique's description was adapted from <a href=\"https://attack.mitre.org/techniques/T1430/\">MITRE ATT&amp;CK</a>.</p>",
+                "createdAt": "2023-08-09T09:51:19.131Z",
+                "mitreId": "T0043",
+                "updatedAt": "2024-08-30T19:15:24.474Z",
+                "id": "ATM-T0043",
+                "lastModifiedAt": "2024-08-30T19:15:24.474Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:10:32.282Z",
+        "updatedAt": "2025-01-30T17:36:03.174Z",
+        "id": "ATM-P0080",
+        "mitreId": "P0080"
+    },
+    {
+        "type": "procedure",
+        "title": "Evaluating Physical-Layer BLE Location Tracking Attacks on Mobile Devices",
+        "description": "To perform a physical-layer fingerprinting attack, the attacker must be equipped with a Software Defined Radio sniffer: a radio receiver capable of recording raw I/Q radio signals. Although, as we show in Section IV-D, it is sufficient to use a modest hobbyist-level SDR ($150).",
+        "technique": [
+            {
+                "title": "Short Range Wireless Communication",
+                "type": "technique",
+                "description": "<p>If available, the adversary can use the vehicle's short range wireless communication capabilities, including Bluetooth and Wi-Fi, in a post-exploitation environment to fulfill their command and control and exfiltration objectives.</p>",
+                "createdAt": "2023-08-09T09:51:19.157Z",
+                "mitreId": "T0065",
+                "updatedAt": "2024-08-30T19:19:12.540Z",
+                "id": "ATM-T0065",
+                "lastModifiedAt": "2024-08-30T19:19:12.539Z"
+            }
+        ],
+        "createdAt": "2023-12-07T18:11:11.009Z",
+        "updatedAt": "2025-01-30T17:36:03.179Z",
+        "id": "ATM-P0081",
+        "mitreId": "P0081"
+    }
+]
