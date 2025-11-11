@@ -25,6 +25,7 @@ All data supporting the study—including Auto-ISAC threat descriptions, generat
 
 ## 📂 Repository Structure
 
+'''
 accessing_llms_knowledge/
 ├── autoISAC/
 │ ├── procedures.json # Auto-ISAC threat matrix source
@@ -46,6 +47,7 @@ accessing_llms_knowledge/
 │ └── score_distribution_plot.png # LLM vs human performance visualization
 │
 └── ReadMe.md
+'''
 
 
 ## 📊 Contents
